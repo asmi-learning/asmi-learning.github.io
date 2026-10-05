@@ -332,14 +332,43 @@
                 </div>
             </div>
 
+            <!-- ==================== SMART CONTACT & BOOKING HUB ==================== -->
             <div id="contact" class="consult-banner">
-                <h3 style="font-family: 'Playfair Display', serif; font-size: 2.1rem; margin-bottom: 0.8rem;">Request an Advanced 1-on-1 Mentorship Session</h3>
-                <p style="color: #bfdbfe; max-width: 650px; margin: 0 auto;">Dedicated syllabus audits, exam problem diagnostics, and theoretical masterclasses for international UG &amp; PG students (UK, Europe &amp; Global).</p>
-                <a href="mailto:dhabalendu@gmail.com?subject=[ASMI%20Mentorship]%20Syllabus%20Audit%20Request" class="email-pill">
-                    ✉ dhabalendu@gmail.com
-                </a>
+                <h3 style="font-family: 'Playfair Display', serif; font-size: 2.2rem; margin-bottom: 0.8rem;">
+                    Request an Advanced 1-on-1 Mentorship Session
+                </h3>
+                <p style="color: #bfdbfe; max-width: 650px; margin: 0 auto 2rem; font-size: 1.05rem;">
+                    Dedicated syllabus audits, exam problem diagnostics, and theoretical masterclasses for international UG &amp; PG students (UK, Europe &amp; Global).
+                </p>
+
+                <!-- DUAL ACTION BUTTONS (Bypasses Windows Prompts) -->
+                <div style="display: flex; justify-content: center; gap: 1.2rem; flex-wrap: wrap; margin-bottom: 1.5rem;">
+                    
+                    <!-- Direct Gmail Web Button -->
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=dhabalendu@gmail.com&su=[ASMI%20Mentorship]%20Syllabus%20Audit%20Request" 
+                       target="_blank" 
+                       rel="noopener noreferrer" 
+                       style="background: #ffffff; color: var(--navy-dark); text-decoration: none; padding: 0.9rem 1.8rem; border-radius: 12px; font-weight: 700; font-size: 1rem; display: inline-flex; align-items: center; gap: 8px; box-shadow: 0 4px 14px rgba(0,0,0,0.15); transition: transform 0.2s;">
+                        ✉ Open in Gmail (Web)
+                    </a>
+
+                    <!-- 1-Click Copy Email Button -->
+                    <button type="button" 
+                            onclick="copyFacultyEmail()" 
+                            id="copyBtn" 
+                            style="background: rgba(255, 255, 255, 0.15); border: 1.5px solid rgba(255, 255, 255, 0.4); color: #ffffff; padding: 0.9rem 1.8rem; border-radius: 12px; font-weight: 700; font-size: 1rem; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; transition: all 0.2s;">
+                        <span id="copyBtnText">📋 Copy: dhabalendu@gmail.com</span>
+                    </button>
+                </div>
+
+                <!-- Desktop App Fallback -->
+                <div style="font-size: 0.85rem; color: #93c5fd;">
+                    Prefer Outlook or Apple Mail? 
+                    <a href="mailto:dhabalendu@gmail.com?subject=[ASMI%20Mentorship]%20Syllabus%20Audit%20Request" style="color: #ffffff; text-decoration: underline; font-weight: 600;">
+                        Open default email software
+                    </a>
+                </div>
             </div>
-        </div>
     </section>
 
     <!-- ==================== FOOTER & LEGAL SHIELD ==================== -->
@@ -361,6 +390,36 @@
             </p>
         </div>
     </footer>
+    <!-- 1-Click Clipboard Copy Handler -->
+    <script>
+        function copyFacultyEmail() {
+            const email = "dhabalendu@gmail.com";
+            const btnText = document.getElementById("copyBtnText");
+            const btn = document.getElementById("copyBtn");
 
+            navigator.clipboard.writeText(email).then(() => {
+                btnText.innerHTML = "✓ Copied to Clipboard!";
+                btn.style.backgroundColor = "#16a34a"; // turns green
+                btn.style.borderColor = "#16a34a";
+                setTimeout(() => {
+                    btnText.innerHTML = "📋 Copy: dhabalendu@gmail.com";
+                    btn.style.backgroundColor = "rgba(255, 255, 255, 0.15)";
+                    btn.style.borderColor = "rgba(255, 255, 255, 0.4)";
+                }, 2500);
+            }).catch(err => {
+                // Fallback for older browsers
+                const temp = document.createElement("input");
+                temp.value = email;
+                document.body.appendChild(temp);
+                temp.select();
+                document.execCommand("copy");
+                document.body.removeChild(temp);
+                btnText.innerHTML = "✓ Copied to Clipboard!";
+                setTimeout(() => {
+                    btnText.innerHTML = "📋 Copy: dhabalendu@gmail.com";
+                }, 2500);
+            });
+        }
+    </script>
 </body>
 </html>

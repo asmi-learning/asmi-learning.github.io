@@ -287,14 +287,17 @@
             .nav-links { display: none; }
         }
         .badge-pill {
-            background: #ffffff;
-            border: 1px solid var(--border-color);
-            color: var(--navy-dark);
-            padding: 0.45rem 0.9rem;
-            border-radius: 20px;
-            font-size: 0.82rem;
+            background: #eff6ff; /* Soft academic light blue tint from video */
+            border: 1.5px solid #bfdbfe; /* Crisp border */
+            color: #1e3a8a; /* Deep navy text */
+            padding: 0.45rem 1.05rem;
+            border-radius: 10px; /* Squarer pill shape matching your slide */
+            font-size: 0.85rem;
             font-weight: 600;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            box-shadow: 0 2px 6px rgba(30, 58, 138, 0.04);
         }
     </style>
 </head>
@@ -336,13 +339,13 @@
                 Credentialed Mathematical Researcher &nbsp;|&nbsp; Industrial Innovator
             </div>
 
-            <!-- UNIFIED BADGE ROW (WITH ORCID) -->
+            <!-- EXACT MATCH TO VIDEO SLIDE BADGES -->
             <div style="display: flex; justify-content: center; align-items: center; gap: 10px; flex-wrap: wrap;">
                 <span class="badge-pill">PhD, Math (IIT Delhi)</span>
-                <span class="badge-pill">16 Yrs University Professor</span>
-                <span class="badge-pill">Ex-STMicroelectronics (10 Yrs)</span>
-                <span class="badge-pill">5 US Patents</span>
-                <a href="https://orcid.org/0000-0003-2341-2430" target="_blank" rel="noopener noreferrer" class="orcid-link" style="padding: 0.45rem 0.9rem; font-size: 0.82rem;">
+                <span class="badge-pill"><strong>16</strong> Yrs University Professor</span>
+                <span class="badge-pill">Ex-STMicroelectronics (<strong>10 Yrs</strong>)</span>
+                <span class="badge-pill"><strong>5</strong> US Patents</span>
+                <a href="https://orcid.org/0000-0003-2341-2430" target="_blank" rel="noopener noreferrer" class="orcid-link" style="padding: 0.45rem 1.05rem; border-radius: 10px; font-size: 0.85rem;">
                     iD ORCID
                 </a>
             </div>

@@ -3,14 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Forces HTTPS connection automatically -->
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <meta name="description" content="ASMI Learning. High-impact 1-on-1 academic mentorship in Linear Algebra & Advanced Mathematics by Dr. Dhabalendu Samanta, PhD (IIT Delhi).">
     
-    <title>ASM Institute of Learning, Research & Development | Dr. Dhabalendu Samanta</title>
+    <title>ASMI Learning | Advanced Mathematical Mentorship &amp; Research Guidance</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+
+    <!-- Structured Data for Independent Educational Consultant -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "ASMI Learning",
+      "founder": {
+        "@type": "Person",
+        "name": "Dr. Dhabalendu Samanta",
+        "honorificPrefix": "Dr.",
+        "alumniOf": "Indian Institute of Technology Delhi",
+        "jobTitle": "Independent Educational Consultant & Mathematical Researcher"
+      },
+      "description": "Independent academic mentorship in linear algebra, advanced proof mechanics, and computational geometry."
+    }
+    </script>
 
     <style>
         :root {
@@ -47,7 +64,7 @@
         .brand-logo { text-decoration: none; }
         .brand-acronym {
             font-family: 'Cinzel', serif;
-            font-size: 1.6rem;
+            font-size: 1.55rem;
             font-weight: 800;
             letter-spacing: 0.12em;
             color: var(--navy-primary);
@@ -57,7 +74,7 @@
         .brand-sub {
             font-size: 0.65rem;
             text-transform: uppercase;
-            letter-spacing: 0.18em;
+            letter-spacing: 0.16em;
             color: #64748b;
             font-weight: 600;
         }
@@ -107,6 +124,8 @@
             padding: 0.6rem 1.4rem;
             border-radius: 30px;
             margin-bottom: 2.2rem;
+            flex-wrap: wrap;
+            justify-content: center;
         }
         .hero-actions { display: flex; justify-content: center; gap: 1.2rem; margin-bottom: 3.5rem; }
         .btn-primary {
@@ -127,7 +146,7 @@
             border: 1.5px solid var(--border-color);
         }
 
-        /* CLEAN VIDEO PLACEHOLDER (Fixes "Video Unavailable" Bug) */
+        /* VIDEO PLACEHOLDER */
         .video-wrapper {
             background: #ffffff;
             border: 2px solid var(--border-color);
@@ -137,7 +156,6 @@
             text-align: left;
         }
         .video-box {
-            position: relative;
             background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
             border-radius: 12px;
             padding: 4rem 2rem;
@@ -145,15 +163,8 @@
             color: #fff;
         }
 
-        /* 3D LAB */
+        /* 3D LAB (SECURED) */
         .section-lab { background: #ffffff; border-top: 1px solid var(--border-color); padding: 5rem 5%; }
-        .streamlit-frame {
-            width: 100%;
-            height: 720px;
-            border: 2px solid var(--border-color);
-            border-radius: 18px;
-            background: #f8fafc;
-        }
 
         /* CREDENTIALS */
         .section-credentials { padding: 5rem 5%; max-width: 1100px; margin: 0 auto; }
@@ -187,18 +198,6 @@
             padding: 3.5rem 2rem;
             text-align: center;
         }
-        .email-pill {
-            display: inline-block;
-            background: rgba(255, 255, 255, 0.15);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            padding: 0.8rem 1.8rem;
-            border-radius: 12px;
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 1.15rem;
-            color: #ffffff;
-            text-decoration: none;
-            margin-top: 1.5rem;
-        }
 
         /* FOOTER & COMPLIANCE */
         footer { background: #0f172a; color: #94a3b8; padding: 3.5rem 5% 2.5rem; font-size: 0.85rem; text-align: center; }
@@ -210,16 +209,18 @@
             border-radius: 10px;
             padding: 1.2rem;
             font-size: 0.80rem;
-            line-height: 1.5;
+            line-height: 1.6;
+            text-align: justify;
         }
     </style>
 </head>
 <body>
 
+    <!-- ==================== NAVIGATION ==================== -->
     <nav class="navbar">
         <a href="https://asmi-learning.github.io/" class="brand-logo">
-            <span class="brand-acronym">ASMI</span>
-            <span class="brand-sub">Institute of Learning, Research &amp; Development</span>
+            <span class="brand-acronym">ASMI LEARNING</span>
+            <span class="brand-sub">Advanced Mathematical Mentorship &amp; Research Guidance</span>
         </a>
         <ul class="nav-links">
             <li><a href="#masterclass">Masterclass</a></li>
@@ -229,18 +230,19 @@
         </ul>
     </nav>
 
+    <!-- ==================== HERO SECTION ==================== -->
     <header class="hero">
-        <div class="hero-tagline">Advanced University Mathematics &amp; Research</div>
+        <div class="hero-tagline">Advanced University Mathematics &amp; Research Guidance</div>
         <h1 class="hero-title">Mastering Linear Algebra<br><span style="font-style: italic; font-weight: 400; color: #334155; font-size: 0.85em;">From Physical Intuition to Mathematical Rigor</span></h1>
         
         <p class="hero-desc">
-            Independent high-impact 1-on-1 academic mentorship for international Undergraduate &amp; Postgraduate students, MSc candidates, and AI engineers.
+            Independent 1-on-1 academic mentorship for international Undergraduate &amp; Postgraduate students, MSc candidates, and AI engineers.
         </p>
 
         <div class="founder-pill">
-            <strong style="color: var(--navy-dark);">Dr. Dhabalendu Samanta</strong>
+            <strong style="color: var(--navy-dark);">Directed by Dr. Dhabalendu Samanta</strong>
             <span style="color: #cbd5e1;">|</span>
-            <span style="color: var(--navy-primary); font-weight: 600;">PhD, IIT Delhi • Credentialed Researcher &amp; Industrial Innovator</span>
+            <span style="color: var(--navy-primary); font-weight: 600;">PhD, IIT Delhi • Independent Educational Consultant • 5 US Patents</span>
         </div>
 
         <div class="hero-actions">
@@ -248,15 +250,15 @@
             <a href="#lab" class="btn-secondary">Explore the 3D Interactive Lab</a>
         </div>
 
-        <!-- REPLACED: Professional placeholder until YouTube video is ready -->
+        <!-- Masterclass Placeholder -->
         <div id="masterclass" class="video-wrapper">
             <div style="margin-bottom: 1rem;">
-                <h3 style="color: var(--navy-primary); font-family: 'Playfair Display', serif; font-size: 1.4rem;">Flagship Masterclass</h3>
+                <h3 style="color: var(--navy-primary); font-family: 'Playfair Display', serif; font-size: 1.4rem;">Flagship Masterclass Showcase</h3>
                 <p style="font-size: 0.88rem; color: #64748b;">The Essence of Eigenvalues &amp; Eigenvectors (Volumetric Dilation, Contraction &amp; Invariant Rotational Axle)</p>
             </div>
             <div class="video-box">
                 <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">▶</div>
-                <h4 style="font-size: 1.25rem; margin-bottom: 0.4rem;">Video Production in Progress</h4>
+                <h4 style="font-size: 1.25rem; margin-bottom: 0.4rem;">Video Masterclass in Production</h4>
                 <p style="font-size: 0.9rem; color: #94a3b8; max-width: 500px; margin: 0 auto;">
                     The 8-minute visual masterclass by Dr. Dhabalendu Samanta is scheduled for release for the Mid-November 2026 exam term.
                 </p>
@@ -264,7 +266,7 @@
         </div>
     </header>
 
-    <!-- ==================== SECTION 2: THE PROPRIETARY 3D LABORATORY (IP-SECURED) ==================== -->
+    <!-- ==================== PROPRIETARY 3D LAB (IP-SECURED) ==================== -->
     <section id="lab" class="section-lab">
         <div style="max-width: 1000px; margin: 0 auto; text-align: center;">
             <div style="display: inline-block; background: #eff6ff; border: 1px solid #bfdbfe; color: var(--navy-primary); padding: 0.35rem 1rem; border-radius: 20px; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; margin-bottom: 1rem;">
@@ -277,7 +279,6 @@
                 ASMI's proprietary 3D simulation engines visualize non-trivial matrix transformations, invariant rotational eigenspaces, and higher-dimensional volumetric scaling in real time.
             </p>
 
-            <!-- LOCKED ACCESS CONTAINER (Zero External Exposure) -->
             <div style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); border-radius: 20px; padding: 4rem 2rem; color: #ffffff; border: 2px solid var(--border-color); box-shadow: 0 20px 40px rgba(15, 23, 42, 0.1);">
                 <div style="font-size: 3rem; margin-bottom: 1rem;">🔒</div>
                 <h3 style="font-family: 'Playfair Display', serif; font-size: 1.8rem; margin-bottom: 0.8rem;">
@@ -294,16 +295,16 @@
             </div>
 
             <div style="margin-top: 1.5rem; font-size: 0.78rem; color: #94a3b8;">
-                © Dr. Dhabalendu Samanta. All visual models, dynamic manifolds, and simulation scripts are proprietary intellectual property. Unauthorized reproduction or scraping is prohibited.
+                © Dr. Dhabalendu Samanta. All visual models, dynamic manifolds, and simulation scripts are proprietary intellectual property. Unauthorized reproduction or scraping is strictly prohibited.
             </div>
         </div>
     </section>
 
-    <!-- CREDENTIALS -->
+    <!-- ==================== FACULTY CREDENTIALS ==================== -->
     <section id="credentials" class="section-credentials">
         <div class="cred-card">
             <h2 style="font-family: 'Playfair Display', serif; color: var(--navy-primary); font-size: 2.3rem;">Dr. Dhabalendu Samanta</h2>
-            <p style="font-style: italic; color: #64748b; font-weight: 600; margin-top: 0.3rem;">Credentialed Mathematical Researcher | Industrial Innovator</p>
+            <p style="font-style: italic; color: #64748b; font-weight: 600; margin-top: 0.3rem;">Pure Mathematics Researcher • Industrial Innovator • Independent Educational Consultant</p>
 
             <div class="cred-grid">
                 <div class="badge-chip">
@@ -332,7 +333,7 @@
                 </div>
             </div>
 
-            <!-- ==================== SMART CONTACT & BOOKING HUB ==================== -->
+            <!-- SMART CONTACT HUB -->
             <div id="contact" class="consult-banner">
                 <h3 style="font-family: 'Playfair Display', serif; font-size: 2.2rem; margin-bottom: 0.8rem;">
                     Request an Advanced 1-on-1 Mentorship Session
@@ -341,56 +342,44 @@
                     Dedicated syllabus audits, exam problem diagnostics, and theoretical masterclasses for international UG &amp; PG students (UK, Europe &amp; Global).
                 </p>
 
-                <!-- DUAL ACTION BUTTONS (Bypasses Windows Prompts) -->
-                <div style="display: flex; justify-content: center; gap: 1.2rem; flex-wrap: wrap; margin-bottom: 1.5rem;">
-                    
-                    <!-- Direct Gmail Web Button -->
+                <div style="display: flex; justify-content: center; gap: 1.2rem; flex-wrap: wrap;">
                     <a href="https://mail.google.com/mail/?view=cm&fs=1&to=dhabalendu@gmail.com&su=[ASMI%20Mentorship]%20Syllabus%20Audit%20Request" 
                        target="_blank" 
                        rel="noopener noreferrer" 
-                       style="background: #ffffff; color: var(--navy-dark); text-decoration: none; padding: 0.9rem 1.8rem; border-radius: 12px; font-weight: 700; font-size: 1rem; display: inline-flex; align-items: center; gap: 8px; box-shadow: 0 4px 14px rgba(0,0,0,0.15); transition: transform 0.2s;">
+                       style="background: #ffffff; color: var(--navy-dark); text-decoration: none; padding: 0.9rem 1.8rem; border-radius: 12px; font-weight: 700; font-size: 1rem; display: inline-flex; align-items: center; gap: 8px; box-shadow: 0 4px 14px rgba(0,0,0,0.15);">
                         ✉ Open in Gmail (Web)
                     </a>
 
-                    <!-- 1-Click Copy Email Button -->
                     <button type="button" 
                             onclick="copyFacultyEmail()" 
                             id="copyBtn" 
-                            style="background: rgba(255, 255, 255, 0.15); border: 1.5px solid rgba(255, 255, 255, 0.4); color: #ffffff; padding: 0.9rem 1.8rem; border-radius: 12px; font-weight: 700; font-size: 1rem; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; transition: all 0.2s;">
+                            style="background: rgba(255, 255, 255, 0.15); border: 1.5px solid rgba(255, 255, 255, 0.4); color: #ffffff; padding: 0.9rem 1.8rem; border-radius: 12px; font-weight: 700; font-size: 1rem; cursor: pointer; display: inline-flex; align-items: center; gap: 8px;">
                         <span id="copyBtnText">📋 Copy: dhabalendu@gmail.com</span>
                     </button>
                 </div>
-
-                <!-- Desktop App Fallback -->
-                <div style="font-size: 0.85rem; color: #93c5fd;">
-                    Prefer Outlook or Apple Mail? 
-                    <a href="mailto:dhabalendu@gmail.com?subject=[ASMI%20Mentorship]%20Syllabus%20Audit%20Request" style="color: #ffffff; text-decoration: underline; font-weight: 600;">
-                        Open default email software
-                    </a>
-                </div>
             </div>
+        </div>
     </section>
 
     <!-- ==================== FOOTER & LEGAL SHIELD ==================== -->
     <footer>
         <div style="max-width: 1000px; margin: 0 auto; text-align: center;">
             <div class="legal-shield">
-                <strong>Legal &amp; Regulatory Notice:</strong> ASM Institute of Learning, Research and Development (ASMI) is an independent educational research and academic mentorship platform founded and directed by Dr. Dhabalendu Samanta. ASMI provides advanced supplementary tutoring, conceptual training, and research guidance. ASMI is not an accredited university and does not confer formal academic degrees, diplomas, or institutional credits under UK QAA, US Dept. of Ed, or Indian UGC regulations.
+                <strong>Legal &amp; Regulatory Notice:</strong> ASMI Learning is an independent educational mentorship initiative and personal consultancy practice founded and directed by Dr. Dhabalendu Samanta, PhD (IIT Delhi), operating as an Independent Educational Consultant and Sole Proprietor. ASMI Learning provides advanced supplementary tutoring, conceptual training, and academic advisory. ASMI Learning is not an accredited university, college, or chartered institution, and does not confer formal academic degrees, diplomas, or institutional credits under UK QAA, US Dept. of Ed, or Indian UGC regulations.
             </div>
 
-            <!-- MANDATORY COMPLIANCE LINKS -->
-            <div style="margin-bottom: 1.2rem; display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap;">
+            <div style="margin-bottom: 1.2rem; display: flex; justify-content: center; gap: 2.5rem; flex-wrap: wrap;">
                 <a href="legal/terms.html" style="color: #94a3b8; text-decoration: none; font-size: 0.85rem; font-weight: 600;">Terms of Advisory Service</a>
                 <a href="legal/privacy.html" style="color: #94a3b8; text-decoration: none; font-size: 0.85rem; font-weight: 600;">GDPR &amp; Privacy Policy</a>
-                <a href="mailto:dhabalendu@gmail.com" style="color: #94a3b8; text-decoration: none; font-size: 0.85rem; font-weight: 600;">Faculty Contact</a>
             </div>
 
             <p style="color: #64748b; font-size: 0.82rem;">
-                &copy; 2026 ASM Institute of Learning, Research and Development. Directed by Dr. Dhabalendu Samanta. All Rights Reserved.
+                &copy; 2026 ASMI Learning • Directed by Dr. Dhabalendu Samanta. All Rights Reserved.
             </p>
         </div>
     </footer>
-    <!-- 1-Click Clipboard Copy Handler -->
+
+    <!-- 1-Click Clipboard Script -->
     <script>
         function copyFacultyEmail() {
             const email = "dhabalendu@gmail.com";
@@ -399,7 +388,7 @@
 
             navigator.clipboard.writeText(email).then(() => {
                 btnText.innerHTML = "✓ Copied to Clipboard!";
-                btn.style.backgroundColor = "#16a34a"; // turns green
+                btn.style.backgroundColor = "#16a34a";
                 btn.style.borderColor = "#16a34a";
                 setTimeout(() => {
                     btnText.innerHTML = "📋 Copy: dhabalendu@gmail.com";
@@ -407,7 +396,6 @@
                     btn.style.borderColor = "rgba(255, 255, 255, 0.4)";
                 }, 2500);
             }).catch(err => {
-                // Fallback for older browsers
                 const temp = document.createElement("input");
                 temp.value = email;
                 document.body.appendChild(temp);

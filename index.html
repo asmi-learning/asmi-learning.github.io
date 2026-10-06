@@ -286,6 +286,16 @@
             .hero-subtitle-line { white-space: normal; }
             .nav-links { display: none; }
         }
+        .badge-pill {
+            background: #ffffff;
+            border: 1px solid var(--border-color);
+            color: var(--navy-dark);
+            padding: 0.45rem 0.9rem;
+            border-radius: 20px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
     </style>
 </head>
 <body>
@@ -304,32 +314,44 @@
         </ul>
     </nav>
 
-    <!-- ==================== HERO SECTION ==================== -->
+    <!-- ==================== HERO SECTION (UNIFIED WITH VIDEO) ==================== -->
     <header class="hero">
         <h1 class="hero-title">Mastering Linear Algebra</h1>
         <div class="hero-subtitle-line">From Physical Intuition to Mathematical Rigor</div>
         
+        <!-- TARGET AUDIENCE DESCRIPTION -->
         <p class="hero-desc">
-            Independent 1-on-1 academic mentorship for international Undergraduate &amp; Postgraduate students, MSc candidates, and AI engineers.
+            Independent 1-on-1 academic mentorship for international Undergraduate &amp; Postgraduate students of Sciences and Engineering, and Industry Professionals.
         </p>
 
-        <!-- CLEAN FOUNDER PILL WITH ORCID VALIDATION -->
-        <div class="founder-pill">
-            <span class="founder-name">Dr. Dhabalendu Samanta</span>
-            <span class="founder-sep">|</span>
-            <span class="founder-cred">PhD, IIT Delhi • 16 Yrs Professor • Ex-STMicroelectronics Patents Head</span>
-            <span class="founder-sep">|</span>
-            <!-- DIRECT LINK TO VERIFIED ORCID PROFILE -->
-            <a href="https://orcid.org/0000-0003-2341-2430" target="_blank" rel="noopener noreferrer" class="orcid-link" title="Verify Scholarly Publications & Patents on ORCID">
-                ORCID iD
-            </a>
+        <!-- CREDENTIALED FACULTY BLOCK (MATCHING VIDEO SLIDE) -->
+        <div style="margin: 1.8rem auto 2.2rem; max-width: 820px; text-align: center;">
+            <div style="font-size: 0.85rem; color: #64748b; text-transform: uppercase; letter-spacing: 0.15em; font-weight: 700; margin-bottom: 0.4rem;">
+                Academic Directorship
+            </div>
+            <div style="font-family: 'Playfair Display', serif; font-size: 1.85rem; font-weight: 700; color: var(--navy-dark); line-height: 1.2;">
+                Dr. Dhabalendu Samanta
+            </div>
+            <div style="font-size: 0.95rem; font-style: italic; color: var(--navy-primary); font-weight: 600; margin-top: 0.2rem; margin-bottom: 1.2rem;">
+                Credentialed Mathematical Researcher &nbsp;|&nbsp; Industrial Innovator
+            </div>
+
+            <!-- UNIFIED BADGE ROW (WITH ORCID) -->
+            <div style="display: flex; justify-content: center; align-items: center; gap: 10px; flex-wrap: wrap;">
+                <span class="badge-pill">PhD, Math (IIT Delhi)</span>
+                <span class="badge-pill">16 Yrs University Professor</span>
+                <span class="badge-pill">Ex-STMicroelectronics (10 Yrs)</span>
+                <span class="badge-pill">5 US Patents</span>
+                <a href="https://orcid.org/0000-0003-2341-2430" target="_blank" rel="noopener noreferrer" class="orcid-link" style="padding: 0.45rem 0.9rem; font-size: 0.82rem;">
+                    iD ORCID
+                </a>
+            </div>
         </div>
 
         <div class="hero-actions">
             <a href="#contact" class="btn-primary">Book a 1-on-1 Diagnostic Consultation</a>
             <a href="#studio" class="btn-secondary">Explore the 3D Interactive Studio</a>
         </div>
-
         <!-- Masterclass Showcase -->
         <div id="masterclass" class="video-wrapper">
             <div style="margin-bottom: 1rem;">

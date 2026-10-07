@@ -90,9 +90,14 @@
         }
         .btn-consult:hover { background: var(--navy-dark); }
 
-        /* HERO - TIGHTENED VERTICALLY TO SHIFT CONTENT UP */
+        /* ==================== HERO SECTION (CALIBRATED TO FILL VIEWPORT CLEANLY) ==================== */
         .hero { 
-            padding: 2.2rem 5% 2.0rem; 
+            min-height: calc(100vh - 75px);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 3.0rem 5% 4.0rem; 
             text-align: center; 
             max-width: 1150px; 
             margin: 0 auto; 
@@ -100,46 +105,47 @@
         
         .hero-title {
             font-family: 'Playfair Display', serif;
-            font-size: clamp(2.3rem, 4.4vw, 3.8rem);
+            font-size: clamp(2.4rem, 4.6vw, 4.0rem);
             color: var(--navy-primary);
             line-height: 1.15;
-            margin-bottom: 0.35rem;
+            margin-bottom: 0.4rem;
         }
 
         .hero-subtitle-line {
             font-family: 'Playfair Display', Georgia, serif;
             font-style: italic;
-            font-size: clamp(1.1rem, 2.2vw, 1.6rem);
+            font-size: clamp(1.15rem, 2.2vw, 1.65rem);
             color: #475569;
-            margin-bottom: 1.1rem;
+            margin-bottom: 1.4rem;
             white-space: nowrap;
         }
 
         .hero-desc {
-            font-size: clamp(1.0rem, 1.25vw, 1.18rem);
+            font-size: clamp(1.02rem, 1.3vw, 1.22rem);
             color: #475569;
             max-width: 860px;
-            margin: 0 auto 0.8rem;
-            line-height: 1.55;
+            margin: 0 auto 1.4rem;
+            line-height: 1.6;
         }
 
         .by-kicker {
-            font-size: 0.85rem;
+            font-size: 0.88rem;
             color: #64748b;
             font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: 0.15em;
-            margin-bottom: 0.8rem;
+            letter-spacing: 0.18em;
+            margin-bottom: 1.2rem;
         }
 
-        /* HERO FACULTY CARD */
+        /* HERO FACULTY PROFILE CARD */
         .hero-faculty-card {
-            background: rgba(255, 255, 255, 0.75);
+            background: rgba(255, 255, 255, 0.78);
             border: 1px solid var(--border-color);
             border-radius: 20px;
-            padding: 1.6rem 2.2rem;
-            max-width: 960px;
-            margin: 0 auto 3.0rem;
+            padding: 1.8rem 2.4rem;
+            max-width: 980px;
+            width: 100%;
+            margin: 0 auto;
             box-shadow: 0 4px 20px rgba(0,0,0,0.03);
         }
 
@@ -147,8 +153,8 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 1.4rem;
-            margin-bottom: 1.2rem;
+            gap: 1.5rem;
+            margin-bottom: 1.4rem;
             flex-wrap: wrap;
         }
 
@@ -185,18 +191,18 @@
 
         .hero-name {
             font-family: 'Playfair Display', serif;
-            font-size: clamp(1.7rem, 2.3vw, 2.2rem);
+            font-size: clamp(1.8rem, 2.5vw, 2.3rem);
             font-weight: 700;
             color: var(--navy-dark);
             line-height: 1.1;
         }
 
         .hero-credentials-sub {
-            font-size: 0.92rem;
+            font-size: 0.95rem;
             font-style: italic;
             color: var(--navy-primary);
             font-weight: 600;
-            margin-top: 0.25rem;
+            margin-top: 0.3rem;
         }
 
         /* 5-BADGE RIBBON */
@@ -206,14 +212,13 @@
             align-items: center;
             gap: 8px;
             flex-wrap: wrap;
-            margin-top: 0.4rem;
         }
 
         .badge-pill {
             background: #eff6ff;
             border: 1.5px solid #bfdbfe;
             color: #1e3a8a;
-            padding: 0.4rem 0.85rem;
+            padding: 0.42rem 0.9rem;
             border-radius: 8px;
             font-size: 0.82rem;
             font-weight: 600;
@@ -235,7 +240,7 @@
             gap: 4px;
             background: #a6ce39;
             color: #ffffff !important;
-            padding: 0.4rem 0.85rem;
+            padding: 0.42rem 0.9rem;
             border-radius: 8px;
             font-size: 0.82rem;
             font-weight: 700;
@@ -245,43 +250,55 @@
         }
         .orcid-link:hover { opacity: 0.9; }
 
-        /* VIDEO CONTAINER */
-        .video-wrapper {
-            background: rgba(255, 255, 255, 0.8);
+        /* ==================== UNIFIED CARD-SHELL ARCHITECTURE (ELEGANCE FOR ALL 3 MODULES) ==================== */
+        .card-shell {
+            background: rgba(255, 255, 255, 0.85);
             border: 1px solid var(--border-color);
             border-radius: 20px;
-            padding: 1.5rem;
-            margin-bottom: 4rem;
-            text-align: left;
+            padding: 2.0rem;
+            max-width: 1000px;
+            margin: 0 auto 5.5rem;
             box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+            text-align: left;
         }
-        .video-box {
+
+        .card-shell-header {
+            margin-bottom: 1.6rem;
+        }
+
+        .card-shell-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.55rem;
+            color: var(--navy-primary);
+            line-height: 1.25;
+            margin-bottom: 0.4rem;
+        }
+
+        .card-shell-sub {
+            font-size: 0.92rem;
+            color: #64748b;
+            line-height: 1.55;
+        }
+
+        /* INNER DARK NAVY CANVASES */
+        .inner-dark-canvas {
             background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-            border-radius: 12px;
-            padding: 4rem 2rem;
-            text-align: center;
-            color: #fff;
-        }
-
-        /* STUDIO SECTION - CONTINUOUS PARCHMENT */
-        .section-studio { 
-            background: transparent; 
-            border-top: 1px solid var(--border-color); 
-            padding: 4.5rem 5%; 
-        }
-
-        /* CONTACT BANNER */
-        .consult-banner {
-            background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
-            color: #ffffff;
-            border-radius: 20px;
+            border-radius: 14px;
             padding: 3.5rem 2rem;
             text-align: center;
-            box-shadow: 0 20px 40px rgba(15, 23, 42, 0.1);
+            color: #ffffff;
+            box-shadow: 0 14px 28px rgba(15, 23, 42, 0.08);
         }
 
         /* FOOTER & COMPLIANCE */
-        footer { background: #0f172a; color: #94a3b8; padding: 3.5rem 5% 2.5rem; font-size: 0.85rem; text-align: center; }
+        footer { 
+            background: #0f172a; 
+            color: #94a3b8; 
+            padding: 3.5rem 5% 2.5rem; 
+            font-size: 0.85rem; 
+            text-align: center; 
+        }
+
         .legal-shield {
             max-width: 1000px;
             margin: 0 auto 1.5rem;
@@ -299,6 +316,7 @@
             .nav-links { display: none; }
             .hero-meta { text-align: center; }
             .hero-faculty-card { padding: 1.5rem 1.0rem; }
+            .card-shell { padding: 1.2rem; margin-bottom: 3.5rem; }
         }
     </style>
 </head>
@@ -317,7 +335,7 @@
         </ul>
     </nav>
 
-    <!-- ==================== HERO SECTION (REFINED VERTICAL SPACING) ==================== -->
+    <!-- ==================== SECTION 1: HERO (DEDICATED FULL VIEWPORT) ==================== -->
     <header class="hero">
         <h1 class="hero-title">Mastering Linear Algebra</h1>
         <div class="hero-subtitle-line">From Physical Intuition to Mathematical Rigor</div>
@@ -354,81 +372,79 @@
                 </a>
             </div>
         </div>
-
-        <!-- Masterclass Showcase -->
-        <div id="masterclass" class="video-wrapper">
-            <div style="margin-bottom: 1rem;">
-                <h3 style="color: var(--navy-primary); font-family: 'Playfair Display', serif; font-size: 1.4rem;">Flagship Masterclass Showcase</h3>
-                <p style="font-size: 0.92rem; color: #64748b; font-weight: 600;">The Essence of Eigenvalues &amp; Eigenvectors</p>
-            </div>
-            <div class="video-box">
-                <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">▶</div>
-                <h4 style="font-size: 1.25rem; margin-bottom: 0.4rem;">Visual Masterclass in Production</h4>
-                <p style="font-size: 0.92rem; color: #94a3b8; max-width: 520px; margin: 0 auto; line-height: 1.5;">
-                    An 8 to 10-minute visual masterclass by Dr. Dhabalendu Samanta will be released soon.
-                </p>
-            </div>
-        </div>
     </header>
 
-    <!-- ==================== THE ASMI INTERACTIVE 3D STUDIO ==================== -->
-    <section id="studio" class="section-studio">
-        <div style="max-width: 1000px; margin: 0 auto; text-align: center;">
-            <div style="display: inline-block; background: #eff6ff; border: 1px solid #bfdbfe; color: var(--navy-primary); padding: 0.35rem 1rem; border-radius: 20px; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; margin-bottom: 1rem;">
-                Proprietary Academic Technology • Protected IP
-            </div>
-            
-            <!-- Cleaned Heading: The ASMI Interactive 3D Studio -->
-            <h2 style="font-family: 'Playfair Display', serif; font-size: 2.4rem; color: var(--navy-primary); margin-bottom: 0.6rem;">
-                The ASMI Interactive 3D Studio
-            </h2>
-            <p style="margin-bottom: 2.5rem; color: #64748b; max-width: 750px; margin-left: auto; margin-right: auto;">
-                ASMI's proprietary 3D simulation engines visualize non-trivial matrix transformations, invariant rotational eigenspaces, and higher-dimensional volumetric scaling in real time.
+    <!-- ==================== MODULE 1: FLAGSHIP MASTERCLASS (DOUBLE-FRAME SHELL) ==================== -->
+    <section id="masterclass" class="card-shell">
+        <div class="card-shell-header">
+            <h2 class="card-shell-title">Flagship Masterclass Showcase</h2>
+            <p class="card-shell-sub" style="font-weight: 600;">The Essence of Eigenvalues &amp; Eigenvectors</p>
+        </div>
+        <div class="inner-dark-canvas">
+            <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">▶</div>
+            <h3 style="font-size: 1.25rem; margin-bottom: 0.4rem; font-family: 'Playfair Display', serif;">Visual Masterclass in Production</h3>
+            <p style="font-size: 0.92rem; color: #94a3b8; max-width: 520px; margin: 0 auto; line-height: 1.5;">
+                An 8 to 10-minute visual masterclass by Dr. Dhabalendu Samanta will be released soon.
             </p>
-
-            <div style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); border-radius: 20px; padding: 4rem 2rem; color: #ffffff; border: 1px solid var(--border-color); box-shadow: 0 20px 40px rgba(15, 23, 42, 0.1);">
-                <div style="font-size: 3rem; margin-bottom: 1rem;">🔒</div>
-                <h3 style="font-family: 'Playfair Display', serif; font-size: 1.8rem; margin-bottom: 0.8rem;">
-                    Controlled Academic Access Environment
-                </h3>
-                <p style="color: #94a3b8; max-width: 620px; margin: 0 auto 2rem; font-size: 0.95rem; line-height: 1.6;">
-                    To protect proprietary algorithms and copyrighted pedagogical assets, live computational sandboxes are demonstrated exclusively during private 1-on-1 mentorship sessions.
-                </p>
-                <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
-                    <a href="#contact" class="btn-consult" style="padding: 0.85rem 2.0rem; font-size: 0.95rem;">
-                        Request Interactive Demo via Mentorship Session
-                    </a>
-                </div>
-            </div>
-
-            <div style="margin-top: 1.5rem; font-size: 0.78rem; color: #94a3b8;">
-                © Dr. Dhabalendu Samanta. All visual models, dynamic manifolds, and simulation scripts are proprietary intellectual property. Unauthorized reproduction or scraping is strictly prohibited.
-            </div>
         </div>
     </section>
 
-    <!-- ==================== BOOKING & INQUIRY SECTION ==================== -->
-    <section id="contact" style="padding: 4.5rem 5%; max-width: 950px; margin: 0 auto;">
-        <div class="consult-banner">
-            <h3 style="font-family: 'Playfair Display', serif; font-size: 2.2rem; margin-bottom: 0.8rem;">
-                Book a 1-on-1 Mentorship Session
+    <!-- ==================== MODULE 2: INTERACTIVE 3D STUDIO (DOUBLE-FRAME SHELL) ==================== -->
+    <section id="studio" class="card-shell">
+        <div class="card-shell-header">
+            <div style="display: inline-block; background: #eff6ff; border: 1px solid #bfdbfe; color: var(--navy-primary); padding: 0.25rem 0.75rem; border-radius: 12px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; margin-bottom: 0.5rem;">
+                Proprietary Academic Technology • Protected IP
+            </div>
+            <h2 class="card-shell-title">The ASMI Interactive 3D Studio</h2>
+            <p class="card-shell-sub">
+                ASMI's proprietary 3D simulation engines visualize non-trivial matrix transformations, invariant rotational eigenspaces, and higher-dimensional volumetric scaling in real time.
+            </p>
+        </div>
+
+        <div class="inner-dark-canvas">
+            <div style="font-size: 2.8rem; margin-bottom: 0.8rem;">🔒</div>
+            <h3 style="font-family: 'Playfair Display', serif; font-size: 1.6rem; margin-bottom: 0.6rem;">
+                Controlled Academic Access Environment
             </h3>
-            <p style="color: #bfdbfe; max-width: 650px; margin: 0 auto 2rem; font-size: 1.05rem;">
+            <p style="color: #94a3b8; max-width: 620px; margin: 0 auto 1.8rem; font-size: 0.94rem; line-height: 1.6;">
+                To protect proprietary algorithms and copyrighted pedagogical assets, live computational sandboxes are demonstrated exclusively during private 1-on-1 mentorship sessions.
+            </p>
+            <div>
+                <a href="#contact" class="btn-consult" style="padding: 0.85rem 2.0rem; font-size: 0.95rem; display: inline-block;">
+                    Request Interactive Demo via Mentorship Session
+                </a>
+            </div>
+        </div>
+
+        <div style="margin-top: 1.2rem; font-size: 0.78rem; color: #94a3b8; text-align: center;">
+            © Dr. Dhabalendu Samanta. All visual models, dynamic manifolds, and simulation scripts are proprietary intellectual property.
+        </div>
+    </section>
+
+    <!-- ==================== MODULE 3: 1-ON-1 MENTORSHIP BOOKING HUB (DOUBLE-FRAME SHELL) ==================== -->
+    <section id="contact" class="card-shell">
+        <div class="card-shell-header" style="text-align: center;">
+            <h2 class="card-shell-title">Request an Advanced 1-on-1 Mentorship Session</h2>
+            <p class="card-shell-sub" style="max-width: 650px; margin: 0 auto;">
                 Dedicated syllabus diagnostics, exam problem evaluations, and theoretical masterclasses for international UG &amp; PG students (UK, Europe &amp; Global).
             </p>
+        </div>
 
+        <div class="inner-dark-canvas" style="padding: 3.0rem 1.5rem;">
             <div style="display: flex; justify-content: center; gap: 1.2rem; flex-wrap: wrap;">
+                <!-- Direct Gmail Web Link -->
                 <a href="https://mail.google.com/mail/?view=cm&fs=1&to=dhabalendu@gmail.com&su=[ASMI%20Mentorship]%20Diagnostic%20Consultation%20Request" 
                    target="_blank" 
                    rel="noopener noreferrer" 
-                   style="background: #ffffff; color: var(--navy-dark); text-decoration: none; padding: 0.9rem 1.8rem; border-radius: 12px; font-weight: 700; font-size: 1rem; display: inline-flex; align-items: center; gap: 8px; box-shadow: 0 4px 14px rgba(0,0,0,0.15);">
+                   style="background: #ffffff; color: var(--navy-dark); text-decoration: none; padding: 0.9rem 1.8rem; border-radius: 12px; font-weight: 700; font-size: 0.95rem; display: inline-flex; align-items: center; gap: 8px; box-shadow: 0 4px 14px rgba(0,0,0,0.15);">
                     ✉ Open in Gmail (Web)
                 </a>
 
+                <!-- 1-Click Copy Button -->
                 <button type="button" 
                         onclick="copyFacultyEmail()" 
                         id="copyBtn" 
-                        style="background: rgba(255, 255, 255, 0.15); border: 1.5px solid rgba(255, 255, 255, 0.4); color: #ffffff; padding: 0.9rem 1.8rem; border-radius: 12px; font-weight: 700; font-size: 1rem; cursor: pointer; display: inline-flex; align-items: center; gap: 8px;">
+                        style="background: rgba(255, 255, 255, 0.15); border: 1.5px solid rgba(255, 255, 255, 0.4); color: #ffffff; padding: 0.9rem 1.8rem; border-radius: 12px; font-weight: 700; font-size: 0.95rem; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; transition: all 0.2s;">
                     <span id="copyBtnText">📋 Copy: dhabalendu@gmail.com</span>
                 </button>
             </div>

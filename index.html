@@ -40,7 +40,7 @@
             --bg-parchment: #f7f3ea;
         }
 
-        /* SMOOTH SCROLLING FOR ALL NAVBAR JUMPS */
+        /* SMOOTH SCROLLING */
         html {
             scroll-behavior: smooth;
         }
@@ -95,7 +95,7 @@
         }
         .btn-consult:hover { background: var(--navy-dark); }
 
-        /* ==================== HERO SECTION (DEDICATED FIRST SCREEN) ==================== */
+        /* HERO - FULL VIEWPORT CALIBRATION */
         .hero { 
             min-height: calc(100vh - 75px);
             display: flex;
@@ -265,8 +265,7 @@
             margin: 0 auto 5.5rem;
             box-shadow: 0 10px 30px rgba(0,0,0,0.03);
             text-align: left;
-            /* CRUCIAL FIX: LEAVES 100PX SPACE SO THE CARD SITS CENTERED UNDER NAVBAR */
-            scroll-margin-top: 100px;
+            scroll-margin-top: 100px; /* Offset for sticky navbar */
         }
 
         .card-shell-header {
@@ -295,6 +294,16 @@
             text-align: center;
             color: #ffffff;
             box-shadow: 0 14px 28px rgba(15, 23, 42, 0.08);
+        }
+
+        /* SCHEDULER CONTAINER */
+        .scheduler-wrapper {
+            background: var(--bg-parchment);
+            border: 1px solid var(--border-color);
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.04);
+            margin-bottom: 1.8rem;
         }
 
         /* FOOTER & COMPLIANCE */
@@ -326,6 +335,9 @@
             .card-shell { padding: 1.2rem; margin-bottom: 3.5rem; scroll-margin-top: 70px; }
         }
     </style>
+
+    <!-- CALENDLY ASYNC WIDGET SCRIPT -->
+    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
 </head>
 <body>
 
@@ -428,30 +440,43 @@
         </div>
     </section>
 
-    <!-- ==================== MODULE 3: 1-ON-1 MENTORSHIP BOOKING HUB (DOUBLE-FRAME SHELL) ==================== -->
+    <!-- ==================== MODULE 3: THE BOOKING & SCHEDULING ENGINE ==================== -->
     <section id="contact" class="card-shell">
         <div class="card-shell-header" style="text-align: center;">
-            <h2 class="card-shell-title">Request an Advanced 1-on-1 Mentorship Session</h2>
-            <p class="card-shell-sub" style="max-width: 650px; margin: 0 auto;">
-                Dedicated syllabus diagnostics, exam problem evaluations, and theoretical masterclasses for international UG &amp; PG students (UK, Europe &amp; Global).
+            <div style="display: inline-block; background: #eff6ff; border: 1px solid #bfdbfe; color: var(--navy-primary); padding: 0.25rem 0.75rem; border-radius: 12px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; margin-bottom: 0.5rem;">
+                ✦ Winter 2026 Cohort Strictly Capped at 5 Students
+            </div>
+            <h2 class="card-shell-title">Book a 1-on-1 Diagnostic Consultation</h2>
+            <p class="card-shell-sub" style="max-width: 680px; margin: 0 auto;">
+                Select a 20-minute slot below to map your university syllabus, diagnose proof roadblocks, and evaluate mathematical invariants with Dr. Dhabalendu Samanta.
             </p>
         </div>
 
-        <div class="inner-dark-canvas" style="padding: 3.0rem 1.5rem;">
-            <div style="display: flex; justify-content: center; gap: 1.2rem; flex-wrap: wrap;">
-                <!-- Direct Gmail Web Link -->
+        <!-- EMBEDDED CONTROLLED CALENDAR (REPLACE URL WITH YOUR EXACT CALENDLY LINK) -->
+        <div class="scheduler-wrapper">
+            <div class="calendly-inline-widget" 
+                 data-url="https://calendly.com/dhabalendus/diagnostic-consultation?hide_landing_page_details=1&hide_gdpr_banner=1&background_color=f7f3ea&text_color=0f172a&primary_color=1e3a8a" 
+                 style="min-width:320px;height:700px;width:100%;">
+            </div>
+        </div>
+
+        <!-- DIRECT EMAIL FALLBACK (BELOW SCHEDULER) -->
+        <div style="background: rgba(15, 23, 42, 0.03); border: 1px dashed var(--border-color); border-radius: 12px; padding: 1.2rem; text-align: center;">
+            <p style="font-size: 0.88rem; color: #64748b; margin-bottom: 0.8rem;">
+                Prefer direct communication, or experiencing scheduling issues?
+            </p>
+            <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
                 <a href="https://mail.google.com/mail/?view=cm&fs=1&to=dhabalendu@gmail.com&su=[ASMI%20Mentorship]%20Diagnostic%20Consultation%20Request" 
                    target="_blank" 
                    rel="noopener noreferrer" 
-                   style="background: #ffffff; color: var(--navy-dark); text-decoration: none; padding: 0.9rem 1.8rem; border-radius: 12px; font-weight: 700; font-size: 0.95rem; display: inline-flex; align-items: center; gap: 8px; box-shadow: 0 4px 14px rgba(0,0,0,0.15);">
-                    ✉ Open in Gmail (Web)
+                   style="background: #ffffff; color: var(--navy-dark); text-decoration: none; padding: 0.6rem 1.4rem; border-radius: 8px; font-weight: 700; font-size: 0.88rem; display: inline-flex; align-items: center; gap: 6px; border: 1px solid var(--border-color);">
+                    ✉ Open in Gmail
                 </a>
 
-                <!-- 1-Click Copy Button -->
                 <button type="button" 
                         onclick="copyFacultyEmail()" 
                         id="copyBtn" 
-                        style="background: rgba(255, 255, 255, 0.15); border: 1.5px solid rgba(255, 255, 255, 0.4); color: #ffffff; padding: 0.9rem 1.8rem; border-radius: 12px; font-weight: 700; font-size: 0.95rem; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; transition: all 0.2s;">
+                        style="background: #ffffff; border: 1px solid var(--border-color); color: var(--slate-body); padding: 0.6rem 1.4rem; border-radius: 8px; font-weight: 700; font-size: 0.88rem; cursor: pointer;">
                     <span id="copyBtnText">📋 Copy: dhabalendu@gmail.com</span>
                 </button>
             </div>
@@ -486,11 +511,11 @@
             navigator.clipboard.writeText(email).then(() => {
                 btnText.innerHTML = "✓ Copied to Clipboard!";
                 btn.style.backgroundColor = "#16a34a";
-                btn.style.borderColor = "#16a34a";
+                btn.style.color = "#ffffff";
                 setTimeout(() => {
                     btnText.innerHTML = "📋 Copy: dhabalendu@gmail.com";
-                    btn.style.backgroundColor = "rgba(255, 255, 255, 0.15)";
-                    btn.style.borderColor = "rgba(255, 255, 255, 0.4)";
+                    btn.style.backgroundColor = "#ffffff";
+                    btn.style.color = "var(--slate-body)";
                 }, 2500);
             }).catch(err => {
                 const temp = document.createElement("input");

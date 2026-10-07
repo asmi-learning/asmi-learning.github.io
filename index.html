@@ -36,9 +36,8 @@
             --slate-body: #334155;
             --border-color: #e2dcd0;
             --accent-cyan: #0284c7;
-            /* WARM SCHOLARLY PARCHMENT TONE */
+            /* CONTINUOUS WARM SCHOLARLY PARCHMENT */
             --bg-parchment: #f7f3ea;
-            --bg-card: #ffffff;
         }
 
         * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -53,11 +52,11 @@
         .navbar {
             position: sticky;
             top: 0;
-            background: rgba(247, 243, 234, 0.95);
+            background: rgba(247, 243, 234, 0.96);
             backdrop-filter: blur(10px);
             border-bottom: 1px solid var(--border-color);
             z-index: 100;
-            padding: 1.1rem 5%;
+            padding: 0.9rem 5%;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -91,51 +90,56 @@
         }
         .btn-consult:hover { background: var(--navy-dark); }
 
-        /* HERO */
-        .hero { padding: 4.5rem 5% 3.0rem; text-align: center; max-width: 1150px; margin: 0 auto; }
+        /* HERO - TIGHTENED VERTICALLY TO SHIFT CONTENT UP */
+        .hero { 
+            padding: 2.2rem 5% 2.0rem; 
+            text-align: center; 
+            max-width: 1150px; 
+            margin: 0 auto; 
+        }
         
         .hero-title {
             font-family: 'Playfair Display', serif;
-            font-size: clamp(2.4rem, 4.8vw, 4.2rem);
+            font-size: clamp(2.3rem, 4.4vw, 3.8rem);
             color: var(--navy-primary);
             line-height: 1.15;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.35rem;
         }
 
         .hero-subtitle-line {
             font-family: 'Playfair Display', Georgia, serif;
             font-style: italic;
-            font-size: clamp(1.1rem, 2.3vw, 1.7rem);
+            font-size: clamp(1.1rem, 2.2vw, 1.6rem);
             color: #475569;
-            margin-bottom: 1.6rem;
+            margin-bottom: 1.1rem;
             white-space: nowrap;
         }
 
         .hero-desc {
-            font-size: clamp(1.05rem, 1.35vw, 1.25rem);
+            font-size: clamp(1.0rem, 1.25vw, 1.18rem);
             color: #475569;
             max-width: 860px;
-            margin: 0 auto 1.2rem;
-            line-height: 1.6;
+            margin: 0 auto 0.8rem;
+            line-height: 1.55;
         }
 
         .by-kicker {
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             color: #64748b;
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 0.15em;
-            margin-bottom: 1.2rem;
+            margin-bottom: 0.8rem;
         }
 
-        /* HERO FACULTY PROFILE CARD */
+        /* HERO FACULTY CARD */
         .hero-faculty-card {
-            background: rgba(255, 255, 255, 0.7);
+            background: rgba(255, 255, 255, 0.75);
             border: 1px solid var(--border-color);
             border-radius: 20px;
-            padding: 2.0rem 2.5rem;
-            max-width: 950px;
-            margin: 0 auto 2.5rem;
+            padding: 1.6rem 2.2rem;
+            max-width: 960px;
+            margin: 0 auto 3.0rem;
             box-shadow: 0 4px 20px rgba(0,0,0,0.03);
         }
 
@@ -143,14 +147,14 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 1.5rem;
-            margin-bottom: 1.5rem;
+            gap: 1.4rem;
+            margin-bottom: 1.2rem;
             flex-wrap: wrap;
         }
 
         .hero-photo-wrap {
-            width: 100px;
-            height: 100px;
+            width: 95px;
+            height: 95px;
             border-radius: 50%;
             border: 3px solid var(--navy-primary);
             overflow: hidden;
@@ -158,7 +162,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+            box-shadow: 0 4px 14px rgba(0,0,0,0.08);
             flex-shrink: 0;
         }
 
@@ -170,7 +174,7 @@
 
         .hero-photo-fallback {
             font-family: 'Cinzel', serif;
-            font-size: 2.2rem;
+            font-size: 2.0rem;
             font-weight: 800;
             color: var(--navy-primary);
         }
@@ -181,18 +185,18 @@
 
         .hero-name {
             font-family: 'Playfair Display', serif;
-            font-size: clamp(1.8rem, 2.5vw, 2.3rem);
+            font-size: clamp(1.7rem, 2.3vw, 2.2rem);
             font-weight: 700;
             color: var(--navy-dark);
             line-height: 1.1;
         }
 
         .hero-credentials-sub {
-            font-size: 0.95rem;
+            font-size: 0.92rem;
             font-style: italic;
             color: var(--navy-primary);
             font-weight: 600;
-            margin-top: 0.3rem;
+            margin-top: 0.25rem;
         }
 
         /* 5-BADGE RIBBON */
@@ -202,7 +206,7 @@
             align-items: center;
             gap: 8px;
             flex-wrap: wrap;
-            margin-top: 0.5rem;
+            margin-top: 0.4rem;
         }
 
         .badge-pill {
@@ -241,33 +245,15 @@
         }
         .orcid-link:hover { opacity: 0.9; }
 
-        /* SINGLE ACTION BUTTON */
-        .hero-actions { display: flex; justify-content: center; margin-bottom: 3.5rem; }
-        .btn-primary {
-            background: var(--navy-primary);
-            color: #fff;
-            text-decoration: none;
-            padding: 0.95rem 2.4rem;
-            border-radius: 10px;
-            font-weight: 700;
-            font-size: 1.05rem;
-            box-shadow: 0 6px 18px rgba(30, 58, 138, 0.25);
-            transition: all 0.2s ease;
-        }
-        .btn-primary:hover {
-            background: var(--navy-dark);
-            transform: translateY(-1px);
-        }
-
         /* VIDEO CONTAINER */
         .video-wrapper {
-            background: #ffffff;
-            border: 2px solid var(--border-color);
+            background: rgba(255, 255, 255, 0.8);
+            border: 1px solid var(--border-color);
             border-radius: 20px;
             padding: 1.5rem;
             margin-bottom: 4rem;
             text-align: left;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
         }
         .video-box {
             background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
@@ -277,8 +263,12 @@
             color: #fff;
         }
 
-        /* 3D STUDIO SECTION */
-        .section-studio { background: #ffffff; border-top: 1px solid var(--border-color); padding: 5rem 5%; }
+        /* STUDIO SECTION - CONTINUOUS PARCHMENT */
+        .section-studio { 
+            background: transparent; 
+            border-top: 1px solid var(--border-color); 
+            padding: 4.5rem 5%; 
+        }
 
         /* CONTACT BANNER */
         .consult-banner {
@@ -327,7 +317,7 @@
         </ul>
     </nav>
 
-    <!-- ==================== HERO SECTION ==================== -->
+    <!-- ==================== HERO SECTION (REFINED VERTICAL SPACING) ==================== -->
     <header class="hero">
         <h1 class="hero-title">Mastering Linear Algebra</h1>
         <div class="hero-subtitle-line">From Physical Intuition to Mathematical Rigor</div>
@@ -338,7 +328,7 @@
 
         <div class="by-kicker">By</div>
 
-        <!-- NEW FACULTY HEADER (PHOTO + NAME + BADGES ABOVE THE FOLD) -->
+        <!-- FACULTY PRESENTATION (PHOTO + NAME + BADGES) -->
         <div class="hero-faculty-card">
             <div class="hero-faculty-header">
                 <!-- Circular Faculty Portrait -->
@@ -365,11 +355,6 @@
             </div>
         </div>
 
-        <!-- SINGLE CONVERSION ACTION -->
-        <div class="hero-actions">
-            <a href="#contact" class="btn-primary">Book 1-on-1 Mentorship</a>
-        </div>
-
         <!-- Masterclass Showcase -->
         <div id="masterclass" class="video-wrapper">
             <div style="margin-bottom: 1rem;">
@@ -386,21 +371,22 @@
         </div>
     </header>
 
-    <!-- ==================== PROPRIETARY 3D STUDIO (IP-SECURED) ==================== -->
+    <!-- ==================== THE ASMI INTERACTIVE 3D STUDIO ==================== -->
     <section id="studio" class="section-studio">
         <div style="max-width: 1000px; margin: 0 auto; text-align: center;">
             <div style="display: inline-block; background: #eff6ff; border: 1px solid #bfdbfe; color: var(--navy-primary); padding: 0.35rem 1rem; border-radius: 20px; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; margin-bottom: 1rem;">
                 Proprietary Academic Technology • Protected IP
             </div>
-            <!-- Cleaned 3D Studio Title without awkward badges -->
+            
+            <!-- Cleaned Heading: The ASMI Interactive 3D Studio -->
             <h2 style="font-family: 'Playfair Display', serif; font-size: 2.4rem; color: var(--navy-primary); margin-bottom: 0.6rem;">
-                The ASMI 3D Interactive Studio
+                The ASMI Interactive 3D Studio
             </h2>
             <p style="margin-bottom: 2.5rem; color: #64748b; max-width: 750px; margin-left: auto; margin-right: auto;">
                 ASMI's proprietary 3D simulation engines visualize non-trivial matrix transformations, invariant rotational eigenspaces, and higher-dimensional volumetric scaling in real time.
             </p>
 
-            <div style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); border-radius: 20px; padding: 4rem 2rem; color: #ffffff; border: 2px solid var(--border-color); box-shadow: 0 20px 40px rgba(15, 23, 42, 0.1);">
+            <div style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); border-radius: 20px; padding: 4rem 2rem; color: #ffffff; border: 1px solid var(--border-color); box-shadow: 0 20px 40px rgba(15, 23, 42, 0.1);">
                 <div style="font-size: 3rem; margin-bottom: 1rem;">🔒</div>
                 <h3 style="font-family: 'Playfair Display', serif; font-size: 1.8rem; margin-bottom: 0.8rem;">
                     Controlled Academic Access Environment
@@ -409,7 +395,7 @@
                     To protect proprietary algorithms and copyrighted pedagogical assets, live computational sandboxes are demonstrated exclusively during private 1-on-1 mentorship sessions.
                 </p>
                 <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
-                    <a href="#contact" class="btn-primary" style="background: #0284c7; border: none; font-size: 0.95rem; padding: 0.8rem 1.8rem;">
+                    <a href="#contact" class="btn-consult" style="padding: 0.85rem 2.0rem; font-size: 0.95rem;">
                         Request Interactive Demo via Mentorship Session
                     </a>
                 </div>
@@ -422,7 +408,7 @@
     </section>
 
     <!-- ==================== BOOKING & INQUIRY SECTION ==================== -->
-    <section id="contact" style="padding: 5rem 5%; max-width: 950px; margin: 0 auto;">
+    <section id="contact" style="padding: 4.5rem 5%; max-width: 950px; margin: 0 auto;">
         <div class="consult-banner">
             <h3 style="font-family: 'Playfair Display', serif; font-size: 2.2rem; margin-bottom: 0.8rem;">
                 Book a 1-on-1 Mentorship Session

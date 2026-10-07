@@ -40,6 +40,11 @@
             --bg-parchment: #f7f3ea;
         }
 
+        /* SMOOTH SCROLLING FOR ALL NAVBAR JUMPS */
+        html {
+            scroll-behavior: smooth;
+        }
+
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body {
             font-family: 'Plus Jakarta Sans', sans-serif;
@@ -90,7 +95,7 @@
         }
         .btn-consult:hover { background: var(--navy-dark); }
 
-        /* ==================== HERO SECTION (CALIBRATED TO FILL VIEWPORT CLEANLY) ==================== */
+        /* ==================== HERO SECTION (DEDICATED FIRST SCREEN) ==================== */
         .hero { 
             min-height: calc(100vh - 75px);
             display: flex;
@@ -250,7 +255,7 @@
         }
         .orcid-link:hover { opacity: 0.9; }
 
-        /* ==================== UNIFIED CARD-SHELL ARCHITECTURE (ELEGANCE FOR ALL 3 MODULES) ==================== */
+        /* ==================== UNIFIED CARD-SHELL WITH STICKY HEADER OFFSET ==================== */
         .card-shell {
             background: rgba(255, 255, 255, 0.85);
             border: 1px solid var(--border-color);
@@ -260,6 +265,8 @@
             margin: 0 auto 5.5rem;
             box-shadow: 0 10px 30px rgba(0,0,0,0.03);
             text-align: left;
+            /* CRUCIAL FIX: LEAVES 100PX SPACE SO THE CARD SITS CENTERED UNDER NAVBAR */
+            scroll-margin-top: 100px;
         }
 
         .card-shell-header {
@@ -316,7 +323,7 @@
             .nav-links { display: none; }
             .hero-meta { text-align: center; }
             .hero-faculty-card { padding: 1.5rem 1.0rem; }
-            .card-shell { padding: 1.2rem; margin-bottom: 3.5rem; }
+            .card-shell { padding: 1.2rem; margin-bottom: 3.5rem; scroll-margin-top: 70px; }
         }
     </style>
 </head>

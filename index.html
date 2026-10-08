@@ -40,7 +40,7 @@
             --bg-parchment: #f7f3ea;
         }
 
-        /* SMOOTH SCROLLING */
+        /* SMOOTH SCROLLING FOR ALL NAVBAR JUMPS */
         html {
             scroll-behavior: smooth;
         }
@@ -83,7 +83,7 @@
             color: #64748b;
             font-weight: 600;
         }
-        .nav-links { display: flex; align-items: center; gap: 2rem; list-style: none; }
+        .nav-links { display: flex; align-items: center; gap: 1.8rem; list-style: none; }
         .nav-links a { text-decoration: none; color: var(--slate-body); font-size: 0.92rem; font-weight: 600; }
         .btn-consult {
             background: var(--navy-primary);
@@ -95,7 +95,7 @@
         }
         .btn-consult:hover { background: var(--navy-dark); }
 
-        /* HERO - FULL VIEWPORT CALIBRATION */
+        /* ==================== HERO SECTION ==================== */
         .hero { 
             min-height: calc(100vh - 75px);
             display: flex;
@@ -142,7 +142,7 @@
             margin-bottom: 1.2rem;
         }
 
-        /* HERO FACULTY PROFILE CARD */
+        /* HERO FACULTY CARD */
         .hero-faculty-card {
             background: rgba(255, 255, 255, 0.78);
             border: 1px solid var(--border-color);
@@ -255,7 +255,7 @@
         }
         .orcid-link:hover { opacity: 0.9; }
 
-        /* ==================== UNIFIED CARD-SHELL WITH STICKY HEADER OFFSET ==================== */
+        /* ==================== UNIFIED CARD-SHELL COMPONENT ==================== */
         .card-shell {
             background: rgba(255, 255, 255, 0.85);
             border: 1px solid var(--border-color);
@@ -265,7 +265,7 @@
             margin: 0 auto 5.5rem;
             box-shadow: 0 10px 30px rgba(0,0,0,0.03);
             text-align: left;
-            scroll-margin-top: 100px; /* Offset for sticky navbar */
+            scroll-margin-top: 100px;
         }
 
         .card-shell-header {
@@ -294,6 +294,76 @@
             text-align: center;
             color: #ffffff;
             box-shadow: 0 14px 28px rgba(15, 23, 42, 0.08);
+        }
+
+        /* ==================== THE CRUCIBLE INTERACTIVE CONSOLE ==================== */
+        .crucible-tabs-row {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-bottom: 1.5rem;
+        }
+
+        .crucible-tab {
+            background: #ffffff;
+            border: 1px solid var(--border-color);
+            color: var(--slate-body);
+            padding: 0.55rem 1.0rem;
+            border-radius: 8px;
+            font-size: 0.82rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .crucible-tab:hover {
+            border-color: var(--navy-primary);
+            color: var(--navy-primary);
+        }
+
+        .crucible-tab.active {
+            background: var(--navy-primary);
+            color: #ffffff;
+            border-color: var(--navy-primary);
+            box-shadow: 0 4px 12px rgba(30, 58, 138, 0.2);
+        }
+
+        /* ANTI-COPY PROTECTED QUESTION DISPLAY */
+        .crucible-display-canvas {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            border-radius: 14px;
+            padding: 3.0rem 2.2rem;
+            color: #ffffff;
+            text-align: center;
+            box-shadow: 0 14px 28px rgba(15, 23, 42, 0.08);
+            user-select: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+        }
+
+        .trap-unit-badge {
+            display: inline-block;
+            background: rgba(2, 132, 199, 0.2);
+            color: #38bdf8;
+            border: 1px solid rgba(56, 189, 248, 0.3);
+            padding: 0.25rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 1.2rem;
+        }
+
+        .trap-question-text {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: clamp(1.15rem, 1.8vw, 1.45rem);
+            color: #f8fafc;
+            line-height: 1.6;
+            max-width: 820px;
+            margin: 0 auto 2.2rem;
+            font-style: italic;
         }
 
         /* SCHEDULER CONTAINER */
@@ -333,6 +403,7 @@
             .hero-meta { text-align: center; }
             .hero-faculty-card { padding: 1.5rem 1.0rem; }
             .card-shell { padding: 1.2rem; margin-bottom: 3.5rem; scroll-margin-top: 70px; }
+            .crucible-display-canvas { padding: 2.0rem 1.2rem; }
         }
     </style>
 
@@ -350,6 +421,7 @@
         <ul class="nav-links">
             <li><a href="#masterclass">Masterclass</a></li>
             <li><a href="#studio">3D Studio</a></li>
+            <li><a href="#crucible">Crucible</a></li>
             <li><a href="#contact" class="btn-consult">Book Mentorship</a></li>
         </ul>
     </nav>
@@ -440,7 +512,52 @@
         </div>
     </section>
 
-    <!-- ==================== MODULE 3: THE BOOKING & SCHEDULING ENGINE ==================== -->
+    <!-- ==================== MODULE 3: THE CRUCIBLE: PROFESSOR'S TRAPS ==================== -->
+    <section id="crucible" class="card-shell">
+        <div class="card-shell-header">
+            <div style="display: inline-block; background: #eff6ff; border: 1px solid #bfdbfe; color: var(--navy-primary); padding: 0.25rem 0.75rem; border-radius: 12px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; margin-bottom: 0.5rem;">
+                Conceptual Stress Tests • Original Intellectual Property
+            </div>
+            <h2 class="card-shell-title">The Crucible: Professor's Traps</h2>
+            <p class="card-shell-sub">
+                Standard textbooks drill mechanical computations, but university examinations test coordinate-free physical intuition. Test your understanding on these 6 foundational unit traps.
+            </p>
+        </div>
+
+        <!-- 6-UNIT SELECTOR TABS -->
+        <div class="crucible-tabs-row">
+            <button class="crucible-tab active" onclick="switchTrap(1, this)">Unit I: Linear Systems</button>
+            <button class="crucible-tab" onclick="switchTrap(2, this)">Unit II: Vector Spaces</button>
+            <button class="crucible-tab" onclick="switchTrap(3, this)">Unit III: Linear Maps</button>
+            <button class="crucible-tab" onclick="switchTrap(4, this)">Unit IV: Inner Products</button>
+            <button class="crucible-tab" onclick="switchTrap(5, this)">Unit V: Eigenspaces</button>
+            <button class="crucible-tab" onclick="switchTrap(6, this)">Unit VI: Applications &amp; SVD</button>
+        </div>
+
+        <!-- ANTI-COPY PROTECTED DISPLAY CANVAS -->
+        <div class="crucible-display-canvas" oncontextmenu="return false;">
+            <div id="trap-unit-badge" class="trap-unit-badge">Unit I • Systems of Linear Equations</div>
+            
+            <p id="trap-question-text" class="trap-question-text">
+                "Convert a non-homogeneous system of linear equations into a homogeneous system of linear equations: (i) when it has a unique solution; (ii) when it has infinitely many solutions."
+            </p>
+
+            <div>
+                <a href="#contact" class="btn-consult" style="padding: 0.85rem 1.8rem; font-size: 0.92rem; display: inline-flex; align-items: center; gap: 8px;">
+                    <span>💡 Think You Have Solved It? Submit for Diagnostic Evaluation</span>
+                </a>
+                <p style="font-size: 0.78rem; color: #94a3b8; margin-top: 1.0rem;">
+                    ✦ Exclusive conceptual traps by Dr. Dhabalendu Samanta. No textbook solutions exist. Evaluate your proof in a private 1-on-1 session.
+                </p>
+            </div>
+        </div>
+
+        <div style="margin-top: 1.2rem; font-size: 0.78rem; color: #94a3b8; text-align: center;">
+            © 2026 Dr. Dhabalendu Samanta. All rights reserved. Intellectual property protected under international copyright law.
+        </div>
+    </section>
+
+    <!-- ==================== MODULE 4: 1-ON-1 DIAGNOSTIC SCHEDULING ENGINE ==================== -->
     <section id="contact" class="card-shell">
         <div class="card-shell-header" style="text-align: center;">
             <div style="display: inline-block; background: #eff6ff; border: 1px solid #bfdbfe; color: var(--navy-primary); padding: 0.25rem 0.75rem; border-radius: 12px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; margin-bottom: 0.5rem;">
@@ -452,8 +569,7 @@
             </p>
         </div>
 
-       
-        <!-- LIVE EMBEDDED CALENDLY ENGINE -->
+        <!-- EMBEDDED LIVE CALENDLY SCHEDULER -->
         <div class="scheduler-wrapper">
             <div class="calendly-inline-widget" 
                  data-url="https://calendly.com/dhabalendu/20min?hide_landing_page_details=1&hide_gdpr_banner=1&background_color=f7f3ea&text_color=0f172a&primary_color=1e3a8a" 
@@ -502,8 +618,45 @@
         </div>
     </footer>
 
-    <!-- 1-Click Clipboard Script -->
+    <!-- INTERACTIVE CRUCIBLE TRAP ENGINE (1-CLICK DYNAMIC SWITCHER) -->
     <script>
+        const trapsData = {
+            1: {
+                badge: "Unit I • Systems of Linear Equations",
+                question: "\"Convert a non-homogeneous system of linear equations into a homogeneous system of linear equations: (i) when it has a unique solution; (ii) when it has infinitely many solutions.\""
+            },
+            2: {
+                badge: "Unit II • Vector Spaces",
+                question: "\"Prove that in ℝⁿ, a rectangular coordinate system is a basis for ℝⁿ, and hence prove that an arbitrary basis of ℝⁿ is a linear coordinate system of ℝⁿ.\""
+            },
+            3: {
+                badge: "Unit III • Linear Transformations",
+                question: "\"Determine whether a function T: ℝⁿ → ℝⁿ is a linear transformation if it maps every subspace of ℝⁿ to a subspace of ℝⁿ. Prove your assertion or provide a counterexample.\""
+            },
+            4: {
+                badge: "Unit IV • Inner Product Spaces",
+                question: "\"A spacecraft travels in orbit with velocity vector v₁, with a solar panel extending along direction v₂, and an optical star-tracker sensor pointing along direction v₃. None of the three directions are mutually perpendicular. To prevent optical blinding from panel glare and engine exhaust, calculate the exact angle of elevation (tilt) of the star-tracker v₃ above the plane formed by the spacecraft and solar panel.\""
+            },
+            5: {
+                badge: "Unit V • Eigenvalues & Eigenvectors",
+                question: "\"Suppose a Sphere of radius R is pressed from North and South Poles to convert into an ellipsoid. Find the eigenvalue(s) and eigenvector(s).\""
+            },
+            6: {
+                badge: "Unit VI • Applications (SVD & Dimension Reduction)",
+                question: "\"A solid rubber ball of unit volume is deformed by an incompressible linear transformation (a matrix with det(A) = 1). Can this transformation completely flatten the ball into a 2-dimensional flat disk? Justify your answer.\""
+            }
+        };
+
+        function switchTrap(unitNum, btnElement) {
+            // Update active button state
+            document.querySelectorAll('.crucible-tab').forEach(b => b.classList.remove('active'));
+            btnElement.classList.add('active');
+
+            // Update badge and question text
+            document.getElementById('trap-unit-badge').textContent = trapsData[unitNum].badge;
+            document.getElementById('trap-question-text').textContent = trapsData[unitNum].question;
+        }
+
         function copyFacultyEmail() {
             const email = "dhabalendu@gmail.com";
             const btnText = document.getElementById("copyBtnText");

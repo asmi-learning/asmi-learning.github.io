@@ -618,44 +618,55 @@
         </div>
     </footer>
 
-    <!-- INTERACTIVE CRUCIBLE TRAP ENGINE (1-CLICK DYNAMIC SWITCHER) -->
+    <!-- SCRAMBLED CRUCIBLE ENGINE (BYTECODE PROTECTED) -->
     <script>
-        const trapsData = {
+        // UTF-8 Bytecode Decoder
+        function _d(s) {
+            return decodeURIComponent(escape(window.atob(s)));
+        }
+
+        // Encrypted Question Vault (No plain English exists on GitHub)
+        const _qVault = {
             1: {
-                badge: "Unit I • Systems of Linear Equations",
-                question: "\"Convert a non-homogeneous system of linear equations into a homogeneous system of linear equations: (i) when it has a unique solution; (ii) when it has infinitely many solutions.\""
+                b: "VW5pdCBJIOKAoiBTeXN0ZW1zIG9mIExpbmVhciBFcXVhdGlvbnM=",
+                q: "IkNvbnZlcnQgYSBub24taG9tb2dlbmVvdXMgc3lzdGVtIG9mIGxpbmVhciBlcXVhdGlvbnMgaW50byBhIGhvbW9nZW5lb3VzIHN5c3RlbSBvZiBsaW5lYXIgZXF1YXRpb25zOiAoaSkgd2hlbiBpdCBoYXMgYSB1bmlxdWUgc29sdXRpb247IChpaSkgd2hlbiBpdCBoYXMgaW5maW5pdGVseSBtYW55IHNvbHV0aW9ucy4i"
             },
             2: {
-                badge: "Unit II • Vector Spaces",
-                question: "\"Prove that in ℝⁿ, a rectangular coordinate system is a basis for ℝⁿ, and hence prove that an arbitrary basis of ℝⁿ is a linear coordinate system of ℝⁿ.\""
+                b: "VW5pdCBJSSDigKIgVmVjdG9yIFNwYWNlcw==",
+                q: "IlByb3ZlIHRoYXQgaW4g4oSd4oG/LCBhIHJlY3Rhbmd1bGFyIGNvb3JkaW5hdGUgc3lzdGVtIGlzIGEgYmFzaXMgZm9yIOKEneKBvywgYW5kIGhlbmNlIHByb3ZlIHRoYXQgYW4gYXJiaXRyYXJ5IGJhc2lzIG9mIOKEneKBvyBpcyBhIGxpbmVhciBjb29yZGluYXRlIHN5c3RlbSBvZiDihJ3igb8uIg=="
             },
             3: {
-                badge: "Unit III • Linear Transformations",
-                question: "\"Determine whether a function T: ℝⁿ → ℝⁿ is a linear transformation if it maps every subspace of ℝⁿ to a subspace of ℝⁿ. Prove your assertion or provide a counterexample.\""
+                b: "VW5pdCBJSUkg4oCiIExpbmVhciBUcmFuc2Zvcm1hdGlvbnM=",
+                q: "IkRldGVybWluZSB3aGV0aGVyIGEgZnVuY3Rpb24gVDog4oSd4oG/IOKGkiDihJ3igb8gaXMgYSBsaW5lYXIgdHJhbnNmb3JtYXRpb24gaWYgaXQgbWFwcyBldmVyeSBzdWJzcGFjZSBvZiDihJ3igb8gdG8gYSBzdWJzcGFjZSBvZiDihJ3igb8uIFByb3ZlIHlvdXIgYXNzZXJ0aW9uIG9yIHByb3ZpZGUgYSBjb3VudGVyZXhhbXBsZS4i"
             },
             4: {
-                badge: "Unit IV • Inner Product Spaces",
-                question: "\"A spacecraft travels in orbit with velocity vector v₁, with a solar panel extending along direction v₂, and an optical star-tracker sensor pointing along direction v₃. None of the three directions are mutually perpendicular. To prevent optical blinding from panel glare and engine exhaust, calculate the exact angle of elevation (tilt) of the star-tracker v₃ above the plane formed by the spacecraft and solar panel.\""
+                b: "VW5pdCBJViDigKIgSW5uZXIgUHJvZHVjdCBTcGFjZXM=",
+                q: "IkEgc3BhY2VjcmFmdCB0cmF2ZWxzIGluIG9yYml0IHdpdGggdmVsb2NpdHkgdmVjdG9yIHbFgSwgd2l0aCBhIHNvbGFyIHBhbmVsIGV4dGVuZGluZyBhbG9uZyBkaXJlY3Rpb24gdnLigJAsIGFuZCBhbiBvcHRpY2FsIHN0YXItdHJhY2tlciBzZW5zb3IgcG9pbnRpbmcgYWxvbmcgZGlyZWN0aW9uIHbFmS4gTm9uZSBvZiB0aGUgdGhyZWUgZGlyZWN0aW9ucyBhcmUgbXV0dWFsbHkgcGVycGVuZGljdWxhci4gVG8gcHJldmVudCBvcHRpY2FsIGJsaW5kaW5nIGZyb20gcGFuZWwgZ2xhcmUgYW5kIGVuZ2luZSBleGhhdXN0LCBjYWxjdWxhdGUgdGhlIGV4YWN0IGFuZ2xlIG9mIGVsZXZhdGlvbiAodGlsdCkgb2YgdGhlIHN0YXItdHJhY2tlciB2x5kgYWJvdmUgdGhlIHBsYW5lIGZvcm1lZCBieSB0aGUgc3BhY2VjcmFmdCBhbmQgc29sYXIgcGFuZWwuIg=="
             },
             5: {
-                badge: "Unit V • Eigenvalues & Eigenvectors",
-                question: "\"Suppose a Sphere of radius R is pressed from North and South Poles to convert into an ellipsoid. Find the eigenvalue(s) and eigenvector(s).\""
+                b: "VW5pdCBWIOKAoiBFaWdlbnZhbHVlcyAmIEVpZ2VudmVjdG9ycw==",
+                q: "IlN1cHBvc2UgYSBTcGhlcmUgb2YgcmFkaXVzIFIgaXMgcHJlc3NlZCBmcm9tIE5vcnRoIGFuZCBTb3V0aCBQb2xlcyB0byBjb252ZXJ0IGludG8gYW4gZWxsaXBzb2lkLiBGaW5kIHRoZSBlaWdlbnZhbHVlKHMpIGFuZCBlaWdlbnZlY3RvcihzKS4i"
             },
             6: {
-                badge: "Unit VI • Applications (SVD & Dimension Reduction)",
-                question: "\"A solid rubber ball of unit volume is deformed by an incompressible linear transformation (a matrix with det(A) = 1). Can this transformation completely flatten the ball into a 2-dimensional flat disk? Justify your answer.\""
+                b: "VW5pdCBWSSDigKIgQXBwbGljYXRpb25zIChTVkQgJiBEaW1lbnNpb24gUmVkdWN0aW9uKQ==",
+                q: "IkEgc29saWQgcnViYmVyIGJhbGwgb2YgdW5pdCB2b2x1bWUgaXMgZGVmb3JtZWQgYnkgYW4gaW5jb21wcmVzc2libGUgbGluZWFyIHRyYW5zZm9ybWF0aW9uIChhIG1hdHJpeCB3aXRoIGRldChBKSA9IDEpLiBDYW4gdGhpcyB0cmFuc2Zvcm1hdGlvbiBjb21wbGV0ZWx5IGZsYXR0ZW4gdGhlIGJhbGwgaW50byBhIDItZGltZW5zaW9uYWwgZmxhdCBkaXNrPyBKdXN0aWZ5IHlvdXIgYW5zd2VyLiI="
             }
         };
 
         function switchTrap(unitNum, btnElement) {
-            // Update active button state
             document.querySelectorAll('.crucible-tab').forEach(b => b.classList.remove('active'));
             btnElement.classList.add('active');
 
-            // Update badge and question text
-            document.getElementById('trap-unit-badge').textContent = trapsData[unitNum].badge;
-            document.getElementById('trap-question-text').textContent = trapsData[unitNum].question;
+            // Dynamic in-memory unscramble
+            document.getElementById('trap-unit-badge').textContent = _d(_qVault[unitNum].b);
+            document.getElementById('trap-question-text').textContent = _d(_qVault[unitNum].q);
         }
+
+        // Initialize Unit 1 on page load
+        document.addEventListener("DOMContentLoaded", () => {
+            document.getElementById('trap-unit-badge').textContent = _d(_qVault[1].b);
+            document.getElementById('trap-question-text').textContent = _d(_qVault[1].q);
+        });
 
         function copyFacultyEmail() {
             const email = "dhabalendu@gmail.com";

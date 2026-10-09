@@ -95,7 +95,7 @@
         }
         .btn-consult:hover { background: var(--navy-dark); }
 
-        /* ==================== HERO SECTION (DEDICATED FULL VIEWPORT) ==================== */
+        /* ==================== HERO SECTION ==================== */
         .hero { 
             min-height: calc(100vh - 75px);
             display: flex;
@@ -142,7 +142,7 @@
             margin-bottom: 1.2rem;
         }
 
-        /* HERO FACULTY PROFILE CARD */
+        /* HERO FACULTY CARD */
         .hero-faculty-card {
             background: rgba(255, 255, 255, 0.78);
             border: 1px solid var(--border-color);
@@ -361,18 +361,21 @@
             background: rgba(255, 255, 255, 0.04);
             border: 1px solid rgba(255, 255, 255, 0.12);
             border-radius: 12px;
-            padding: 2.0rem 1.8rem;
+            padding: 2.0rem 2.2rem;
             margin: 0 auto 2.2rem;
-            max-width: 840px;
+            max-width: 860px;
         }
 
+        /* JUSTIFIED TEXT ALIGNMENT LIKE AN MS WORD / JOURNAL ARTICLE */
         .trap-question-text {
             font-family: 'Playfair Display', Georgia, serif;
             font-size: clamp(1.15rem, 1.8vw, 1.45rem);
             color: #f8fafc;
-            line-height: 1.6;
+            line-height: 1.7;
             margin: 0;
             font-style: italic;
+            text-align: justify;
+            text-justify: inter-word;
         }
 
         /* SCHEDULER CONTAINER */
@@ -413,7 +416,8 @@
             .hero-faculty-card { padding: 1.5rem 1.0rem; }
             .card-shell { padding: 1.2rem; margin-bottom: 3.5rem; scroll-margin-top: 70px; }
             .crucible-display-canvas { padding: 1.8rem 1.2rem; }
-            .trap-challenge-card { padding: 1.4rem 1.0rem; }
+            .trap-challenge-card { padding: 1.4rem 1.2rem; }
+            .trap-question-text { text-align: left; }
         }
     </style>
 
@@ -553,14 +557,14 @@
         <div class="crucible-display-canvas" oncontextmenu="return false;">
             <div id="trap-unit-badge" class="trap-unit-badge">Unit I • Systems of Linear Equations</div>
             
-            <!-- DISTINCT CHALLENGE CARD INSET -->
+            <!-- DISTINCT CHALLENGE CARD INSET (JUSTIFIED FORMATTING) -->
             <div class="trap-challenge-card">
                 <p id="trap-question-text" class="trap-question-text">
                     "Suppose a system of 4 linear equations in 3 unknowns has the property that any choice of 3 equations has a unique solution. Does the complete 4-equation system necessarily have a solution? Provide a geometric proof or counterexample."
                 </p>
             </div>
 
-            <!-- EXPLICIT CALL TO ACTION (BRIDGING DIRECTLY TO CALENDAR) -->
+            <!-- EXPLICIT CALL TO ACTION -->
             <div>
                 <a href="#contact" class="btn-consult" style="padding: 0.85rem 1.8rem; font-size: 0.92rem; display: inline-flex; align-items: center; gap: 8px;">
                     <span>💡 Think You Have Solved It? Book a 20-Min Session to Evaluate Your Proof →</span>
@@ -637,9 +641,9 @@
         </div>
     </footer>
 
-    <!-- SCRAMBLED CRUCIBLE ENGINE (BYTECODE PROTECTED • 100% WATERPROOF QUESTIONS) -->
+    <!-- SCRAMBLED CRUCIBLE ENGINE (BYTECODE PROTECTED • STRICT MATHEMATICAL TYPESETTING) -->
     <script>
-        // UTF-8 Bytecode Decoder
+        // UTF-8 Bytecode Decoder (Supports mathematical Unicode symbols without corruption)
         function _d(s) {
             return decodeURIComponent(escape(window.atob(s)));
         }
@@ -652,19 +656,19 @@
             },
             2: {
                 b: "VW5pdCBJSSDigKIgVmVjdG9yIFNwYWNlcw==",
-                q: "IkxldCBCID0gKHYxLCB2MiwgdjMpIGJlIGFuIGFyYml0cmFyeSBvcmRlcmVkIGJhc2lzIG9mIFJeMywgcmVwcmVzZW50aW5nIGEgZml4ZWQgbm9uLXplcm8gdmVjdG9yIHg6IHggPSBjMSp2MSArIGMyKnYyICsgYzMqdjMgKHdoZXJlIGMxICE9IDAgYW5kIGMyICE9IDApLiBTdXBwb3NlIHRoYXQgdGhlIHJlcHJlc2VudGF0aW9uIG9mIHggd2l0aCByZXNwZWN0IHRvIHRoZSBuZXcgb3JkZXJlZCBiYXNpcyBCJyA9ICh2MSwgdjInLCB2MykgaXM6IHggPSBjMScqdjEgKyBjMicqdjInICsgYzMnKnYzLiBDYW4gdGhlIHNjYWxhciBjMScgYmVjb21lIHplcm8/IElmIHllcywgZGV0ZXJtaW5lIHRoZSBuZWNlc3NhcnkgYW5kIHN1ZmZpY2llbnQgY29uZGl0aW9uIG9uIHRoZSB2ZWN0b3IgdjInIGFuZCBjb25zdHJ1Y3QgaXQuIElmIG5vdCwgcHJvdmUgd2h5IGl0IGlzIGltcG9zc2libGUuIg=="
+                q: "IkxldCBCID0ge3bFjSwgdnLigJAsIHbFmX0gYmUgYW4gYXJiaXRyYXJ5IG9yZGVyZWQgYmFzaXMgb2Yg4oSd4oG/LCByZXByZXNlbnRpbmcgYSBmaXhlZCBub24temVybyB2ZWN0b3IgeDogeCA9IGPFiXbFjSArIGPvigJAdvKAgKyBjwpmv4oGfICh3aGVyZSBjwpsg4omgIDAgbmQgw7LigJAg4omgIDApLiBTdXBwb3NlIHRoYXQgdGhlIHJlcHJlc2VudGF0aW9uIG9mIHggd2l0aCByZXNwZWN0IHRvIHRoZSBuZXcgb3JkZXJlZCBiYXNpcyBCJyA9IHt2xWksIHbvigJAnLCB2xZl9IGlzOiB4ID0gY8WpJ3bFjSArIGPvigJAnc/KAgCcgKyBjwpmnduKBny4gQ2FuIHRoZSBzY2FsYXIgY8WpJyBiZWNvbWUgemVybz8gSWYgeWVzLCBkZXRlcm1pbmUgdGhlIG5lY2Vzc2FyeSBhbmQgc3VmZmljaWVudCBjb25kaXRpb24gb24gdGhlIHZlY3RvciB24oCAnyBhbmQgY29uc3RydWN0IGl0LiBJZiBub3QsIHByb3ZlIHdoeSBpdCBpcyBpbXBvc3NpYmxlLiI="
             },
             3: {
                 b: "VW5pdCBJSUkg4oCiIExpbmVhciBUcmFuc2Zvcm1hdGlvbnM=",
-                q: "IkRldGVybWluZSB3aGV0aGVyIGEgZnVuY3Rpb24gVDogUl5uIC0+IFJebiBpcyBuZWNlc3NhcmlseSBhIGxpbmVhciB0cmFuc2Zvcm1hdGlvbiBpZiBpdCBtYXBzIGV2ZXJ5IHN1YnNwYWNlIG9mIFJebiB0byBhIHN1YnNwYWNlIG9mIFJebi4gUHJvdmUgeW91ciBhc3NlcnRpb24gb3IgcHJvdmlkZSBhIGNvdW50ZXJleGFtcGxlLiI="
+                q: "IkRldGVybWluZSB3aGV0aGVyIGEgZnVuY3Rpb24gVDog4oSd4oG/IOKGkiDihJ3igb8gaXMgbmVjZXNzYXJpbHkgYSBsaW5lYXIgdHJhbnNmb3JtYXRpb24gaWYgaXQgbWFwcyBldmVyeSBzdWJzcGFjZSBvZiDihJ3igb8gdG8gYSBzdWJzcGFjZSBvZiDihJ3igb8uIFByb3ZlIHlvdXIgYXNzZXJ0aW9uIG9yIHByb3ZpZGUgYSBjb3VudGVyZXhhbXBsZS4i"
             },
             4: {
                 b: "VW5pdCBJViDigKIgSW5uZXIgUHJvZHVjdCBTcGFjZXM=",
-                q: "IkEgc3BhY2VjcmFmdCB0cmF2ZWxzIGluIG9yYml0IHdpdGggYSB2ZWxvY2l0eSB2ZWN0b3IgdjEsIGEgc29sYXIgcGFuZWwgZXh0ZW5kaW5nIGFsb25nIHRoZSBkaXJlY3Rpb24gdjIsIGFuZCBhbiBvcHRpY2FsIHN0YXItdHJhY2tlciBzZW5zb3IgcG9pbnRpbmcgYWxvbmcgdGhlIGRpcmVjdGlvbiB2Mywgd2hlcmUge3YxLCB2MiwgdjN9IGlzIGEgbGluZWFybHkgaW5kZXBlbmRlbnQgc2V0IG9mIHZlY3RvcnMgaW4gUl4zLiBOb25lIG9mIHRoZSB0aHJlZSBkaXJlY3Rpb25zIGFyZSBtdXR1YWxseSBwZXJwZW5kaWN1bGFyLiBUbyBwcmV2ZW50IG9wdGljYWwgZ2xhcmUgYW5kIGNhbGlicmF0ZSB0aGUgYXR0aXR1ZGUgZ3VpZGFuY2Ugc3lzdGVtOiAoaSkgRGVjb21wb3NlIHRoZSBzZW5zb3IgdmVjdG9yIHYzIGludG8gYSBjb21wb25lbnQgbHlpbmcgZW50aXJlbHkgd2l0aGluIHRoZSBwbGFuZSBzcGFubmVkIGJ5IHt2MSwgdjJ9LCBhbmQgYSBjb21wb25lbnQgc3RyaWN0bHkgcGVycGVuZGljdWxhciB0byB0aGlzIHBsYW5lLiAoaWkpIFVzaW5nIG9ubHkgaW5uZXIgcHJvZHVjdHMgYW5kIG9ydGhvZ29uYWwgcHJvamVjdGlvbnMgKHdpdGhvdXQgaW52b2tpbmcgMy1kaW1lbnNpb25hbCBjcm9zcyBwcm9kdWN0cyksIGRldGVybWluZSB0aGUgZXhhY3QgYW5nbGUgb2YgZWxldmF0aW9uIG9mIHRoZSBzdGFyLXRyYWNrZXIgc2Vuc29yIGFib3ZlIHRoZSBwbGFuZS4i"
+                q: "IkEgc3BhY2VjcmFmdCB0cmF2ZWxzIGluIG9yYml0IHdpdGggYSB2ZWxvY2l0eSB2ZWN0b3IgdnWAnSwgYSBzb2xhciBwYW5lbCBleHRlbmRpbmcgYWxvbmcgdGhlIGRpcmVjdGlvbiB24oCAnCwganCBhbiBvcHRpY2FsIHN0YXItdHJhY2tlciBzZW5zb3IgcG9pbnRpbmcgYWxvbmcgdGhlIGRpcmVjdGlvbiB2xZksIHdoZXJlIHt2xWksIHbvigJAsIHbFmX0gaXMgYSBsaW5lYXJseSBpbmRlcGVuZGVudCBzZXQgb2YgdmVjdG9ycyBpbiDihJ3igb8uIE5vbmUgb2YgdGhlIHRocmVlIGRpcmVjdGlvbnMgYXJlIG11dHVhbGx5IHBlcnBlbmRpY3VsYXIuIFRvIHByZXZlbnQgb3B0aWNhbCBnbGFyZSBhbmQgY2FsaWJyYXRlIHRoZSBhdHRpdHVkZSBndWlkYW5jZSBzeXN0ZW06IChpKSBEZWNvbXBvc2UgdGhlIHNlbnNvciB2ZWN0b3IgdnWAmSBpbnRvIGEgY29tcG9uZW50IGx5aW5nIGVudGlyZWx5IHdpdGhpbiB0aGUgcGxhbmUgc3Bhbm5lZCBieSB7dnWAnSwgdnLigJAsIGFuZCBhIGNvbXBvbmVudCBzdHJpY3RseSBwZXJwZW5kaWN1bGFyIHRvIHRoaXMgcGxhbmUuIChpaSkgVXNpbmcgb25seSBpbm5lciBwcm9kdWN0cyBhbmQgb3J0aG9nb25hbCBwcm9qZWN0aW9ucyAod2l0aG91dCBpbnZva2luZyAzLWRpbWVuc2lvbmFsIGNyb3NzIHByb2R1Y3RzKSwgZGV0ZXJtaW5lIHRoZSBleGFjdCBhbmdsZSBvZiBlbGV2YXRpb24gb2YgdGhlIHN0YXItdHJhY2tlciBzZW5zb3IgYWJvdmUgdGhlIHBsYW5lLiI="
             },
             5: {
                 b: "VW5pdCBWIOKAoiBFaWdlbnZhbHVlcyAmIEVpZ2VudmVjdG9ycw==",
-                q: "IlN1cHBvc2UgYSBzcGhlcmUgb2YgcmFkaXVzIHIgY2VudGVyZWQgYXQgdGhlIG9yaWdpbiAoMCwwLDApIGluIFJeMyBpcyBkZWZvcm1lZCBpbnRvIGFuIGVsbGlwc29pZCBieSBjb21wcmVzc2luZyBpdCBzeW1tZXRyaWNhbGx5IGFsb25nIGl0cyBwb2xhciBheGlzIChOb3J0aC1Tb3V0aCBwb2xlcykgdG8gYSBuZXcgcG9sYXIgcmFkaXVzIGMgKGMgPCByKSwgd2l0aCBhIHJlc3VsdGluZyB1bmlmb3JtIGVxdWF0b3JpYWwgcmFkaXVzIGEgKGEgPiByKS4gRGV0ZXJtaW5lIGFsbCB0aGUgZWlnZW52YWx1ZXMsIHRoZWlyIGFsZ2VicmFpYyBhbmQgZ2VvbWV0cmljIG11bHRpcGxpY2l0aWVzLCBhbmQgdGhlIGNvcnJlc3BvbmRpbmcgZWlnZW5zcGFjZXMgb2YgdGhpcyBkZWZvcm1hdGlvbiBwcm9jZXNzLiI="
+                q: "IlN1cHBvc2UgYSBzcGhlcmUgb2YgcmFkaXVzIHIgY2VudGVyZWQgYXQgdGhlIG9yaWdpbiAoMCwgMCwgMCkgaW4g4oSd4oG/IGlzIGRlZm9ybWVkIGludG8gYW4gZWxsaXBzb2lkIGJ5IGNvbXByZXNzaW5nIGl0IHN5bW1ldHJpY2FsbHkgYWxvbmcgaXRzIHBvbGFyIGF4aXMgKE5vcnRoLVNvdXRoIHBvbGVzKSB0byBhIG5ldyBwb2xhciByYWRpdXMgYyAoYyA8IHIpLCB3aXRoIGEgcmVzdWx0aW5nIHVuaWZvcm0gZXF1YXRvcmlhbCByYWRpdXMgYSAoYSA+IHIpLiBEZXRlcm1pbmUgYWxsIHRoZSBlaWdlbnZhbHVlcywgdGhlaXIgYWxnZWJyYWljIGFuZCBnZW9tZXRyaWMgbXVsdGlwbGljaXRpZXMsIGFuZCB0aGUgY29ycmVzcG9uZGluZyBlaWdlbnNwYWNlcyBvZiB0aGlzIGRlZm9ybWF0aW9uIHByb2Nlc3MuIg=="
             },
             6: {
                 b: "VW5pdCBWSSDigKIgQXBwbGljYXRpb25zIChTVkQgJiBEaW1lbnNpb24gUmVkdWN0aW9uKQ==",

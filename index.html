@@ -475,7 +475,14 @@
             <div class="hero-faculty-header">
                 <!-- Circular Faculty Portrait -->
                 <div class="hero-photo-wrap">
-                    <img src="Photo_DS.jpg" alt="Dr. Dhabalendu Samanta" class="hero-photo" onerror="this.style.display='none'; document.getElementById('hero-photo-fallback').style.display='flex';">
+                    <img src="Photo_DS.jpg" 
+                            alt="Dr. Dhabalendu Samanta"
+                            class="hero-photo"
+                            width="95" 
+                            height="95" 
+                            loading="eager" 
+                            fetchpriority="high" 
+                            onerror="this.style.display='none'; document.getElementById('hero-photo-fallback').style.display='flex';">
                     <div id="hero-photo-fallback" class="hero-photo-fallback" style="display: none;">DS</div>
                 </div>
 

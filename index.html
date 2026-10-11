@@ -438,7 +438,7 @@
             font-style: normal;
         }
 
-        /* ==================== SPRINT INSET CARD ==================== */
+        /* ==================== SPRINT INSET CARD (PERFECT SCROLL OFFSET) ==================== */
         .sprint-card-banner {
             background: linear-gradient(135deg, #eff6ff 0%, #f0fdf4 100%);
             border: 2px solid #bfdbfe;
@@ -451,6 +451,7 @@
             gap: 2.0rem;
             flex-wrap: wrap;
             box-shadow: 0 4px 16px rgba(30, 58, 138, 0.04);
+            scroll-margin-top: 110px; /* ENSURES CARD NEVER GETS TRAPPED UNDER NAVBAR */
         }
 
         .sprint-badge-kicker {
@@ -507,7 +508,7 @@
             .crucible-display-canvas { padding: 1.8rem 1.2rem; }
             .trap-challenge-card { padding: 1.4rem 1.2rem; }
             .trap-question-text { text-align: left; }
-            .sprint-card-banner { padding: 1.5rem 1.2rem; }
+            .sprint-card-banner { padding: 1.5rem 1.2rem; scroll-margin-top: 80px; }
         }
     </style>
 
@@ -523,7 +524,7 @@
             <span class="brand-sub">Advanced Mathematical Mentorship &amp; Research Guidance</span>
         </a>
         <ul class="nav-links">
-            <li><a href="#masterclass">Lecture</a></li>
+            <li><a href="#archive">Video Archive</a></li>
             <li><a href="#studio">3D Studio</a></li>
             <li><a href="#syllabus">Syllabus</a></li>
             <li><a href="#crucible">Crucible</a></li>
@@ -575,18 +576,20 @@
         </div>
     </header>
 
-    <!-- ==================== MODULE 1: CONCEPTUAL VIDEO DEMONSTRATION ==================== -->
-    <section id="masterclass" class="card-shell">
+    <!-- ==================== MODULE 1: CONCEPTUAL VIDEO ARCHIVE ==================== -->
+    <section id="archive" class="card-shell">
         <div class="card-shell-header">
             <div style="display: inline-block; background: #eff6ff; border: 1px solid #bfdbfe; color: var(--navy-primary); padding: 0.25rem 0.75rem; border-radius: 12px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; margin-bottom: 0.5rem;">
-                Conceptual Video Demonstration
+                ✦ Conceptual Video Archive
             </div>
-            <h2 class="card-shell-title">The Essence of Eigenvalues &amp; Eigenvectors</h2>
-            <p class="card-shell-sub">An intuitive geometric and physical explanation of invariant rotational axes by Dr. Dhabalendu Samanta.</p>
+            <h2 class="card-shell-title">Conceptual Video Archive</h2>
+            <p class="card-shell-sub">
+                A continuously expanding archive of 8 to 10-minute visual concept videos by Dr. Dhabalendu Samanta—demystifying Linear Algebra through everyday physical intuition and universal real-world phenomena across undergraduate, postgraduate, AI, and Quantum engineering curricula.
+            </p>
         </div>
         <div class="inner-dark-canvas">
             <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">▶</div>
-            <h3 style="font-size: 1.25rem; margin-bottom: 0.4rem; font-family: 'Playfair Display', serif;">Visual Demonstration in Production</h3>
+            <h3 style="font-size: 1.25rem; margin-bottom: 0.4rem; font-family: 'Playfair Display', serif;">Featured Premiere: The Essence of Eigenvalues &amp; Eigenvectors</h3>
             <p style="font-size: 0.92rem; color: #94a3b8; max-width: 520px; margin: 0 auto; line-height: 1.5;">
                 An 8 to 10-minute visual explanation of eigenvalues and rotational invariants will be released soon.
             </p>
@@ -629,7 +632,7 @@
         </div>
     </section>
 
-    <!-- ==================== NEW MODULE: REFERENCE SYLLABUS ==================== -->
+    <!-- ==================== MODULE: REFERENCE SYLLABUS ==================== -->
     <section id="syllabus" class="card-shell">
         <div class="card-shell-header">
             <div style="display: inline-block; background: #eff6ff; border: 1px solid #bfdbfe; color: var(--navy-primary); padding: 0.25rem 0.75rem; border-radius: 12px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; margin-bottom: 0.5rem;">
@@ -637,7 +640,7 @@
             </div>
             <h2 class="card-shell-title">Curriculum Coverage &amp; Syllabus Map</h2>
             <p class="card-shell-sub">
-                Designed to cover and exceed the rigorous Linear Algebra syllabi of leading global universities (MIT, Stanford, Cambridge, IIT) for undergraduates, postgraduates, and AI/engineering researchers.
+                Designed to cover and exceed the rigorous Linear Algebra syllabi for undergraduates, postgraduates, and AI/engineering researchers.
             </p>
         </div>
 
@@ -746,15 +749,15 @@
     <!-- ==================== MODULE 4: DIAGNOSTIC SCHEDULING & RAPID SPRINT ==================== -->
     <section id="contact" class="card-shell">
         
-        <!-- NEW FAST-TRACK: PROBLEM-SET & MIDTERM DIAGNOSTIC SPRINT -->
+        <!-- FAST-TRACK: PROBLEM-SET & MIDTERM DIAGNOSTIC SPRINT -->
         <div id="sprint" class="sprint-card-banner">
             <div style="max-width: 620px;">
-                <span class="sprint-badge-kicker">✦ Accelerated Academic Track • 72-Hour Rapid Response</span>
+                <span class="sprint-badge-kicker">✦ Accelerated Academic Track • 48-Hour Rapid Response</span>
                 <h3 style="font-family: 'Playfair Display', serif; font-size: 1.45rem; color: var(--navy-dark); margin-bottom: 0.4rem;">
                     Problem-Set &amp; Midterm Diagnostic Sprint
                 </h3>
                 <p style="font-size: 0.88rem; color: #475569; line-height: 1.55;">
-                    Facing an imminent university problem-set deadline, midterm exam, or thesis proof roadblock? Book a high-intensity 60-minute diagnostic sprint with Dr. Samanta to resolve conceptual bottlenecks, verify computational derivations, and master proof mechanics.
+                    Facing an imminent problem-set deadline, midterm exam, or thesis proof roadblock? Book a high-intensity 60-minute diagnostic sprint with Dr. Samanta to resolve conceptual bottlenecks, verify computational derivations, and master proof mechanics.
                 </p>
             </div>
             <div>
@@ -763,7 +766,7 @@
                    rel="noopener noreferrer" 
                    class="btn-consult" 
                    style="background: #0284c7; white-space: nowrap; display: inline-block; padding: 0.8rem 1.6rem; font-size: 0.90rem;">
-                    Request 72-Hour Sprint →
+                    Request 48-Hour Sprint →
                 </a>
             </div>
         </div>

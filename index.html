@@ -10,7 +10,6 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- RESTORED display=swap & PRELOADED FOR INSTANT, ZERO-JERK TYPOGRAPHIC PAINT -->
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
 
     <link rel="preload" as="image" href="Photo_DS.jpg" fetchpriority="high">
@@ -43,7 +42,6 @@
             --bg-parchment: #f7f3ea;
         }
 
-        /* SMOOTH SCROLLING FOR ALL NAVBAR JUMPS */
         html {
             scroll-behavior: smooth;
         }
@@ -88,19 +86,19 @@
             color: #64748b;
             font-weight: 600;
         }
-        .nav-links { display: flex; align-items: center; gap: 1.8rem; list-style: none; }
-        .nav-links a { text-decoration: none; color: var(--slate-body); font-size: 0.92rem; font-weight: 600; }
+        .nav-links { display: flex; align-items: center; gap: 1.4rem; list-style: none; }
+        .nav-links a { text-decoration: none; color: var(--slate-body); font-size: 0.88rem; font-weight: 600; }
         .btn-consult {
             background: var(--navy-primary);
             color: #ffffff !important;
-            padding: 0.65rem 1.4rem;
+            padding: 0.65rem 1.3rem;
             border-radius: 8px;
             font-weight: 600;
             transition: all 0.2s ease;
         }
         .btn-consult:hover { background: var(--navy-dark); }
 
-        /* ==================== HERO SECTION (STABILIZED VIEWPORT) ==================== */
+        /* HERO SECTION */
         .hero { 
             min-height: calc(100vh - 75px);
             display: flex;
@@ -147,7 +145,7 @@
             margin-bottom: 1.2rem;
         }
 
-        /* HERO FACULTY PROFILE CARD (ROCK-SOLID SIZING) */
+        /* HERO FACULTY PROFILE CARD */
         .hero-faculty-card {
             background: rgba(255, 255, 255, 0.78);
             border: 1px solid var(--border-color);
@@ -196,9 +194,7 @@
             color: var(--navy-primary);
         }
 
-        .hero-meta {
-            text-align: left;
-        }
+        .hero-meta { text-align: left; }
 
         .hero-name {
             font-family: 'Playfair Display', serif;
@@ -216,7 +212,6 @@
             margin-top: 0.3rem;
         }
 
-        /* 5-BADGE RIBBON */
         .hero-badges-row {
             display: flex;
             justify-content: center;
@@ -240,10 +235,7 @@
             white-space: nowrap;
         }
 
-        .badge-pill strong {
-            color: #0f172a;
-            font-weight: 700;
-        }
+        .badge-pill strong { color: #0f172a; font-weight: 700; }
 
         .orcid-link {
             display: inline-flex;
@@ -261,7 +253,7 @@
         }
         .orcid-link:hover { opacity: 0.9; }
 
-        /* ==================== UNIFIED CARD-SHELL COMPONENT ==================== */
+        /* UNIFIED CARD-SHELL */
         .card-shell {
             background: rgba(255, 255, 255, 0.85);
             border: 1px solid var(--border-color);
@@ -274,9 +266,7 @@
             scroll-margin-top: 100px;
         }
 
-        .card-shell-header {
-            margin-bottom: 1.6rem;
-        }
+        .card-shell-header { margin-bottom: 1.6rem; }
 
         .card-shell-title {
             font-family: 'Playfair Display', serif;
@@ -302,7 +292,55 @@
             box-shadow: 0 14px 28px rgba(15, 23, 42, 0.08);
         }
 
-        /* ==================== THE CRUCIBLE INTERACTIVE CONSOLE ==================== */
+        /* ==================== SYLLABUS GRID ==================== */
+        .syllabus-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+            gap: 1.2rem;
+            margin-top: 1.0rem;
+        }
+
+        .syllabus-unit-card {
+            background: #ffffff;
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 1.4rem;
+            transition: all 0.2s ease;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+        }
+
+        .syllabus-unit-card:hover {
+            border-color: var(--navy-primary);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 18px rgba(30, 58, 138, 0.06);
+        }
+
+        .unit-num-kicker {
+            font-family: 'Cinzel', serif;
+            font-size: 0.78rem;
+            font-weight: 800;
+            color: var(--accent-cyan);
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: 0.4rem;
+        }
+
+        .unit-card-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.15rem;
+            color: var(--navy-dark);
+            font-weight: 700;
+            margin-bottom: 0.7rem;
+            line-height: 1.3;
+        }
+
+        .unit-card-topics {
+            font-size: 0.84rem;
+            color: #475569;
+            line-height: 1.6;
+        }
+
+        /* ==================== CRUCIBLE STYLES ==================== */
         .crucible-tabs-row {
             display: flex;
             gap: 8px;
@@ -334,7 +372,6 @@
             box-shadow: 0 4px 12px rgba(30, 58, 138, 0.2);
         }
 
-        /* ANTI-COPY PROTECTED DISPLAY CANVAS */
         .crucible-display-canvas {
             background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
             border-radius: 14px;
@@ -362,7 +399,6 @@
             margin-bottom: 1.2rem;
         }
 
-        /* DISTINCT CHALLENGE CARD INSET BOX */
         .trap-challenge-card {
             background: rgba(255, 255, 255, 0.04);
             border: 1px solid rgba(255, 255, 255, 0.12);
@@ -370,10 +406,9 @@
             padding: 2.0rem 2.2rem;
             margin: 0 auto 2.2rem;
             max-width: 860px;
-            min-height: 120px; /* STABILIZES HEIGHT ON TAB SWITCH */
+            min-height: 120px;
         }
 
-        /* JUSTIFIED TEXT ALIGNMENT WITH CRISP MATHEMATICAL SUBSCRIPTS */
         .trap-question-text {
             font-family: 'Playfair Display', Georgia, serif;
             font-size: clamp(1.15rem, 1.8vw, 1.45rem);
@@ -403,6 +438,34 @@
             font-style: normal;
         }
 
+        /* ==================== SPRINT INSET CARD ==================== */
+        .sprint-card-banner {
+            background: linear-gradient(135deg, #eff6ff 0%, #f0fdf4 100%);
+            border: 2px solid #bfdbfe;
+            border-radius: 16px;
+            padding: 2.0rem 2.2rem;
+            margin-bottom: 2.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2.0rem;
+            flex-wrap: wrap;
+            box-shadow: 0 4px 16px rgba(30, 58, 138, 0.04);
+        }
+
+        .sprint-badge-kicker {
+            display: inline-block;
+            background: #1e3a8a;
+            color: #ffffff;
+            padding: 0.25rem 0.75rem;
+            border-radius: 12px;
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            margin-bottom: 0.6rem;
+        }
+
         /* SCHEDULER CONTAINER */
         .scheduler-wrapper {
             background: var(--bg-parchment);
@@ -411,7 +474,7 @@
             overflow: hidden;
             box-shadow: 0 8px 24px rgba(0,0,0,0.04);
             margin-bottom: 1.8rem;
-            min-height: 700px; /* ELIMINATES RESIZE JERK WHEN CALENDLY ATTACHES */
+            min-height: 700px;
         }
 
         /* FOOTER & COMPLIANCE */
@@ -444,6 +507,7 @@
             .crucible-display-canvas { padding: 1.8rem 1.2rem; }
             .trap-challenge-card { padding: 1.4rem 1.2rem; }
             .trap-question-text { text-align: left; }
+            .sprint-card-banner { padding: 1.5rem 1.2rem; }
         }
     </style>
 
@@ -461,12 +525,14 @@
         <ul class="nav-links">
             <li><a href="#masterclass">Lecture</a></li>
             <li><a href="#studio">3D Studio</a></li>
+            <li><a href="#syllabus">Syllabus</a></li>
             <li><a href="#crucible">Crucible</a></li>
+            <li><a href="#sprint" style="color: var(--navy-primary); font-weight: 700;">Diagnostic Sprint</a></li>
             <li><a href="#contact" class="btn-consult">Book Mentorship</a></li>
         </ul>
     </nav>
 
-    <!-- ==================== SECTION 1: HERO (DEDICATED FULL VIEWPORT) ==================== -->
+    <!-- ==================== SECTION 1: HERO ==================== -->
     <header class="hero">
         <h1 class="hero-title">Mastering Linear Algebra</h1>
         <div class="hero-subtitle-line">From Physical Intuition to Mathematical Rigor</div>
@@ -477,10 +543,8 @@
 
         <div class="by-kicker">By</div>
 
-        <!-- FACULTY PRESENTATION (PHOTO + NAME + BADGES) -->
         <div class="hero-faculty-card">
             <div class="hero-faculty-header">
-                <!-- Circular Faculty Portrait -->
                 <div class="hero-photo-wrap">
                     <img src="Photo_DS.jpg" 
                          alt="Dr. Dhabalendu Samanta"
@@ -499,7 +563,6 @@
                 </div>
             </div>
 
-            <!-- UNIFIED 5-BADGE RIBBON -->
             <div class="hero-badges-row">
                 <span class="badge-pill">PhD, Math (IIT Delhi)</span>
                 <span class="badge-pill"><strong>16</strong> Yrs University Professor</span>
@@ -530,7 +593,7 @@
         </div>
     </section>
 
-    <!-- ==================== MODULE 2: INTERACTIVE LINEAR ALGEBRA STUDIO ==================== -->
+    <!-- ==================== MODULE 2: INTERACTIVE 3D STUDIO ==================== -->
     <section id="studio" class="card-shell">
         <div class="card-shell-header">
             <div style="display: inline-block; background: #eff6ff; border: 1px solid #bfdbfe; color: var(--navy-primary); padding: 0.25rem 0.75rem; border-radius: 12px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; margin-bottom: 0.5rem;">
@@ -538,35 +601,104 @@
             </div>
             <h2 class="card-shell-title">Interactive Linear Algebra Studio</h2>
             <p class="card-shell-sub">
-                Highly interactive and geometric visualization of core curriculum concepts: Matrix Decompositions, Diagonalization, Eigenvalues &amp; Eigenvectors, Projections, SVD, and PCA.
+                Highly interactive geometric visualization of core curriculum concepts: Real-time 3D Matrix Transformations, Invariant Eigenspaces, Projections, SVD Manifolds, and Spectral Decompositions.
             </p>
         </div>
 
         <div class="inner-dark-canvas">
             <div style="display: inline-block; background: rgba(2, 132, 199, 0.25); border: 1px solid rgba(56, 189, 248, 0.35); color: #38bdf8; padding: 0.3rem 0.9rem; border-radius: 20px; font-size: 0.78rem; font-weight: 700; margin-bottom: 1.2rem; text-transform: uppercase; letter-spacing: 0.08em;">
-                ✦ Unit-I: Open Interactive Workspace (Free Access)
+                ✦ Unit-I: 3D Geometric Workspace (Open Demonstration)
             </div>
             <h3 style="font-family: 'Playfair Display', serif; font-size: 1.6rem; margin-bottom: 0.6rem;">
-                Unit-I: Systems of Linear Equations &amp; Row Operations
+                Unit-I: Systems of Linear Equations &amp; Intersecting Manifolds
             </h3>
             <p style="color: #94a3b8; max-width: 640px; margin: 0 auto 1.8rem; font-size: 0.94rem; line-height: 1.6;">
-                Experience real-time 3D spatial transformations and coordinate geometry directly in your browser with our open Unit-I simulation.<br>
+                Visualize real-time 3D coordinate geometry, intersecting hyperplanes, and automated row-space invariant classifications directly in your browser.<br>
                 <span style="font-size: 0.85rem; color: #cbd5e1; display: inline-block; margin-top: 0.4rem;">
-                    (Units II through VI—Eigenspaces, SVD, and Orthogonal Projections—are demonstrated and guided live during private 1-on-1 mentorship sessions).
+                    (Advanced algorithmic simulations across Units II through VI are guided live during private 1-on-1 mentorship sessions).
                 </span>
             </p>
             <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
                 <a href="#studio" class="btn-consult" style="padding: 0.85rem 1.8rem; font-size: 0.92rem; display: inline-block; background: #0284c7;">
-                    Launch Unit-I Interactive Studio (Free Demo)
+                    Launch Unit-I 3D Studio Demo
                 </a>
                 <a href="#contact" class="btn-consult" style="padding: 0.85rem 1.8rem; font-size: 0.92rem; display: inline-block; background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.3);">
-                    Book Mentorship for Advanced Units →
+                    Book Mentorship for Full Curriculum →
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- ==================== MODULE 3: THE CRUCIBLE: PROFESSOR'S TRAPS ==================== -->
+    <!-- ==================== NEW MODULE: REFERENCE SYLLABUS ==================== -->
+    <section id="syllabus" class="card-shell">
+        <div class="card-shell-header">
+            <div style="display: inline-block; background: #eff6ff; border: 1px solid #bfdbfe; color: var(--navy-primary); padding: 0.25rem 0.75rem; border-radius: 12px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; margin-bottom: 0.5rem;">
+                Comprehensive Curriculum Architecture
+            </div>
+            <h2 class="card-shell-title">Curriculum Coverage &amp; Syllabus Map</h2>
+            <p class="card-shell-sub">
+                Designed to cover and exceed the rigorous Linear Algebra syllabi of leading global universities (MIT, Stanford, Cambridge, IIT) for undergraduates, postgraduates, and AI/engineering researchers.
+            </p>
+        </div>
+
+        <div class="syllabus-grid">
+            <!-- UNIT 1 -->
+            <div class="syllabus-unit-card">
+                <div class="unit-num-kicker">Unit I</div>
+                <h3 class="unit-card-title">Systems of Linear Equations</h3>
+                <p class="unit-card-topics">
+                    Matrices and elementary row operations, row-reduced echelon form (RREF), rank of a matrix, solution of linear systems via Gauss elimination and LU decomposition (matrix factorization), matrix multiplication and invertible matrices.
+                </p>
+            </div>
+
+            <!-- UNIT 2 -->
+            <div class="syllabus-unit-card">
+                <div class="unit-num-kicker">Unit II</div>
+                <h3 class="unit-card-title">Vector Spaces &amp; Subspaces</h3>
+                <p class="unit-card-topics">
+                    Axiomatic vector spaces and properties, subspaces, linear dependence and independence, linear combinations and span, basis and dimension, sum and intersection of subspaces, direct sums, dual spaces, invariant and cyclic subspaces.
+                </p>
+            </div>
+
+            <!-- UNIT 3 -->
+            <div class="syllabus-unit-card">
+                <div class="unit-num-kicker">Unit III</div>
+                <h3 class="unit-card-title">Linear Transformations</h3>
+                <p class="unit-card-topics">
+                    Linear maps and operational properties, range and kernel, rank and nullity of transformations, Rank-Nullity Theorem and proof consequences, matrix representations of operators, change of basis, isomorphism theorems, and change of coordinate matrices.
+                </p>
+            </div>
+
+            <!-- UNIT 4 -->
+            <div class="syllabus-unit-card">
+                <div class="unit-num-kicker">Unit IV</div>
+                <h3 class="unit-card-title">Inner Product Spaces</h3>
+                <p class="unit-card-topics">
+                    Scalar inner products, orthogonality, normed linear spaces, complex inner products, orthogonal complements, subspace projections, Gram-Schmidt orthogonalization process, least squares approximation, and Bessel's inequality.
+                </p>
+            </div>
+
+            <!-- UNIT 5 -->
+            <div class="syllabus-unit-card">
+                <div class="unit-num-kicker">Unit V</div>
+                <h3 class="unit-card-title">Eigenvalues &amp; Eigenvectors</h3>
+                <p class="unit-card-topics">
+                    Eigenvalues and eigenvectors of operators and matrices, eigenspaces, algebraic and geometric multiplicity, Cayley-Hamilton Theorem, similarity and diagonalization, symmetric and Hermitian matrices, orthogonal diagonalization, quadratic forms, and conic sections.
+                </p>
+            </div>
+
+            <!-- UNIT 6 -->
+            <div class="syllabus-unit-card">
+                <div class="unit-num-kicker">Unit VI</div>
+                <h3 class="unit-card-title">Advanced Applications &amp; SVD</h3>
+                <p class="unit-card-topics">
+                    Spectral decomposition, Singular Value Decomposition (SVD), dimensionality reduction, Principal Component Analysis (PCA), algorithmic image compression, facial recognition (eigenfaces), and solving decoupled systems of first-order linear ODEs.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== MODULE 3: THE CRUCIBLE ==================== -->
     <section id="crucible" class="card-shell">
         <div class="card-shell-header">
             <div style="display: inline-block; background: #eff6ff; border: 1px solid #bfdbfe; color: var(--navy-primary); padding: 0.25rem 0.75rem; border-radius: 12px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; margin-bottom: 0.5rem;">
@@ -578,12 +710,10 @@
             </p>
         </div>
 
-        <!-- VISUAL TAB CUE FOR VISITORS -->
         <div style="font-size: 0.82rem; color: #64748b; font-weight: 700; margin-bottom: 0.6rem; text-transform: uppercase; letter-spacing: 0.08em;">
             👉 Select a Unit Below to Reveal Its Conceptual Trap:
         </div>
 
-        <!-- 6-UNIT SELECTOR TABS -->
         <div class="crucible-tabs-row">
             <button class="crucible-tab active" onclick="switchTrap(1, this)">Unit I: Linear Systems</button>
             <button class="crucible-tab" onclick="switchTrap(2, this)">Unit II: Vector Spaces</button>
@@ -593,18 +723,15 @@
             <button class="crucible-tab" onclick="switchTrap(6, this)">Unit VI: Applications &amp; SVD</button>
         </div>
 
-        <!-- ANTI-COPY PROTECTED DISPLAY CANVAS -->
         <div class="crucible-display-canvas" oncontextmenu="return false;">
             <div id="trap-unit-badge" class="trap-unit-badge">Unit I • Systems of Linear Equations</div>
             
-            <!-- DISTINCT CHALLENGE CARD INSET -->
             <div class="trap-challenge-card">
                 <p id="trap-question-text" class="trap-question-text">
                     "Suppose a system of 4 linear equations in 3 unknowns has the property that any choice of 3 equations has a unique solution. Does the complete 4-equation system necessarily have a solution? Provide a geometric proof or counterexample."
                 </p>
             </div>
 
-            <!-- EXPLICIT CALL TO ACTION -->
             <div>
                 <a href="#contact" class="btn-consult" style="padding: 0.85rem 1.8rem; font-size: 0.92rem; display: inline-flex; align-items: center; gap: 8px;">
                     <span>💡 Think You Have Solved It? Book a 20-Min Session to Evaluate Your Proof →</span>
@@ -616,8 +743,32 @@
         </div>
     </section>
 
-    <!-- ==================== MODULE 4: 1-ON-1 DIAGNOSTIC SCHEDULING ENGINE ==================== -->
+    <!-- ==================== MODULE 4: DIAGNOSTIC SCHEDULING & RAPID SPRINT ==================== -->
     <section id="contact" class="card-shell">
+        
+        <!-- NEW FAST-TRACK: PROBLEM-SET & MIDTERM DIAGNOSTIC SPRINT -->
+        <div id="sprint" class="sprint-card-banner">
+            <div style="max-width: 620px;">
+                <span class="sprint-badge-kicker">✦ Accelerated Academic Track • 72-Hour Rapid Response</span>
+                <h3 style="font-family: 'Playfair Display', serif; font-size: 1.45rem; color: var(--navy-dark); margin-bottom: 0.4rem;">
+                    Problem-Set &amp; Midterm Diagnostic Sprint
+                </h3>
+                <p style="font-size: 0.88rem; color: #475569; line-height: 1.55;">
+                    Facing an imminent university problem-set deadline, midterm exam, or thesis proof roadblock? Book a high-intensity 60-minute diagnostic sprint with Dr. Samanta to resolve conceptual bottlenecks, verify computational derivations, and master proof mechanics.
+                </p>
+            </div>
+            <div>
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=dhabalendu@gmail.com&su=[ASMI%20Sprint]%20Problem-Set%20%26%20Midterm%20Diagnostic%20Request" 
+                   target="_blank" 
+                   rel="noopener noreferrer" 
+                   class="btn-consult" 
+                   style="background: #0284c7; white-space: nowrap; display: inline-block; padding: 0.8rem 1.6rem; font-size: 0.90rem;">
+                    Request 72-Hour Sprint →
+                </a>
+            </div>
+        </div>
+
+        <!-- FULL 1-ON-1 DIAGNOSTIC MENTORSHIP CALENDLY -->
         <div class="card-shell-header" style="text-align: center;">
             <div style="display: inline-block; background: #eff6ff; border: 1px solid #bfdbfe; color: var(--navy-primary); padding: 0.25rem 0.75rem; border-radius: 12px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; margin-bottom: 0.5rem;">
                 ✦ Winter 2026 Cohort Strictly Capped at 5 Students
@@ -628,7 +779,6 @@
             </p>
         </div>
 
-        <!-- EMBEDDED LIVE CALENDLY SCHEDULER -->
         <div class="scheduler-wrapper">
             <div class="calendly-inline-widget" 
                  data-url="https://calendly.com/dhabalendu/20min?hide_landing_page_details=1&hide_gdpr_banner=1&background_color=f7f3ea&text_color=0f172a&primary_color=1e3a8a" 
@@ -636,7 +786,7 @@
             </div>
         </div>
 
-        <!-- DIRECT EMAIL FALLBACK (BELOW SCHEDULER) -->
+        <!-- DIRECT EMAIL FALLBACK -->
         <div style="background: rgba(15, 23, 42, 0.03); border: 1px dashed var(--border-color); border-radius: 12px; padding: 1.2rem; text-align: center;">
             <p style="font-size: 0.88rem; color: #64748b; margin-bottom: 0.8rem;">
                 Prefer direct communication, or experiencing scheduling issues?
@@ -659,7 +809,7 @@
         </div>
     </section>
 
-    <!-- ==================== FOOTER & LEGAL SHIELD ==================== -->
+    <!-- ==================== FOOTER ==================== -->
     <footer>
         <div style="max-width: 1000px; margin: 0 auto; text-align: center;">
             <div class="legal-shield">
@@ -677,13 +827,12 @@
         </div>
     </footer>
 
-    <!-- ROBUST MATHEMATICAL CRUCIBLE ENGINE (HTML SUBSCRIPTS ENABLED) -->
+    <!-- ROBUST MATHEMATICAL CRUCIBLE ENGINE -->
     <script>
         function _d(arr) {
             return String.fromCharCode.apply(null, arr);
         }
 
-        // Encrypted Question Vault (With Native HTML Subscripts: v<sub>1</sub>, c<sub>1</sub>, etc.)
         const _qVault = {
             1: {
                 b: [85,110,105,116,32,73,32,8226,32,83,121,115,116,101,109,115,32,111,102,32,76,105,110,101,97,114,32,69,113,117,97,116,105,111,110,115],
@@ -703,7 +852,7 @@
             },
             5: {
                 b: [85,110,105,116,32,86,32,8226,32,69,105,103,101,110,118,97,108,117,101,115,32,38,32,69,105,103,101,110,118,101,99,116,111,114,115],
-                q: [34,83,117,112,112,111,115,101,32,97,32,115,112,104,101,114,101,32,111,102,32,114,97,100,105,117,115,32,114,32,99,101,110,116,101,114,101,100,32,97,116,32,116,104,101,32,111,114,105,103,105,110,32,40,48,44,32,48,44,32,48,41,32,105,110,32,8477,60,115,117,112,62,51,60,47,115,117,112,62,32,105,115,32,100,101,102,111,114,109,101,100,32,105,110,116,111,32,97,110,32,101,108,108,105,112,115,111,105,100,32,98,121,32,99,111,109,112,114,101,115,115,105,110,103,32,105,116,32,115,121,109,109,101,116,114,105,99,97,108,108,121,32,97,108,111,110,103,32,105,116,115,32,112,111,108,97,114,32,97,120,105,115,32,40,78,111,114,116,104,45,83,111,117,116,104,32,112,111,108,101,115,41,32,116,111,32,97,32,110,101,119,32,112,111,108,97,114,32,114,97,100,105,117,115,32,99,32,40,99,32,60,32,114,41,44,32,119,105,116,104,32,97,32,114,101,115,117,108,116,105,110,103,32,117,110,105,102,111,114,109,32,101,113,117,97,116,111,114,105,97,108,32,114,97,100,105,117,115,32,97,32,40,97,32,62,32,114,41,46,32,68,101,116,101,114,109,105,110,101,32,97,108,108,32,116,104,101,32,101,105,103,101,110,118,97,108,117,101,115,44,32,116,104,101,105,114,32,97,108,103,101,98,114,97,105,99,32,97,110,100,32,103,101,111,109,101,116,114,105,99,32,109,117,108,116,105,112,108,105,99,105,116,105,101,115,44,32,97,110,100,32,116,104,101,32,99,111,114,114,101,115,112,111,110,100,105,110,103,32,101,105,103,101,110,115,112,97,99,101,115,32,111,102,32,116,104,105,115,32,100,101,102,111,114,109,97,116,105,111,110,32,112,114,111,99,101,115,115,46,34]
+                q: [34,83,117,112,112,111,115,101,32,97,32,115,112,104,101,114,101,32,111,102,32,114,97,100,105,117,115,32,114,32,99,101,110,116,101,114,101,100,32,97,116,32,116,104,101,32,111,114,105,103,105,110,32,40,48,44,32,48,44,32,48,41,32,105,110,32,8477,60,115,117,112,62,51,60,47,115,117,112,62,32,105,115,32,100,101,102,111,114,109,101,100,32,105,110,116,111,32,97,110,32,101,108,108,105,112,115,111,105,100,32,98,121,32,99,111,109,112,114,101,115,115,105,110,103,32,105,116,32,115,121,109,109,101,116,114,105,99,97,108,108,121,32,97,108,111,110,103,32,105,116,115,32,112,111,108,97,114,32,97,120,105,115,32,40,78,111,114,116,104,45,83,111,117,116,104,32,112,111,108,101,115,41,32,116,111,32,97,32,110,101,119,32,112,111,108,97,114,32,114,97,100,105,117,115,32,99,32,40,99,32,60,32,114,41,44,32,119,105,116,104,32,97,32,114,101,115,117,108,116,105,110,103,32,117,110,105,102,111,114,109,32,101,113,117,97,116,111,114,105,97,108,32,114,97,100,105,117,115,32,97,32,40,97,32,62,32,114,41,46,32,68,101,116,101,114,109,105,110,101,32,97,108,108,32,116,104,101,32,101,105,103,101,110,118,97,108,117,101,115,44,32,116,104,101,105,114,32,97,108,103,101,98,114,97,105,99,32,97,110,100,32,103,101,111,109,101,116,114,105,99,32,109,117,108,116,105,112,108,105,99,105,116,105,101,115,44,32,97,110,100,32,116,104,101,32,99,111,114,114,101,115,112,111,110,100,105,110,103,32,101,105,103,101,110,113,112,97,99,101,115,32,111,102,32,116,104,105,115,32,100,101,102,111,114,109,97,116,105,111,110,32,112,114,111,99,101,115,115,46,34]
             },
             6: {
                 b: [85,110,105,116,32,86,73,32,8226,32,65,112,112,108,105,99,97,116,105,111,110,115,32,40,83,86,68,32,38,32,68,105,109,101,110,115,105,111,110,32,82,101,100,117,99,116,105,111,110,41],
@@ -715,7 +864,6 @@
             document.querySelectorAll('.crucible-tab').forEach(b => b.classList.remove('active'));
             btnElement.classList.add('active');
 
-            // Set via innerHTML so <sub> and <sup> tags render natively
             document.getElementById('trap-unit-badge').innerHTML = _d(_qVault[unitNum].b);
             document.getElementById('trap-question-text').innerHTML = _d(_qVault[unitNum].q);
         }

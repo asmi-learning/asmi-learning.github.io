@@ -460,7 +460,7 @@
             font-style: normal;
         }
 
-        /* ==================== CARD 1: SPRINT CARD STYLING ==================== */
+        /* ==================== CARD 1: SPRINT CARD ==================== */
         .sprint-badge-kicker {
             display: inline-block;
             background: #eff6ff;
@@ -476,7 +476,7 @@
         }
 
         .sprint-lines-block {
-            margin: 1.0rem 0 1.2rem;
+            margin: 0.9rem 0 1.2rem;
         }
 
         .sprint-line-item {
@@ -503,7 +503,6 @@
             font-size: 1.15rem;
             font-weight: 700;
             color: var(--navy-primary);
-            margin: 1.0rem 0 1.2rem;
             display: inline-block;
             background: #ffffff;
             border: 1px solid var(--border-color);
@@ -518,7 +517,6 @@
             font-family: 'Plus Jakarta Sans', sans-serif;
         }
 
-        /* IN-PAGE SPRINT DISPATCH FORM */
         .sprint-form-container {
             display: none;
             background: #ffffff;
@@ -563,64 +561,77 @@
             border-color: var(--navy-primary);
         }
 
-        /* ==================== CARD 2: COHORT & PLAN B ==================== */
-        .cohort-plan-card {
-            background: #ffffff;
-            border: 2px solid var(--navy-primary);
-            border-radius: 16px;
-            padding: 2.2rem;
-            margin: 1.5rem 0 2.0rem;
-            box-shadow: 0 8px 24px rgba(30, 58, 138, 0.05);
-            position: relative;
+        /* ==================== CARD 3: ADMISSIONS & SEMESTER PATHWAYS ==================== */
+        .admissions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 1.4rem;
+            margin: 1.4rem 0 2.0rem;
         }
 
-        .plan-rate-display {
+        .pathway-enroll-card {
+            background: #ffffff;
+            border: 1.5px solid var(--border-color);
+            border-radius: 14px;
+            padding: 1.8rem;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.02);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .pathway-enroll-card.featured {
+            border: 2px solid var(--navy-primary);
+            box-shadow: 0 8px 22px rgba(30, 58, 138, 0.07);
+        }
+
+        .pathway-rate-display {
             font-family: 'JetBrains Mono', monospace;
-            font-size: 2.3rem;
+            font-size: 2.1rem;
             font-weight: 700;
             color: var(--navy-primary);
             margin-bottom: 0.3rem;
         }
 
-        .plan-rate-display span {
-            font-size: 1.0rem;
+        .pathway-rate-display span {
+            font-size: 0.95rem;
             font-weight: 500;
             color: #64748b;
             font-family: 'Plus Jakarta Sans', sans-serif;
         }
 
-        .plan-installment-pill {
+        .pathway-installment-pill {
             display: inline-block;
             background: #f0fdf4;
             border: 1px solid #bbf7d0;
             color: var(--accent-green);
-            padding: 0.25rem 0.75rem;
+            padding: 0.20rem 0.65rem;
             border-radius: 20px;
-            font-size: 0.82rem;
+            font-size: 0.78rem;
             font-weight: 700;
-            margin-bottom: 1.0rem;
+            margin-bottom: 0.8rem;
         }
 
-        .cohort-features-list {
+        .pathway-perks-list {
             list-style: none;
             padding: 0;
-            margin: 1.2rem 0;
-            font-size: 0.90rem;
+            margin: 0.8rem 0 1.4rem;
+            font-size: 0.86rem;
             color: #334155;
         }
 
-        .cohort-features-list li {
-            margin-bottom: 0.65rem;
+        .pathway-perks-list li {
+            margin-bottom: 0.55rem;
             display: flex;
             align-items: flex-start;
-            gap: 10px;
+            gap: 8px;
             line-height: 1.5;
         }
 
-        .cohort-features-list li span {
+        .pathway-perks-list li span {
             color: var(--accent-green);
             font-weight: 800;
-            font-size: 1.0rem;
+            font-size: 0.95rem;
         }
 
         /* CLASSROOM DELIVERY INSET CARD */
@@ -629,7 +640,7 @@
             border: 1px solid var(--border-color);
             border-radius: 14px;
             padding: 1.6rem 1.8rem;
-            margin-bottom: 2.2rem;
+            margin-bottom: 2.0rem;
             box-shadow: 0 4px 14px rgba(0,0,0,0.02);
         }
 
@@ -655,94 +666,14 @@
             line-height: 1.5;
         }
 
-        /* ==================== SIGNATURE PILL-SWITCH NAVIGATION ==================== */
-        .pill-switch-nav {
-            display: flex;
-            justify-content: center;
-            gap: 14px;
-            margin: 1.8rem auto 1.4rem;
-            background: #ffffff;
-            border: 1.5px solid var(--border-color);
-            border-radius: 35px;
-            padding: 6px;
-            width: fit-content;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
-            flex-wrap: wrap;
-        }
-
-        .pill-switch-btn {
-            background: transparent;
-            border: none;
-            padding: 0.55rem 1.4rem;
-            border-radius: 25px;
-            font-size: 0.88rem;
-            font-weight: 700;
-            color: #475569;
-            cursor: pointer;
-            transition: all 0.2s ease;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            white-space: nowrap;
-        }
-
-        /* Circular Indicator Matching Streamlit App */
-        .pill-badge {
-            width: 22px;
-            height: 22px;
-            border-radius: 50%;
-            background: #e2e8f0;
-            color: #64748b;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 0.75rem;
-            font-weight: 800;
-            transition: all 0.2s ease;
-        }
-
-        /* Active: Academic Forest Green Circular Badge */
-        .pill-switch-btn.active {
-            color: var(--navy-dark);
-        }
-
-        .pill-switch-btn.active .pill-badge {
-            background: #15803d;
-            color: #ffffff;
-            box-shadow: 0 2px 6px rgba(21, 128, 61, 0.3);
-        }
-
-        /* INITIAL CLEAN SELECTION VIEW */
-        .initial-pathway-cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.2rem;
-            margin: 1.4rem 0;
-        }
-
-        .pathway-choice-card {
-            background: #ffffff;
-            border: 1.5px solid var(--border-color);
-            border-radius: 12px;
-            padding: 1.6rem;
-            text-align: center;
-            transition: all 0.2s ease;
-        }
-
-        .pathway-choice-card:hover {
-            border-color: var(--navy-primary);
-            box-shadow: 0 6px 18px rgba(30, 58, 138, 0.05);
-        }
-
         /* SCHEDULER IFRAME WRAPPER */
         .scheduler-wrapper {
-            display: none;
             background: var(--bg-parchment);
             border: 1px solid var(--border-color);
             border-radius: 14px;
             overflow: hidden;
             box-shadow: 0 8px 24px rgba(0,0,0,0.04);
-            margin: 1.5rem 0;
+            margin: 1.2rem 0;
             min-height: 700px;
         }
 
@@ -776,8 +707,6 @@
             .crucible-display-canvas { padding: 1.8rem 1.2rem; }
             .trap-challenge-card { padding: 1.4rem 1.2rem; }
             .trap-question-text { text-align: left; }
-            .pill-switch-nav { border-radius: 16px; width: 100%; }
-            .pill-switch-btn { width: 100%; justify-content: center; }
             .sprint-form-grid { grid-template-columns: 1fr; }
         }
     </style>
@@ -799,7 +728,7 @@
             <li><a href="#syllabus">Syllabus</a></li>
             <li><a href="#crucible">Crucible</a></li>
             <li><a href="#sprint" style="color: var(--navy-primary); font-weight: 700;">Diagnostic Sprint</a></li>
-            <li><a href="#cohort" class="btn-consult">Book Mentorship</a></li>
+            <li><a href="#trial" class="btn-consult">Free Trial Consultation</a></li>
         </ul>
     </nav>
 
@@ -900,7 +829,7 @@
                     Launch Unit-I 3D Studio Demo ↗
                 </a>
                 <a href="#cohort" class="btn-consult" style="padding: 0.85rem 1.8rem; font-size: 0.92rem; display: inline-block; background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.3);">
-                    Book Mentorship for Full Curriculum →
+                    Enroll in Cohort Mentorship →
                 </a>
             </div>
         </div>
@@ -1010,7 +939,7 @@
             </div>
 
             <div>
-                <a href="#cohort" class="btn-consult" style="padding: 0.85rem 1.8rem; font-size: 0.92rem; display: inline-flex; align-items: center; gap: 8px;">
+                <a href="#trial" class="btn-consult" style="padding: 0.85rem 1.8rem; font-size: 0.92rem; display: inline-flex; align-items: center; gap: 8px;">
                     <span>💡 Think You Have Solved It? Book a 20-Min Session to Evaluate Your Proof →</span>
                 </a>
                 <p style="font-size: 0.78rem; color: #94a3b8; margin-top: 1.0rem;">
@@ -1045,7 +974,7 @@
 
         <div style="display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; flex-wrap: wrap;">
             <div class="sprint-price-tag">
-                Plan A: $40 <span>/ hour (Pay-As-You-Go)</span>
+                $40 <span>/ hour (Pay-As-You-Go)</span>
             </div>
 
             <button type="button" 
@@ -1100,7 +1029,30 @@
         </div>
     </section>
 
-    <!-- ==================== CARD 2 (STANDALONE): WINTER 2026 COHORT & ENROLLMENT ==================== -->
+    <!-- ==================== CARD 2 (STANDALONE): FREE TRIAL DIAGNOSTIC CONSULTATION ==================== -->
+    <section id="trial" class="card-shell" style="border-top: 4px solid var(--accent-green);">
+        <div style="display: inline-block; background: #f0fdf4; border: 1px solid #bbf7d0; color: var(--accent-green); padding: 0.25rem 0.75rem; border-radius: 12px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; margin-bottom: 0.5rem;">
+            ✦ Complimentary Academic Trial • 1-on-1 Evaluation
+        </div>
+        
+        <h2 class="card-shell-title" style="margin: 0.4rem 0 0.6rem; font-size: 1.65rem;">
+            Book Your Free 20-Minute Diagnostic Consultation
+        </h2>
+        
+        <p class="card-shell-sub" style="margin-bottom: 1.4rem;">
+            Map your university syllabus, diagnose proof roadblocks, and evaluate mathematical invariants with Dr. Dhabalendu Samanta before enrolling.
+        </p>
+
+        <!-- 20-MIN DIAGNOSTIC CALENDLY EMBED -->
+        <div class="scheduler-wrapper" style="display: block; margin-top: 1.0rem;">
+            <div class="calendly-inline-widget" 
+                 data-url="https://calendly.com/dhabalendu/20min?hide_landing_page_details=1&hide_gdpr_banner=1&background_color=f7f3ea&text_color=0f172a&primary_color=1e3a8a" 
+                 style="min-width:320px;height:700px;width:100%;">
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CARD 3 (STANDALONE): WINTER 2026 COHORT ADMISSIONS & SCHEDULING ==================== -->
     <section id="cohort" class="card-shell" style="border-top: 4px solid var(--navy-primary);">
         
         <div style="display: inline-block; background: #eff6ff; border: 1px solid #bfdbfe; color: var(--navy-primary); padding: 0.25rem 0.75rem; border-radius: 12px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; margin-bottom: 0.5rem;">
@@ -1108,45 +1060,95 @@
         </div>
 
         <h2 class="card-shell-title" style="margin-bottom: 0.4rem; font-size: 1.65rem;">
-            Mentorship Plan &amp; Semester Enrollment
+            Cohort Admissions &amp; Semester Scheduling
         </h2>
         <p class="card-shell-sub" style="margin-bottom: 1.4rem;">
-            Private, rigorous academic guidance and complete curriculum mastery with Dr. Dhabalendu Samanta.
+            Private, comprehensive curriculum guidance with Dr. Dhabalendu Samanta. Choose your preferred semester tuition structure below:
         </p>
 
-        <!-- PLAN B FLAGSHIP COHORT CARD -->
-        <div class="cohort-plan-card">
-            <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 0.8rem; margin-bottom: 0.4rem;">
-                <h3 style="font-family: 'Playfair Display', serif; font-size: 1.45rem; color: var(--navy-dark); font-weight: 700;">
-                    Plan B • Full Semester Mentorship Cohort
-                </h3>
-                <span class="plan-installment-pill">Payable in two equal installments of $500</span>
+        <!-- TWO SIDE-BY-SIDE SEMESTER ENROLLMENT PATHWAYS (NO PLAN A/B LABELS) -->
+        <div class="admissions-grid">
+            
+            <!-- PATHWAY 1: SEMESTER PAY-PER-CLASS -->
+            <div class="pathway-enroll-card">
+                <div>
+                    <div style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #64748b; margin-bottom: 0.3rem;">
+                        Semester Flexible Track
+                    </div>
+                    <h3 style="font-family: 'Playfair Display', serif; font-size: 1.35rem; color: var(--navy-dark); font-weight: 700; margin-bottom: 0.4rem;">
+                        Semester Pay-Per-Class
+                    </h3>
+                    <div class="pathway-rate-display">$40 <span>/ class (hour)</span></div>
+                    
+                    <p style="font-size: 0.86rem; color: #475569; line-height: 1.5; margin-bottom: 1.0rem;">
+                        Continuous semester syllabus pacing with the complete flexibility to pay class-by-class as you learn.
+                    </p>
+
+                    <ul class="pathway-perks-list">
+                        <li><span>✓</span> Continuous syllabus tracking across the term</li>
+                        <li><span>✓</span> Full flexibility: pay per session with zero upfront lock-in</li>
+                        <li><span>✓</span> Complete vectorized Lecture Notes in PDF delivered after class</li>
+                    </ul>
+                </div>
+
+                <button type="button" 
+                        class="btn-consult" 
+                        onclick="revealCohortCalendar('per-class')"
+                        style="background: var(--navy-primary); width: 100%; text-align: center; border: none; cursor: pointer; padding: 0.75rem 1.0rem; font-size: 0.88rem;">
+                    Schedule Class Slot ↓
+                </button>
             </div>
 
-            <div class="plan-rate-display">$1,000 <span>/ Semester</span></div>
+            <!-- PATHWAY 2: FULL SEMESTER MENTORSHIP COHORT -->
+            <div class="pathway-enroll-card featured">
+                <div>
+                    <div style="font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; color: var(--navy-primary); margin-bottom: 0.3rem;">
+                        Flagship Cohort Mentorship
+                    </div>
+                    <h3 style="font-family: 'Playfair Display', serif; font-size: 1.35rem; color: var(--navy-dark); font-weight: 700; margin-bottom: 0.4rem;">
+                        Full Semester Mentorship
+                    </h3>
+                    
+                    <div class="pathway-rate-display">$1,000 <span>/ Semester</span></div>
+                    <div class="pathway-installment-pill">Payable in two equal installments of $500</div>
 
-            <p style="font-size: 0.90rem; color: #475569; line-height: 1.55; margin-bottom: 1.0rem;">
-                Comprehensive curriculum mastery strictly capped at 5 students. Guaranteed minimum of 35 hours, extendable as needed through finals without additional charges.
-            </p>
+                    <p style="font-size: 0.86rem; color: #475569; line-height: 1.5; margin-bottom: 1.0rem;">
+                        Comprehensive term mastery strictly capped at 5 students. Guaranteed minimum of 35 hours, extendable as needed through finals without added charges.
+                    </p>
 
-            <ul class="cohort-features-list">
-                <li>
-                    <span>✓</span>
-                    <div><strong>3 Dedicated Hours / Week</strong> reserved exclusively on Dr. Samanta's master calendar</div>
-                </li>
-                <li>
-                    <span>✓</span>
-                    <div><strong>Guaranteed Minimum of 35 Hours</strong> (Extendable at zero added charges through finals)</div>
-                </li>
-                <li>
-                    <span>✓</span>
-                    <div><strong>Priority Direct Access</strong> via WhatsApp &amp; Email for between-class proof verification</div>
-                </li>
-                <li>
-                    <span>✓</span>
-                    <div><strong>Complete Term Coverage:</strong> Weekly Coursework, Midterm Sprints, and Final Exam Mastery</div>
-                </li>
-            </ul>
+                    <ul class="pathway-perks-list">
+                        <li><span>✓</span> <strong>3 Dedicated Hours / Week</strong> reserved on Dr. Samanta's calendar</li>
+                        <li><span>✓</span> Guaranteed 35+ hours (extendable at zero added charges through finals)</li>
+                        <li><span>✓</span> Priority WhatsApp &amp; Email access for between-class proof verification</li>
+                        <li><span>✓</span> Complete coverage: Coursework, Midterm Sprints, and Finals Prep</li>
+                    </ul>
+                </div>
+
+                <button type="button" 
+                        class="btn-consult" 
+                        onclick="revealCohortCalendar('full-term')"
+                        style="background: #15803d; width: 100%; text-align: center; border: none; cursor: pointer; padding: 0.75rem 1.0rem; font-size: 0.88rem;">
+                    Lock 3 hr/wk Semester Slot ↓
+                </button>
+            </div>
+
+        </div>
+
+        <!-- REVEALED COHORT CALENDLY EXPANDER -->
+        <div id="cohort-scheduler-frame" class="scheduler-wrapper" style="display: none;">
+            <div id="cohort-view-per-class">
+                <div class="calendly-inline-widget" 
+                     data-url="https://calendly.com/dhabalendu/20min?hide_landing_page_details=1&hide_gdpr_banner=1&background_color=f7f3ea&text_color=0f172a&primary_color=1e3a8a" 
+                     style="min-width:320px;height:700px;width:100%;">
+                </div>
+            </div>
+
+            <div id="cohort-view-full-term" style="display: none;">
+                <div class="calendly-inline-widget" 
+                     data-url="https://calendly.com/dhabalendu/semester-cohort?hide_landing_page_details=1&hide_gdpr_banner=1&background_color=f7f3ea&text_color=0f172a&primary_color=1e3a8a" 
+                     style="min-width:320px;height:700px;width:100%;">
+                </div>
+            </div>
         </div>
 
         <!-- DEDICATED CLASSROOM INFRASTRUCTURE INSET CARD -->
@@ -1166,91 +1168,18 @@
                 </div>
                 <div class="delivery-item">
                     <h4>📄 Complete Deliverables</h4>
-                    <p>Complete vectorized <strong>Lecture Notes</strong> in high-resolution PDF delivered after every class.</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- SELECT YOUR BOOKING PATHWAY (EXECUTIVE HEADER & CLEAN INITIAL VIEW) -->
-        <div style="text-align: center; margin: 2.2rem 0 0.8rem;">
-            <h3 style="font-family: 'Playfair Display', serif; font-size: 1.45rem; color: var(--navy-dark); margin-bottom: 0.3rem;">
-                Select Your Booking Pathway
-            </h3>
-        </div>
-
-        <!-- SIGNATURE PILL-SWITCH NAVIGATION (GREEN CIRCULAR INDICATOR) -->
-        <div class="pill-switch-nav">
-            <button type="button" class="pill-switch-btn active" id="tab-btn-1" onclick="switchBookingTab(1)">
-                <span class="pill-badge" id="badge-1">1</span>
-                <span>Complimentary 20-Min Diagnostic</span>
-            </button>
-            <button type="button" class="pill-switch-btn" id="tab-btn-2" onclick="switchBookingTab(2)">
-                <span class="pill-badge" id="badge-2">2</span>
-                <span>Reserve 3 hr/wk (Full Semester)</span>
-            </button>
-        </div>
-
-        <!-- CLEAN INITIAL SELECTION VIEW (NO GIANT OPEN IFRAME BY DEFAULT) -->
-        <div id="initial-choice-view" class="initial-pathway-cards">
-            <div class="pathway-choice-card">
-                <div style="font-size: 1.8rem; margin-bottom: 0.4rem;">🎯</div>
-                <h4 style="font-family: 'Playfair Display', serif; font-size: 1.15rem; color: var(--navy-dark); margin-bottom: 0.4rem;">
-                    Complimentary Consultation
-                </h4>
-                <p style="font-size: 0.84rem; color: #64748b; line-height: 1.5; margin-bottom: 1.0rem;">
-                    Map your university syllabus, diagnose proof roadblocks, and evaluate mathematical invariants with Dr. Dhabalendu Samanta.
-                </p>
-                <button type="button" 
-                        class="btn-consult" 
-                        onclick="revealCalendar(1)"
-                        style="background: var(--navy-primary); font-size: 0.85rem; padding: 0.65rem 1.2rem; border: none; cursor: pointer;">
-                    Open 20-Min Calendar ↓
-                </button>
-            </div>
-
-            <div class="pathway-choice-card">
-                <div style="font-size: 1.8rem; margin-bottom: 0.4rem;">📅</div>
-                <h4 style="font-family: 'Playfair Display', serif; font-size: 1.15rem; color: var(--navy-dark); margin-bottom: 0.4rem;">
-                    Plan B Full Semester Schedule
-                </h4>
-                <p style="font-size: 0.84rem; color: #64748b; line-height: 1.5; margin-bottom: 1.0rem;">
-                    Reserve your dedicated 3 hours / week for the entire Winter 2026 semester ($1,000 in two $500 installments). Minimum 35 hours.
-                </p>
-                <button type="button" 
-                        class="btn-consult" 
-                        onclick="revealCalendar(2)"
-                        style="background: #15803d; font-size: 0.85rem; padding: 0.65rem 1.2rem; border: none; cursor: pointer;">
-                    Open Semester Reservation ↓
-                </button>
-            </div>
-        </div>
-
-        <!-- REVEALED CALENDLY WRAPPER -->
-        <div id="scheduler-frame-wrap" class="scheduler-wrapper">
-            <!-- TAB 1: 20-MINUTE DIAGNOSTIC MEETING -->
-            <div id="booking-view-1">
-                <div class="calendly-inline-widget" 
-                     data-url="https://calendly.com/dhabalendu/20min?hide_landing_page_details=1&hide_gdpr_banner=1&background_color=f7f3ea&text_color=0f172a&primary_color=1e3a8a" 
-                     style="min-width:320px;height:700px;width:100%;">
-                </div>
-            </div>
-
-            <!-- TAB 2: FULL SEMESTER 3 HR/WEEK RESERVATION -->
-            <div id="booking-view-2" style="display: none;">
-                <div class="calendly-inline-widget" 
-                     data-url="https://calendly.com/dhabalendu/semester-cohort?hide_landing_page_details=1&hide_gdpr_banner=1&background_color=f7f3ea&text_color=0f172a&primary_color=1e3a8a" 
-                     style="min-width:320px;height:700px;width:100%;">
+                    <p>Complete vectorized <strong>Lecture Notes in PDF</strong> delivered after every class.</p>
                 </div>
             </div>
         </div>
 
         <!-- DIRECT EMAIL FALLBACK -->
-        <div style="background: rgba(15, 23, 42, 0.03); border: 1px dashed var(--border-color); border-radius: 12px; padding: 1.2rem; text-align: center; margin-top: 1.6rem;">
+        <div style="background: rgba(15, 23, 42, 0.03); border: 1px dashed var(--border-color); border-radius: 12px; padding: 1.2rem; text-align: center;">
             <p style="font-size: 0.88rem; color: #64748b; margin-bottom: 0.8rem;">
                 Prefer direct communication, or experiencing scheduling issues?
             </p>
             <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
-                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=dhabalendu@gmail.com&su=[ASMI%20Mentorship]%20Diagnostic%20Consultation%20Request" 
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=dhabalendu@gmail.com&su=[ASMI%20Mentorship]%20Enrollment%20Inquiry" 
                    target="_blank" 
                    rel="noopener noreferrer" 
                    style="background: #ffffff; color: var(--navy-dark); text-decoration: none; padding: 0.6rem 1.4rem; border-radius: 8px; font-weight: 700; font-size: 0.88rem; display: inline-flex; align-items: center; gap: 6px; border: 1px solid var(--border-color);">
@@ -1310,7 +1239,7 @@
             },
             5: {
                 b: [85,110,105,116,32,86,32,8226,32,69,105,103,101,110,118,97,108,117,101,115,32,38,32,69,105,103,101,110,118,101,99,116,111,114,115],
-                q: [34,83,117,112,112,111,115,101,32,97,32,115,112,104,101,114,101,32,111,102,32,114,97,100,105,117,115,32,114,32,99,101,110,116,101,114,101,100,32,97,116,32,116,104,101,32,111,114,105,103,105,110,32,40,48,44,32,48,44,32,48,41,32,105,110,32,8477,60,115,117,112,62,51,60,47,115,117,112,62,32,105,115,32,100,101,102,111,114,109,101,100,32,105,110,116,111,32,97,110,32,101,108,108,105,112,115,111,105,100,32,98,121,32,99,111,109,112,114,101,115,115,105,110,103,32,105,116,32,115,121,109,109,101,116,114,105,99,97,108,108,121,32,97,108,111,110,103,32,105,116,115,32,112,111,108,97,114,32,97,120,105,115,32,40,78,111,114,116,104,45,83,111,117,116,104,32,112,111,108,101,115,41,32,116,111,32,97,32,110,101,119,32,112,111,108,97,114,32,114,97,100,105,117,115,32,99,32,40,99,32,60,32,114,41,44,32,119,105,116,104,32,97,32,114,101,115,117,108,116,105,110,103,32,117,110,105,102,111,114,109,32,101,113,117,97,116,111,114,105,97,108,32,114,97,100,105,117,115,32,97,32,40,97,32,62,32,114,41,46,32,68,101,116,101,114,109,105,110,101,32,97,108,108,32,116,104,101,32,101,105,103,101,110,118,97,108,117,101,115,44,32,116,104,101,105,114,32,97,108,103,101,98,114,97,105,99,32,97,110,100,32,103,101,111,109,101,116,114,105,99,32,109,117,108,116,105,112,108,105,99,105,116,105,101,115,44,32,97,110,100,32,116,104,101,32,99,111,114,114,101,115,112,111,110,100,105,110,103,32,101,105,103,101,110,113,112,97,99,101,115,32,111,102,32,116,104,105,115,32,100,101,102,111,114,109,97,116,105,111,110,32,112,114,111,99,101,115,115,46,34]
+                q: [34,83,117,112,112,111,115,101,32,97,32,115,112,104,101,114,101,32,111,102,32,114,97,100,105,117,115,32,114,32,99,101,110,116,101,114,101,100,32,97,116,32,116,104,101,32,111,114,105,103,105,110,32,40,48,44,32,48,44,32,48,41,32,105,110,32,8477,60,115,117,112,62,51,60,47,115,117,112,62,32,105,115,32,100,101,102,111,114,109,101,100,32,105,110,116,111,32,97,110,32,101,108,108,105,112,115,111,105,100,32,98,121,32,99,111,109,112,114,101,115,115,105,110,103,32,105,116,32,115,121,109,109,101,116,114,105,99,97,108,108,121,32,97,108,111,110,103,32,105,116,115,32,112,111,108,97,114,32,97,120,105,115,32,40,78,111,114,116,104,45,83,111,117,116,104,32,112,111,108,101,115,41,32,116,111,32,97,32,110,101,119,32,112,111,108,97,114,32,114,97,100,105,117,115,32,99,32,40,99,32,60,32,114,41,44,32,119,105,116,104,32,97,32,114,101,115,117,108,116,105,110,103,32,117,110,105,102,111,114,109,32,101,113,117,97,116,111,114,105,97,108,32,114,97,100,105,117,115,32,97,32,40,97,32,62,32,114,41,46,32,68,101,116,101,114,109,105,110,101,32,97,108,108,32,116,104,101,32,101,105,103,101,110,118,97,108,117,101,115,44,32,116,104,101,105,114,32,97,108,103,101,98,114,97,105,99,32,97,110,100,32,103,101,111,109,101,116,114,105,99,32,109,117,108,116,105,112,108,105,99,105,116,105,101,115,44,32,97,110,100,32,116,104,101,32,99,111,114,114,101,115,112,111,110,100,105,110,103,32,101,105,103,101,110,113,112,97,99,101,115,32,111,102,32,116,104,105,115,32,100,101,102,111,114,109,97,116,105,111,110,32,112,114,111,109,101,115,115,46,34]
             },
             6: {
                 b: [85,110,105,116,32,86,73,32,8226,32,65,112,112,108,105,99,97,116,105,111,110,115,32,40,83,86,68,32,38,32,68,105,109,101,110,115,105,111,110,32,82,101,100,117,99,116,105,111,110,41],
@@ -1375,7 +1304,6 @@
                 document.getElementById('sprintDispatchForm').reset();
             })
             .catch(error => {
-                // Fallback to mailto if network blocked
                 const fallbackSubject = encodeURIComponent("[URGENT SPRINT] Request from " + payload.student_name);
                 const fallbackBody = encodeURIComponent("Name: " + payload.student_name + "\nEmail: " + payload.student_email + "\nUniversity: " + payload.university + "\nDeadline: " + payload.deadline + "\n\nProblem Details:\n" + payload.problem_details);
                 window.location.href = "mailto:dhabalendu@gmail.com?subject=" + fallbackSubject + "&body=" + fallbackBody;
@@ -1385,45 +1313,20 @@
             });
         }
 
-        /* CARD 2: PILL-SWITCH SCHEDULER CONTROLLER */
-        function switchBookingTab(tabNum) {
-            const btn1 = document.getElementById('tab-btn-1');
-            const btn2 = document.getElementById('tab-btn-2');
-            const view1 = document.getElementById('booking-view-1');
-            const view2 = document.getElementById('booking-view-2');
+        /* CARD 3: REVEAL COHORT CALENDLY ON DEMAND */
+        function revealCohortCalendar(mode) {
+            const frameWrap = document.getElementById('cohort-scheduler-frame');
+            const viewPerClass = document.getElementById('cohort-view-per-class');
+            const viewFullTerm = document.getElementById('cohort-view-full-term');
 
-            if (tabNum === 1) {
-                btn1.classList.add('active');
-                btn2.classList.remove('active');
-                view1.style.display = 'block';
-                view2.style.display = 'none';
-            } else {
-                btn2.classList.add('active');
-                btn1.classList.remove('active');
-                view1.style.display = 'none';
-                view2.style.display = 'block';
-            }
-            revealCalendar(tabNum);
-        }
-
-        /* REVEAL CALENDAR ON-DEMAND (ELIMINATES HEAVY DEFAULT IFRAME LOAD) */
-        function revealCalendar(tabNum) {
-            const frameWrap = document.getElementById('scheduler-frame-wrap');
-            const choiceView = document.getElementById('initial-choice-view');
-            
             frameWrap.style.display = 'block';
-            choiceView.style.display = 'none';
 
-            if (tabNum === 1) {
-                document.getElementById('tab-btn-1').classList.add('active');
-                document.getElementById('tab-btn-2').classList.remove('active');
-                document.getElementById('booking-view-1').style.display = 'block';
-                document.getElementById('booking-view-2').style.display = 'none';
+            if (mode === 'per-class') {
+                viewPerClass.style.display = 'block';
+                viewFullTerm.style.display = 'none';
             } else {
-                document.getElementById('tab-btn-2').classList.add('active');
-                document.getElementById('tab-btn-1').classList.remove('active');
-                document.getElementById('booking-view-1').style.display = 'none';
-                document.getElementById('booking-view-2').style.display = 'block';
+                viewPerClass.style.display = 'none';
+                viewFullTerm.style.display = 'block';
             }
 
             frameWrap.scrollIntoView({ behavior: 'smooth', block: 'nearest' });

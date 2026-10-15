@@ -68,7 +68,6 @@
             -webkit-font-smoothing: antialiased;
         }
 
-        /* Enforce normal upright academic styling for ampersands across all typography */
         h1, h2, h3, h4, .amp {
             font-feature-settings: "liga" 0;
         }
@@ -634,27 +633,27 @@
             font-size: 0.95rem;
         }
 
-        /* CLASSROOM DELIVERY INSET CARD */
+        /* CLASSROOM DELIVERY INSET CARD (COMPACT & SLEEK) */
         .classroom-inset-card {
             background: #ffffff;
             border: 1px solid var(--border-color);
             border-radius: 14px;
-            padding: 1.6rem 1.8rem;
-            margin-bottom: 2.0rem;
+            padding: 1.2rem 1.4rem;
+            margin-bottom: 1.5rem;
             box-shadow: 0 4px 14px rgba(0,0,0,0.02);
         }
 
         .delivery-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 1.4rem;
-            margin-top: 1.0rem;
+            gap: 1.2rem;
+            margin-top: 0.8rem;
         }
 
         .delivery-item h4 {
-            font-size: 0.90rem;
+            font-size: 0.88rem;
             color: var(--navy-dark);
-            margin-bottom: 0.3rem;
+            margin-bottom: 0.25rem;
             display: flex;
             align-items: center;
             gap: 6px;
@@ -663,7 +662,17 @@
         .delivery-item p {
             font-size: 0.82rem;
             color: #64748b;
-            line-height: 1.5;
+            line-height: 1.45;
+        }
+
+        /* DIRECT INQUIRY & DISPATCH INSET CARD (DIFFERENTIATED) */
+        .direct-inquiry-card {
+            background: #ffffff;
+            border: 1.5px dashed #cbd5e1;
+            border-radius: 14px;
+            padding: 1.4rem 1.6rem;
+            text-align: center;
+            margin-top: 1.5rem;
         }
 
         /* SCHEDULER IFRAME WRAPPER */
@@ -1039,12 +1048,23 @@
             Book Your Free 20-Minute Diagnostic Consultation
         </h2>
         
-        <p class="card-shell-sub" style="margin-bottom: 1.4rem;">
+        <p class="card-shell-sub" style="margin-bottom: 1.2rem;">
             Map your university syllabus, diagnose proof roadblocks, and evaluate mathematical invariants with Dr. Dhabalendu Samanta before enrolling.
         </p>
 
-        <!-- 20-MIN DIAGNOSTIC CALENDLY EMBED -->
-        <div class="scheduler-wrapper" style="display: block; margin-top: 1.0rem;">
+        <!-- ON-DEMAND CLICK BUTTON (CALENDAR ONLY APPEARS ON CLICK) -->
+        <div style="text-align: center; margin: 1.2rem 0 0.4rem;">
+            <button type="button" 
+                    id="trialCalendarToggleBtn"
+                    class="btn-consult" 
+                    onclick="toggleTrialCalendar()" 
+                    style="background: var(--accent-green); padding: 0.8rem 1.8rem; font-size: 0.92rem; border: none; cursor: pointer;">
+                Open 20-Min Calendar ↓
+            </button>
+        </div>
+
+        <!-- REVEALED 20-MIN CALENDLY EMBED -->
+        <div id="trial-scheduler-frame" class="scheduler-wrapper" style="display: none; margin-top: 1.4rem;">
             <div class="calendly-inline-widget" 
                  data-url="https://calendly.com/dhabalendu/20min?hide_landing_page_details=1&hide_gdpr_banner=1&background_color=f7f3ea&text_color=0f172a&primary_color=1e3a8a" 
                  style="min-width:320px;height:700px;width:100%;">
@@ -1151,7 +1171,7 @@
             </div>
         </div>
 
-        <!-- DEDICATED CLASSROOM INFRASTRUCTURE INSET CARD -->
+        <!-- CARD HOLDER A: DEDICATED CLASSROOM INFRASTRUCTURE INSET CARD -->
         <div class="classroom-inset-card">
             <div style="display: inline-block; background: #eff6ff; border: 1px solid #bfdbfe; color: var(--navy-primary); padding: 0.20rem 0.65rem; border-radius: 10px; font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em;">
                 ✦ Classroom Delivery Infrastructure
@@ -1173,8 +1193,12 @@
             </div>
         </div>
 
-        <!-- DIRECT EMAIL FALLBACK -->
-        <div style="background: rgba(15, 23, 42, 0.03); border: 1px dashed var(--border-color); border-radius: 12px; padding: 1.2rem; text-align: center;">
+        <!-- CARD HOLDER B: DIRECT INQUIRY & DISPATCH (DIFFERENTIATED BADGE) -->
+        <div class="direct-inquiry-card">
+            <div style="display: inline-block; background: #f8fafc; border: 1px solid #cbd5e1; color: #475569; padding: 0.20rem 0.65rem; border-radius: 10px; font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.6rem;">
+                ✦ Direct Faculty Advisory &amp; Dispatch
+            </div>
+            
             <p style="font-size: 0.88rem; color: #64748b; margin-bottom: 0.8rem;">
                 Prefer direct communication, or experiencing scheduling issues?
             </p>
@@ -1239,7 +1263,7 @@
             },
             5: {
                 b: [85,110,105,116,32,86,32,8226,32,69,105,103,101,110,118,97,108,117,101,115,32,38,32,69,105,103,101,110,118,101,99,116,111,114,115],
-                q: [34,83,117,112,112,111,115,101,32,97,32,115,112,104,101,114,101,32,111,102,32,114,97,100,105,117,115,32,114,32,99,101,110,116,101,114,101,100,32,97,116,32,116,104,101,32,111,114,105,103,105,110,32,40,48,44,32,48,44,32,48,41,32,105,110,32,8477,60,115,117,112,62,51,60,47,115,117,112,62,32,105,115,32,100,101,102,111,114,109,101,100,32,105,110,116,111,32,97,110,32,101,108,108,105,112,115,111,105,100,32,98,121,32,99,111,109,112,114,101,115,115,105,110,103,32,105,116,32,115,121,109,109,101,116,114,105,99,97,108,108,121,32,97,108,111,110,103,32,105,116,115,32,112,111,108,97,114,32,97,120,105,115,32,40,78,111,114,116,104,45,83,111,117,116,104,32,112,111,108,101,115,41,32,116,111,32,97,32,110,101,119,32,112,111,108,97,114,32,114,97,100,105,117,115,32,99,32,40,99,32,60,32,114,41,44,32,119,105,116,104,32,97,32,114,101,115,117,108,116,105,110,103,32,117,110,105,102,111,114,109,32,101,113,117,97,116,111,114,105,97,108,32,114,97,100,105,117,115,32,97,32,40,97,32,62,32,114,41,46,32,68,101,116,101,114,109,105,110,101,32,97,108,108,32,116,104,101,32,101,105,103,101,110,118,97,108,117,101,115,44,32,116,104,101,105,114,32,97,108,103,101,98,114,97,105,99,32,97,110,100,32,103,101,111,109,101,116,114,105,99,32,109,117,108,116,105,112,108,105,99,105,116,105,101,115,44,32,97,110,100,32,116,104,101,32,99,111,114,114,101,115,112,111,110,100,105,110,103,32,101,105,103,101,110,113,112,97,99,101,115,32,111,102,32,116,104,105,115,32,100,101,102,111,114,109,97,116,105,111,110,32,112,114,111,109,101,115,115,46,34]
+                q: [34,83,117,112,112,111,115,101,32,97,32,115,112,104,101,114,101,32,111,102,32,114,97,100,105,117,115,32,114,32,99,101,110,116,101,114,101,100,32,97,116,32,116,104,101,32,111,114,105,103,105,110,32,40,48,44,32,48,44,32,48,41,32,105,110,32,8477,60,115,117,112,62,51,60,47,115,117,112,62,32,105,115,32,100,101,102,111,114,109,101,100,32,105,110,116,111,32,97,110,32,101,108,108,105,112,115,111,105,100,32,98,121,32,99,111,109,112,114,101,115,115,105,110,103,32,105,116,32,115,121,109,109,101,116,114,105,99,97,108,108,121,32,97,108,111,110,103,32,105,116,115,32,112,111,108,97,114,32,97,120,105,115,32,40,78,111,114,116,104,45,83,111,117,116,104,32,112,111,108,101,115,41,32,116,111,32,97,32,110,101,119,32,112,111,108,97,114,32,114,97,100,105,117,115,32,99,32,40,99,32,60,32,114,41,44,32,119,105,116,104,32,97,32,114,101,115,117,108,116,105,110,103,32,117,110,105,102,111,114,109,32,101,113,117,97,116,111,114,105,97,108,32,114,97,100,105,117,115,32,97,32,40,97,32,62,32,114,41,46,32,68,101,116,101,114,109,105,110,101,32,97,108,108,32,116,104,101,32,101,105,103,101,110,118,97,108,117,101,115,44,32,116,104,101,105,114,32,97,108,103,101,98,114,97,105,99,32,97,110,100,32,103,101,111,109,101,116,114,105,99,32,109,117,108,116,105,112,108,105,99,105,116,105,101,115,44,32,97,110,100,32,116,104,101,32,99,111,114,114,101,115,112,111,110,100,105,110,103,32,101,105,103,101,110,113,112,97,99,101,115,32,111,102,32,116,104,105,115,32,100,101,102,111,114,109,97,116,105,111,110,32,112,114,111,99,101,115,115,46,34]
             },
             6: {
                 b: [85,110,105,116,32,86,73,32,8226,32,65,112,112,108,105,99,97,116,105,111,110,115,32,40,83,86,68,32,38,32,68,105,109,101,110,115,105,111,110,32,82,101,100,117,99,116,105,111,110,41],
@@ -1311,6 +1335,20 @@
                 submitBtn.innerText = '✓ Dispatched via Email Client';
                 submitBtn.style.backgroundColor = '#15803d';
             });
+        }
+
+        /* CARD 2: ON-DEMAND FREE TRIAL CALENDLY TOGGLE */
+        function toggleTrialCalendar() {
+            const frame = document.getElementById('trial-scheduler-frame');
+            const btn = document.getElementById('trialCalendarToggleBtn');
+            if (frame.style.display === 'block') {
+                frame.style.display = 'none';
+                btn.innerText = 'Open 20-Min Calendar ↓';
+            } else {
+                frame.style.display = 'block';
+                btn.innerText = 'Close Calendar ↑';
+                frame.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }
         }
 
         /* CARD 3: REVEAL COHORT CALENDLY ON DEMAND */

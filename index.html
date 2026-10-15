@@ -69,7 +69,7 @@
         }
 
         /* Enforce normal upright academic styling for ampersands across all typography */
-        .amp, h1, h2, h3, h4 {
+        h1, h2, h3, h4, .amp {
             font-feature-settings: "liga" 0;
         }
 
@@ -112,6 +112,8 @@
             border-radius: 8px;
             font-weight: 600;
             transition: all 0.2s ease;
+            text-decoration: none;
+            display: inline-block;
         }
         .btn-consult:hover { background: var(--navy-dark); }
 
@@ -278,17 +280,17 @@
         /* UNIFIED CARD-SHELL */
         .card-shell {
             background: rgba(255, 255, 255, 0.88);
-            border: 1px solid var(--border-color);
+            border: 1.5px solid var(--border-color);
             border-radius: 20px;
             padding: 2.2rem;
             max-width: 1000px;
-            margin: 0 auto 5.5rem;
+            margin: 0 auto 3.5rem;
             box-shadow: 0 10px 30px rgba(0,0,0,0.03);
             text-align: left;
-            scroll-margin-top: 100px;
+            scroll-margin-top: 90px;
         }
 
-        .card-shell-header { margin-bottom: 1.6rem; }
+        .card-shell-header { margin-bottom: 1.4rem; }
 
         .card-shell-title {
             font-family: 'Playfair Display', serif;
@@ -403,8 +405,6 @@
             box-shadow: 0 14px 28px rgba(15, 23, 42, 0.08);
             user-select: none;
             -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
         }
 
         .trap-unit-badge {
@@ -460,145 +460,207 @@
             font-style: normal;
         }
 
-        /* ==================== SPRINT INSET CARD ==================== */
-        .sprint-card-banner {
-            background: linear-gradient(135deg, #eff6ff 0%, #f0fdf4 100%);
-            border: 2px solid #bfdbfe;
-            border-radius: 16px;
-            padding: 2.0rem 2.2rem;
-            margin-bottom: 2.5rem;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 2.0rem;
-            flex-wrap: wrap;
-            box-shadow: 0 4px 16px rgba(30, 58, 138, 0.04);
-            scroll-margin-top: 110px;
-        }
-
+        /* ==================== CARD 1: SPRINT CARD STYLING ==================== */
         .sprint-badge-kicker {
             display: inline-block;
-            background: #1e3a8a;
-            color: #ffffff;
+            background: #eff6ff;
+            border: 1px solid #bfdbfe;
+            color: var(--navy-primary);
             padding: 0.25rem 0.75rem;
             border-radius: 12px;
-            font-size: 0.72rem;
-            font-weight: 700;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-            margin-bottom: 0.6rem;
-        }
-
-        /* ==================== PRICING & TUITION TIERS ==================== */
-        .pricing-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.5rem;
-            margin: 1.5rem 0 2.2rem;
-        }
-
-        .pricing-card {
-            background: #ffffff;
-            border: 1.5px solid var(--border-color);
-            border-radius: 14px;
-            padding: 1.8rem;
-            box-shadow: 0 4px 14px rgba(0,0,0,0.02);
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        .pricing-card.featured {
-            border-color: #1e3a8a;
-            border-width: 2px;
-            box-shadow: 0 6px 20px rgba(30, 58, 138, 0.08);
-            background: #fdfdfd;
-        }
-
-        .pricing-tag {
             font-size: 0.75rem;
             font-weight: 700;
+            letter-spacing: 0.06em;
             text-transform: uppercase;
-            letter-spacing: 0.08em;
-            color: #64748b;
-            margin-bottom: 0.3rem;
-        }
-
-        .pricing-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.35rem;
-            color: var(--navy-dark);
             margin-bottom: 0.6rem;
-            font-weight: 700;
         }
 
-        .pricing-rate {
+        .sprint-lines-block {
+            margin: 1.0rem 0 1.2rem;
+        }
+
+        .sprint-line-item {
+            font-size: 0.94rem;
+            color: var(--slate-body);
+            margin-bottom: 0.45rem;
+            display: flex;
+            align-items: baseline;
+            gap: 8px;
+        }
+
+        .sprint-line-item strong {
+            color: var(--navy-dark);
+        }
+
+        .sprint-line-bullet {
+            color: var(--accent-cyan);
+            font-weight: 800;
+            font-size: 0.85rem;
+        }
+
+        .sprint-price-tag {
             font-family: 'JetBrains Mono', monospace;
-            font-size: 2.1rem;
+            font-size: 1.15rem;
             font-weight: 700;
             color: var(--navy-primary);
-            margin-bottom: 0.4rem;
+            margin: 1.0rem 0 1.2rem;
+            display: inline-block;
+            background: #ffffff;
+            border: 1px solid var(--border-color);
+            padding: 0.4rem 1.0rem;
+            border-radius: 8px;
         }
 
-        .pricing-rate span {
-            font-size: 0.95rem;
+        .sprint-price-tag span {
+            font-size: 0.82rem;
             font-weight: 500;
             color: #64748b;
             font-family: 'Plus Jakarta Sans', sans-serif;
         }
 
-        .pricing-sub {
-            font-size: 0.85rem;
-            color: #475569;
-            line-height: 1.5;
-            margin-bottom: 1.2rem;
+        /* IN-PAGE SPRINT DISPATCH FORM */
+        .sprint-form-container {
+            display: none;
+            background: #ffffff;
+            border: 1.5px solid var(--border-color);
+            border-radius: 14px;
+            padding: 1.6rem;
+            margin-top: 1.2rem;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.03);
         }
 
-        .pricing-perks {
+        .sprint-form-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1.0rem;
+            margin-bottom: 1.0rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.80rem;
+            font-weight: 700;
+            color: var(--navy-dark);
+            margin-bottom: 0.35rem;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+        }
+
+        .form-group input, .form-group textarea {
+            width: 100%;
+            background: #ffffff;
+            border: 1.5px solid var(--border-color);
+            border-radius: 8px;
+            padding: 0.65rem 0.85rem;
+            font-size: 0.88rem;
+            font-family: inherit;
+            color: var(--navy-dark);
+            outline: none;
+            transition: border 0.2s ease;
+        }
+
+        .form-group input:focus, .form-group textarea:focus {
+            border-color: var(--navy-primary);
+        }
+
+        /* ==================== CARD 2: COHORT & PLAN B ==================== */
+        .cohort-plan-card {
+            background: #ffffff;
+            border: 2px solid var(--navy-primary);
+            border-radius: 16px;
+            padding: 2.2rem;
+            margin: 1.5rem 0 2.0rem;
+            box-shadow: 0 8px 24px rgba(30, 58, 138, 0.05);
+            position: relative;
+        }
+
+        .plan-rate-display {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 2.3rem;
+            font-weight: 700;
+            color: var(--navy-primary);
+            margin-bottom: 0.3rem;
+        }
+
+        .plan-rate-display span {
+            font-size: 1.0rem;
+            font-weight: 500;
+            color: #64748b;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        .plan-installment-pill {
+            display: inline-block;
+            background: #f0fdf4;
+            border: 1px solid #bbf7d0;
+            color: var(--accent-green);
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.82rem;
+            font-weight: 700;
+            margin-bottom: 1.0rem;
+        }
+
+        .cohort-features-list {
             list-style: none;
             padding: 0;
-            margin: 0 0 1.2rem;
-            font-size: 0.84rem;
+            margin: 1.2rem 0;
+            font-size: 0.90rem;
             color: #334155;
         }
 
-        .pricing-perks li {
-            margin-bottom: 0.5rem;
+        .cohort-features-list li {
+            margin-bottom: 0.65rem;
             display: flex;
             align-items: flex-start;
-            gap: 8px;
+            gap: 10px;
+            line-height: 1.5;
         }
 
-        .pricing-perks li span {
+        .cohort-features-list li span {
             color: var(--accent-green);
-            font-weight: 700;
+            font-weight: 800;
+            font-size: 1.0rem;
         }
 
-        /* PLATFORM BADGE */
-        .delivery-badge-strip {
-            background: #f8fafc;
-            border: 1px solid #e2e8f0;
-            border-radius: 12px;
-            padding: 0.9rem 1.4rem;
+        /* CLASSROOM DELIVERY INSET CARD */
+        .classroom-inset-card {
+            background: #ffffff;
+            border: 1px solid var(--border-color);
+            border-radius: 14px;
+            padding: 1.6rem 1.8rem;
+            margin-bottom: 2.2rem;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.02);
+        }
+
+        .delivery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.4rem;
+            margin-top: 1.0rem;
+        }
+
+        .delivery-item h4 {
+            font-size: 0.90rem;
+            color: var(--navy-dark);
+            margin-bottom: 0.3rem;
             display: flex;
             align-items: center;
-            justify-content: center;
-            gap: 1.2rem;
-            margin-bottom: 2.2rem;
-            flex-wrap: wrap;
-            font-size: 0.86rem;
-            color: #475569;
+            gap: 6px;
         }
 
-        .delivery-badge-strip strong { color: var(--navy-dark); }
+        .delivery-item p {
+            font-size: 0.82rem;
+            color: #64748b;
+            line-height: 1.5;
+        }
 
-        /* ==================== COHORT PILL-SWITCH SCHEDULER ==================== */
+        /* ==================== SIGNATURE PILL-SWITCH NAVIGATION ==================== */
         .pill-switch-nav {
             display: flex;
             justify-content: center;
-            gap: 10px;
-            margin: 0 auto 1.4rem;
+            gap: 14px;
+            margin: 1.8rem auto 1.4rem;
             background: #ffffff;
             border: 1.5px solid var(--border-color);
             border-radius: 35px;
@@ -611,29 +673,76 @@
         .pill-switch-btn {
             background: transparent;
             border: none;
-            padding: 0.60rem 1.5rem;
+            padding: 0.55rem 1.4rem;
             border-radius: 25px;
             font-size: 0.88rem;
             font-weight: 700;
-            color: #64748b;
+            color: #475569;
             cursor: pointer;
             transition: all 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
             white-space: nowrap;
         }
 
-        .pill-switch-btn.active {
-            background: var(--navy-primary);
-            color: #ffffff;
-            box-shadow: 0 4px 10px rgba(30, 58, 138, 0.2);
+        /* Circular Indicator Matching Streamlit App */
+        .pill-badge {
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            background: #e2e8f0;
+            color: #64748b;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.75rem;
+            font-weight: 800;
+            transition: all 0.2s ease;
         }
 
+        /* Active: Academic Forest Green Circular Badge */
+        .pill-switch-btn.active {
+            color: var(--navy-dark);
+        }
+
+        .pill-switch-btn.active .pill-badge {
+            background: #15803d;
+            color: #ffffff;
+            box-shadow: 0 2px 6px rgba(21, 128, 61, 0.3);
+        }
+
+        /* INITIAL CLEAN SELECTION VIEW */
+        .initial-pathway-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.2rem;
+            margin: 1.4rem 0;
+        }
+
+        .pathway-choice-card {
+            background: #ffffff;
+            border: 1.5px solid var(--border-color);
+            border-radius: 12px;
+            padding: 1.6rem;
+            text-align: center;
+            transition: all 0.2s ease;
+        }
+
+        .pathway-choice-card:hover {
+            border-color: var(--navy-primary);
+            box-shadow: 0 6px 18px rgba(30, 58, 138, 0.05);
+        }
+
+        /* SCHEDULER IFRAME WRAPPER */
         .scheduler-wrapper {
+            display: none;
             background: var(--bg-parchment);
             border: 1px solid var(--border-color);
             border-radius: 14px;
             overflow: hidden;
             box-shadow: 0 8px 24px rgba(0,0,0,0.04);
-            margin-bottom: 1.8rem;
+            margin: 1.5rem 0;
             min-height: 700px;
         }
 
@@ -663,13 +772,13 @@
             .nav-links { display: none; }
             .hero-meta { text-align: center; }
             .hero-faculty-card { padding: 1.5rem 1.0rem; }
-            .card-shell { padding: 1.4rem; margin-bottom: 3.5rem; scroll-margin-top: 70px; }
+            .card-shell { padding: 1.4rem; margin-bottom: 2.5rem; scroll-margin-top: 70px; }
             .crucible-display-canvas { padding: 1.8rem 1.2rem; }
             .trap-challenge-card { padding: 1.4rem 1.2rem; }
             .trap-question-text { text-align: left; }
-            .sprint-card-banner { padding: 1.5rem 1.2rem; scroll-margin-top: 80px; }
             .pill-switch-nav { border-radius: 16px; width: 100%; }
-            .pill-switch-btn { width: 100%; text-align: center; }
+            .pill-switch-btn { width: 100%; justify-content: center; }
+            .sprint-form-grid { grid-template-columns: 1fr; }
         }
     </style>
 
@@ -690,7 +799,7 @@
             <li><a href="#syllabus">Syllabus</a></li>
             <li><a href="#crucible">Crucible</a></li>
             <li><a href="#sprint" style="color: var(--navy-primary); font-weight: 700;">Diagnostic Sprint</a></li>
-            <li><a href="#contact" class="btn-consult">Book Mentorship</a></li>
+            <li><a href="#cohort" class="btn-consult">Book Mentorship</a></li>
         </ul>
     </nav>
 
@@ -790,7 +899,7 @@
                    style="padding: 0.85rem 1.8rem; font-size: 0.92rem; display: inline-block; background: #0284c7;">
                     Launch Unit-I 3D Studio Demo ↗
                 </a>
-                <a href="#contact" class="btn-consult" style="padding: 0.85rem 1.8rem; font-size: 0.92rem; display: inline-block; background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.3);">
+                <a href="#cohort" class="btn-consult" style="padding: 0.85rem 1.8rem; font-size: 0.92rem; display: inline-block; background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.3);">
                     Book Mentorship for Full Curriculum →
                 </a>
             </div>
@@ -901,7 +1010,7 @@
             </div>
 
             <div>
-                <a href="#contact" class="btn-consult" style="padding: 0.85rem 1.8rem; font-size: 0.92rem; display: inline-flex; align-items: center; gap: 8px;">
+                <a href="#cohort" class="btn-consult" style="padding: 0.85rem 1.8rem; font-size: 0.92rem; display: inline-flex; align-items: center; gap: 8px;">
                     <span>💡 Think You Have Solved It? Book a 20-Min Session to Evaluate Your Proof →</span>
                 </a>
                 <p style="font-size: 0.78rem; color: #94a3b8; margin-top: 1.0rem;">
@@ -911,113 +1020,214 @@
         </div>
     </section>
 
-    <!-- ==================== MODULE 4: DIAGNOSTIC SCHEDULING, PRICING & COHORT ==================== -->
-    <section id="contact" class="card-shell">
+    <!-- ==================== CARD 1 (STANDALONE): PROBLEM-SET & MIDTERM DIAGNOSTIC SPRINT ==================== -->
+    <section id="sprint" class="card-shell" style="border-top: 4px solid var(--accent-cyan);">
+        <span class="sprint-badge-kicker">✦ Accelerated Academic Track • 48-Hour Rapid Response</span>
         
-        <!-- FAST-TRACK: PROBLEM-SET & MIDTERM DIAGNOSTIC SPRINT -->
-        <div id="sprint" class="sprint-card-banner">
-            <div style="max-width: 620px;">
-                <span class="sprint-badge-kicker">✦ Accelerated Academic Track • 48-Hour Rapid Response</span>
-                <h3 style="font-family: 'Playfair Display', serif; font-size: 1.45rem; color: var(--navy-dark); margin-bottom: 0.4rem;">
-                    Problem-Set &amp; Midterm Diagnostic Sprint
-                </h3>
-                <p style="font-size: 0.88rem; color: #475569; line-height: 1.55;">
-                    Facing an imminent problem-set deadline, midterm exam, or thesis proof roadblock? Book a high-intensity 60-minute diagnostic sprint with Dr. D. Samanta to resolve conceptual bottlenecks, verify computational derivations, and master proof mechanics.
-                </p>
+        <h2 class="card-shell-title" style="margin: 0.4rem 0 0.8rem; font-size: 1.65rem;">
+            Problem-Set &amp; Midterm Diagnostic Sprint
+        </h2>
+
+        <div class="sprint-lines-block">
+            <div class="sprint-line-item">
+                <span class="sprint-line-bullet">✦</span>
+                <strong>Facing an urgent problem-set deadline, midterm exam, or proof roadblock?</strong>
             </div>
-            <div>
-                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=dhabalendu@gmail.com&su=[ASMI%20Sprint]%20Problem-Set%20%26%20Midterm%20Diagnostic%20Request" 
-                   target="_blank" 
-                   rel="noopener noreferrer" 
-                   class="btn-consult" 
-                   style="background: #0284c7; white-space: nowrap; display: inline-block; padding: 0.8rem 1.6rem; font-size: 0.90rem;">
-                    Request 48-Hour Sprint →
-                </a>
+            <div class="sprint-line-item">
+                <span class="sprint-line-bullet">✦</span>
+                <span>Book a high-intensity 60-minute diagnostic sprint with Dr. D. Samanta.</span>
+            </div>
+            <div class="sprint-line-item">
+                <span class="sprint-line-bullet">✦</span>
+                <span>Resolve conceptual bottlenecks, verify derivations, and master proof mechanics.</span>
             </div>
         </div>
 
-        <!-- PRICING & TUITION TIERS (EXPLICIT & AUTHORITATIVE) -->
-        <div style="text-align: center; margin-bottom: 1.2rem;">
-            <div style="display: inline-block; background: #eff6ff; border: 1px solid #bfdbfe; color: var(--navy-primary); padding: 0.25rem 0.75rem; border-radius: 12px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; margin-bottom: 0.5rem;">
-                ✦ Tuition &amp; Mentorship Architecture
+        <div style="display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; flex-wrap: wrap;">
+            <div class="sprint-price-tag">
+                Plan A: $40 <span>/ hour (Pay-As-You-Go)</span>
             </div>
-            <h2 class="card-shell-title" style="margin-bottom: 0.4rem;">Mentorship Plans &amp; Cohort Enrollment</h2>
-            <p class="card-shell-sub" style="max-width: 700px; margin: 0 auto;">
-                Transparent tuition structure for private, rigorous 1-on-1 mathematical guidance with Dr. Dhabalendu Samanta.
-            </p>
+
+            <button type="button" 
+                    class="btn-consult" 
+                    id="sprintToggleBtn"
+                    onclick="toggleSprintForm()" 
+                    style="background: #0284c7; padding: 0.80rem 1.6rem; font-size: 0.90rem; cursor: pointer; border: none;">
+                Request 48-Hour Sprint ↓
+            </button>
         </div>
 
-        <div class="pricing-grid">
-            <!-- PLAN A -->
-            <div class="pricing-card">
-                <div>
-                    <div class="pricing-tag">Plan A • Pay-As-You-Go</div>
-                    <h3 class="pricing-title">Hourly Mentorship</h3>
-                    <div class="pricing-rate">$40 <span>/ hour</span></div>
-                    <p class="pricing-sub">
-                        Targeted problem-set assistance, urgent midterm proof validation, or dedicated standalone topic deep-dives.
-                    </p>
-                    <ul class="pricing-perks">
-                        <li><span>✓</span> Flexible scheduling per session</li>
-                        <li><span>✓</span> Rigorous proof and derivation audit</li>
-                        <li><span>✓</span> Immediate session notes in high-res PDF</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- PLAN B -->
-            <div class="pricing-card featured">
-                <div>
-                    <div class="pricing-tag" style="color: var(--navy-primary); font-weight: 800;">Plan B • Winter 2026 Cohort</div>
-                    <h3 class="pricing-title">Full Semester Mentorship</h3>
-                    <div class="pricing-rate">$1,000 <span>/ Semester</span></div>
-                    <div style="font-size: 0.80rem; font-weight: 700; color: #16a34a; margin-bottom: 0.6rem;">
-                        Payable in two equal installments of $500
+        <!-- GUIDED SPRINT DISPATCH INTAKE (OPTION A: DIRECT INBOX DISPATCH) -->
+        <div id="sprintFormContainer" class="sprint-form-container">
+            <h4 style="font-family: 'Playfair Display', serif; font-size: 1.15rem; color: var(--navy-dark); margin-bottom: 0.8rem;">
+                Dispatch Urgent Sprint Intake Form
+            </h4>
+            <form id="sprintDispatchForm" onsubmit="handleSprintSubmit(event)">
+                <div class="sprint-form-grid">
+                    <div class="form-group">
+                        <label>Your Full Name *</label>
+                        <input type="text" id="sp_name" required placeholder="e.g., Alex Johnson">
                     </div>
-                    <p class="pricing-sub">
-                        Comprehensive curriculum mastery strictly capped at 5 students. Minimum 35 guaranteed hours, extendable as needed through finals without additional charges.
-                    </p>
-                    <ul class="pricing-perks">
-                        <li><span>✓</span> <strong>3 Dedicated Hours / Week</strong> reserved exclusively for you</li>
-                        <li><span>✓</span> Guaranteed minimum of 35 hours (extendable at zero added cost)</li>
-                        <li><span>✓</span> Direct WhatsApp / Email priority guidance for urgent doubts</li>
-                        <li><span>✓</span> Complete coverage: Coursework, Midterm Sprints, and Finals Prep</li>
-                    </ul>
+                    <div class="form-group">
+                        <label>Academic Email *</label>
+                        <input type="email" id="sp_email" required placeholder="e.g., alex@university.edu">
+                    </div>
+                    <div class="form-group">
+                        <label>University &amp; Degree *</label>
+                        <input type="text" id="sp_univ" required placeholder="e.g., Stanford / BS Physics">
+                    </div>
+                    <div class="form-group">
+                        <label>Exam Date or Imminent Deadline *</label>
+                        <input type="text" id="sp_deadline" required placeholder="e.g., This Friday 4:00 PM EST">
+                    </div>
+                </div>
+
+                <div class="form-group" style="margin-bottom: 1.2rem;">
+                    <label>Specific Problem, Proof, or Conceptual Roadblock *</label>
+                    <textarea id="sp_details" rows="3" required placeholder="Briefly describe the theorem, derivation, or problem-set topic you need resolved in this 60-min sprint..."></textarea>
+                </div>
+
+                <div style="display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;">
+                    <button type="submit" 
+                            id="sprintSubmitBtn"
+                            class="btn-consult" 
+                            style="background: var(--navy-primary); border: none; padding: 0.75rem 1.6rem; font-size: 0.90rem; cursor: pointer;">
+                        Dispatch Urgent Sprint Request →
+                    </button>
+                    <span id="sprintStatusMsg" style="font-size: 0.88rem; font-weight: 700;"></span>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- ==================== CARD 2 (STANDALONE): WINTER 2026 COHORT & ENROLLMENT ==================== -->
+    <section id="cohort" class="card-shell" style="border-top: 4px solid var(--navy-primary);">
+        
+        <div style="display: inline-block; background: #eff6ff; border: 1px solid #bfdbfe; color: var(--navy-primary); padding: 0.25rem 0.75rem; border-radius: 12px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; margin-bottom: 0.5rem;">
+            ✦ Winter 2026 Cohort Strictly Capped at 5 Students
+        </div>
+
+        <h2 class="card-shell-title" style="margin-bottom: 0.4rem; font-size: 1.65rem;">
+            Mentorship Plan &amp; Semester Enrollment
+        </h2>
+        <p class="card-shell-sub" style="margin-bottom: 1.4rem;">
+            Private, rigorous academic guidance and complete curriculum mastery with Dr. Dhabalendu Samanta.
+        </p>
+
+        <!-- PLAN B FLAGSHIP COHORT CARD -->
+        <div class="cohort-plan-card">
+            <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 0.8rem; margin-bottom: 0.4rem;">
+                <h3 style="font-family: 'Playfair Display', serif; font-size: 1.45rem; color: var(--navy-dark); font-weight: 700;">
+                    Plan B • Full Semester Mentorship Cohort
+                </h3>
+                <span class="plan-installment-pill">Payable in two equal installments of $500</span>
+            </div>
+
+            <div class="plan-rate-display">$1,000 <span>/ Semester</span></div>
+
+            <p style="font-size: 0.90rem; color: #475569; line-height: 1.55; margin-bottom: 1.0rem;">
+                Comprehensive curriculum mastery strictly capped at 5 students. Guaranteed minimum of 35 hours, extendable as needed through finals without additional charges.
+            </p>
+
+            <ul class="cohort-features-list">
+                <li>
+                    <span>✓</span>
+                    <div><strong>3 Dedicated Hours / Week</strong> reserved exclusively on Dr. Samanta's master calendar</div>
+                </li>
+                <li>
+                    <span>✓</span>
+                    <div><strong>Guaranteed Minimum of 35 Hours</strong> (Extendable at zero added charges through finals)</div>
+                </li>
+                <li>
+                    <span>✓</span>
+                    <div><strong>Priority Direct Access</strong> via WhatsApp &amp; Email for between-class proof verification</div>
+                </li>
+                <li>
+                    <span>✓</span>
+                    <div><strong>Complete Term Coverage:</strong> Weekly Coursework, Midterm Sprints, and Final Exam Mastery</div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- DEDICATED CLASSROOM INFRASTRUCTURE INSET CARD -->
+        <div class="classroom-inset-card">
+            <div style="display: inline-block; background: #eff6ff; border: 1px solid #bfdbfe; color: var(--navy-primary); padding: 0.20rem 0.65rem; border-radius: 10px; font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em;">
+                ✦ Classroom Delivery Infrastructure
+            </div>
+            
+            <div class="delivery-grid">
+                <div class="delivery-item">
+                    <h4>💻 Classroom Delivery</h4>
+                    <p>Live 1-on-1 private sessions conducted via <strong>Google Meet</strong> or <strong>Zoom</strong>.</p>
+                </div>
+                <div class="delivery-item">
+                    <h4>✍️ High-Definition Instruction</h4>
+                    <p>HD digital pen-tablet whiteboard derivations &amp; <strong>Highly interactive 3D Studio</strong>.</p>
+                </div>
+                <div class="delivery-item">
+                    <h4>📄 Complete Deliverables</h4>
+                    <p>Complete vectorized <strong>Lecture Notes</strong> in high-resolution PDF delivered after every class.</p>
                 </div>
             </div>
         </div>
 
-        <!-- CLASSROOM INFRASTRUCTURE STRIP -->
-        <div class="delivery-badge-strip">
-            <div>💻 <strong>Classroom Infrastructure:</strong> Live 1-on-1 via Google Meet or Zoom</div>
-            <div>✍️ <strong>Instruction:</strong> HD digital pen-tablet whiteboard derivations &amp; Python simulations</div>
-            <div>📄 <strong>Notes:</strong> Complete vectorized session PDF delivered after every class</div>
+        <!-- SELECT YOUR BOOKING PATHWAY (EXECUTIVE HEADER & CLEAN INITIAL VIEW) -->
+        <div style="text-align: center; margin: 2.2rem 0 0.8rem;">
+            <h3 style="font-family: 'Playfair Display', serif; font-size: 1.45rem; color: var(--navy-dark); margin-bottom: 0.3rem;">
+                Select Your Booking Pathway
+            </h3>
         </div>
 
-        <!-- COHORT RESERVATION SECTION -->
-        <div class="card-shell-header" style="text-align: center;">
-            <div style="display: inline-block; background: #eff6ff; border: 1px solid #bfdbfe; color: var(--navy-primary); padding: 0.25rem 0.75rem; border-radius: 12px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; margin-bottom: 0.5rem;">
-                ✦ Winter 2026 Cohort Strictly Capped at 5 Students
-            </div>
-            <h2 class="card-shell-title">Select Your Booking Pathway</h2>
-            <p id="booking-sub-text" class="card-shell-sub" style="max-width: 720px; margin: 0 auto;">
-                Select a 20-minute slot below to map your university syllabus, diagnose proof roadblocks, and evaluate mathematical invariants with Dr. Dhabalendu Samanta.
-            </p>
-        </div>
-
-        <!-- APPROACH A: SLEEK PILL-SWITCH NAVIGATION -->
+        <!-- SIGNATURE PILL-SWITCH NAVIGATION (GREEN CIRCULAR INDICATOR) -->
         <div class="pill-switch-nav">
             <button type="button" class="pill-switch-btn active" id="tab-btn-1" onclick="switchBookingTab(1)">
-                1. Complimentary 20-Min Diagnostic
+                <span class="pill-badge" id="badge-1">1</span>
+                <span>Complimentary 20-Min Diagnostic</span>
             </button>
             <button type="button" class="pill-switch-btn" id="tab-btn-2" onclick="switchBookingTab(2)">
-                2. Reserve 3 hr/wk (Full Semester)
+                <span class="pill-badge" id="badge-2">2</span>
+                <span>Reserve 3 hr/wk (Full Semester)</span>
             </button>
         </div>
 
-        <!-- CALENDLY EMBED WRAPPER -->
-        <div class="scheduler-wrapper">
-            <!-- TAB 1: 20-MINUTE FREE DIAGNOSTIC MEETING -->
+        <!-- CLEAN INITIAL SELECTION VIEW (NO GIANT OPEN IFRAME BY DEFAULT) -->
+        <div id="initial-choice-view" class="initial-pathway-cards">
+            <div class="pathway-choice-card">
+                <div style="font-size: 1.8rem; margin-bottom: 0.4rem;">🎯</div>
+                <h4 style="font-family: 'Playfair Display', serif; font-size: 1.15rem; color: var(--navy-dark); margin-bottom: 0.4rem;">
+                    Complimentary Consultation
+                </h4>
+                <p style="font-size: 0.84rem; color: #64748b; line-height: 1.5; margin-bottom: 1.0rem;">
+                    Map your university syllabus, diagnose proof roadblocks, and evaluate mathematical invariants with Dr. Dhabalendu Samanta.
+                </p>
+                <button type="button" 
+                        class="btn-consult" 
+                        onclick="revealCalendar(1)"
+                        style="background: var(--navy-primary); font-size: 0.85rem; padding: 0.65rem 1.2rem; border: none; cursor: pointer;">
+                    Open 20-Min Calendar ↓
+                </button>
+            </div>
+
+            <div class="pathway-choice-card">
+                <div style="font-size: 1.8rem; margin-bottom: 0.4rem;">📅</div>
+                <h4 style="font-family: 'Playfair Display', serif; font-size: 1.15rem; color: var(--navy-dark); margin-bottom: 0.4rem;">
+                    Plan B Full Semester Schedule
+                </h4>
+                <p style="font-size: 0.84rem; color: #64748b; line-height: 1.5; margin-bottom: 1.0rem;">
+                    Reserve your dedicated 3 hours / week for the entire Winter 2026 semester ($1,000 in two $500 installments). Minimum 35 hours.
+                </p>
+                <button type="button" 
+                        class="btn-consult" 
+                        onclick="revealCalendar(2)"
+                        style="background: #15803d; font-size: 0.85rem; padding: 0.65rem 1.2rem; border: none; cursor: pointer;">
+                    Open Semester Reservation ↓
+                </button>
+            </div>
+        </div>
+
+        <!-- REVEALED CALENDLY WRAPPER -->
+        <div id="scheduler-frame-wrap" class="scheduler-wrapper">
+            <!-- TAB 1: 20-MINUTE DIAGNOSTIC MEETING -->
             <div id="booking-view-1">
                 <div class="calendly-inline-widget" 
                      data-url="https://calendly.com/dhabalendu/20min?hide_landing_page_details=1&hide_gdpr_banner=1&background_color=f7f3ea&text_color=0f172a&primary_color=1e3a8a" 
@@ -1027,7 +1237,6 @@
 
             <!-- TAB 2: FULL SEMESTER 3 HR/WEEK RESERVATION -->
             <div id="booking-view-2" style="display: none;">
-                <!-- Dedicated Cohort Reservation Calendar -->
                 <div class="calendly-inline-widget" 
                      data-url="https://calendly.com/dhabalendu/semester-cohort?hide_landing_page_details=1&hide_gdpr_banner=1&background_color=f7f3ea&text_color=0f172a&primary_color=1e3a8a" 
                      style="min-width:320px;height:700px;width:100%;">
@@ -1036,7 +1245,7 @@
         </div>
 
         <!-- DIRECT EMAIL FALLBACK -->
-        <div style="background: rgba(15, 23, 42, 0.03); border: 1px dashed var(--border-color); border-radius: 12px; padding: 1.2rem; text-align: center;">
+        <div style="background: rgba(15, 23, 42, 0.03); border: 1px dashed var(--border-color); border-radius: 12px; padding: 1.2rem; text-align: center; margin-top: 1.6rem;">
             <p style="font-size: 0.88rem; color: #64748b; margin-bottom: 0.8rem;">
                 Prefer direct communication, or experiencing scheduling issues?
             </p>
@@ -1076,7 +1285,7 @@
         </div>
     </footer>
 
-    <!-- ROBUST MATHEMATICAL CRUCIBLE & SCHEDULER ENGINE -->
+    <!-- ROBUST MATHEMATICAL CRUCIBLE, SPRINT & SCHEDULER ENGINE -->
     <script>
         function _d(arr) {
             return String.fromCharCode.apply(null, arr);
@@ -1117,27 +1326,107 @@
             document.getElementById('trap-question-text').innerHTML = _d(_qVault[unitNum].q);
         }
 
-        /* PILL-SWITCH SCHEDULER CONTROLLER */
+        /* CARD 1: SPRINT INTAKE FORM TOGGLE & AJAX DISPATCH (OPTION A) */
+        function toggleSprintForm() {
+            const formBox = document.getElementById('sprintFormContainer');
+            const toggleBtn = document.getElementById('sprintToggleBtn');
+            if (formBox.style.display === 'block') {
+                formBox.style.display = 'none';
+                toggleBtn.innerText = 'Request 48-Hour Sprint ↓';
+            } else {
+                formBox.style.display = 'block';
+                toggleBtn.innerText = 'Close Intake Form ↑';
+                formBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }
+        }
+
+        function handleSprintSubmit(e) {
+            e.preventDefault();
+            const submitBtn = document.getElementById('sprintSubmitBtn');
+            const statusMsg = document.getElementById('sprintStatusMsg');
+            
+            submitBtn.innerText = 'Dispatching Request...';
+            submitBtn.disabled = true;
+
+            const payload = {
+                service: "Problem-Set & Midterm Diagnostic Sprint (48-Hour Rapid Response)",
+                student_name: document.getElementById('sp_name').value,
+                student_email: document.getElementById('sp_email').value,
+                university: document.getElementById('sp_univ').value,
+                deadline: document.getElementById('sp_deadline').value,
+                problem_details: document.getElementById('sp_details').value
+            };
+
+            // Option A: Direct Background Dispatch to dhabalendu@gmail.com
+            fetch("https://formsubmit.co/ajax/dhabalendu@gmail.com", {
+                method: "POST",
+                headers: { 
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify(payload)
+            })
+            .then(response => response.json())
+            .then(data => {
+                submitBtn.innerText = '✓ Urgent Request Dispatched';
+                submitBtn.style.backgroundColor = '#15803d';
+                statusMsg.style.color = '#15803d';
+                statusMsg.innerHTML = 'Dr. D. Samanta has received your sprint intake and will respond within 48 hours.';
+                document.getElementById('sprintDispatchForm').reset();
+            })
+            .catch(error => {
+                // Fallback to mailto if network blocked
+                const fallbackSubject = encodeURIComponent("[URGENT SPRINT] Request from " + payload.student_name);
+                const fallbackBody = encodeURIComponent("Name: " + payload.student_name + "\nEmail: " + payload.student_email + "\nUniversity: " + payload.university + "\nDeadline: " + payload.deadline + "\n\nProblem Details:\n" + payload.problem_details);
+                window.location.href = "mailto:dhabalendu@gmail.com?subject=" + fallbackSubject + "&body=" + fallbackBody;
+                
+                submitBtn.innerText = '✓ Dispatched via Email Client';
+                submitBtn.style.backgroundColor = '#15803d';
+            });
+        }
+
+        /* CARD 2: PILL-SWITCH SCHEDULER CONTROLLER */
         function switchBookingTab(tabNum) {
             const btn1 = document.getElementById('tab-btn-1');
             const btn2 = document.getElementById('tab-btn-2');
             const view1 = document.getElementById('booking-view-1');
             const view2 = document.getElementById('booking-view-2');
-            const subText = document.getElementById('booking-sub-text');
 
             if (tabNum === 1) {
                 btn1.classList.add('active');
                 btn2.classList.remove('active');
                 view1.style.display = 'block';
                 view2.style.display = 'none';
-                subText.innerHTML = "Select a 20-minute slot below to map your university syllabus, diagnose proof roadblocks, and evaluate mathematical invariants with Dr. Dhabalendu Samanta.";
             } else {
                 btn2.classList.add('active');
                 btn1.classList.remove('active');
                 view1.style.display = 'none';
                 view2.style.display = 'block';
-                subText.innerHTML = "Plan B Semester Cohort: Reserve your dedicated 3 hours / week for the entire Winter 2026 semester ($1,000 payable in two equal $500 installments). Minimum 35 guaranteed hours.";
             }
+            revealCalendar(tabNum);
+        }
+
+        /* REVEAL CALENDAR ON-DEMAND (ELIMINATES HEAVY DEFAULT IFRAME LOAD) */
+        function revealCalendar(tabNum) {
+            const frameWrap = document.getElementById('scheduler-frame-wrap');
+            const choiceView = document.getElementById('initial-choice-view');
+            
+            frameWrap.style.display = 'block';
+            choiceView.style.display = 'none';
+
+            if (tabNum === 1) {
+                document.getElementById('tab-btn-1').classList.add('active');
+                document.getElementById('tab-btn-2').classList.remove('active');
+                document.getElementById('booking-view-1').style.display = 'block';
+                document.getElementById('booking-view-2').style.display = 'none';
+            } else {
+                document.getElementById('tab-btn-2').classList.add('active');
+                document.getElementById('tab-btn-1').classList.remove('active');
+                document.getElementById('booking-view-1').style.display = 'none';
+                document.getElementById('booking-view-2').style.display = 'block';
+            }
+
+            frameWrap.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
         }
 
         function copyFacultyEmail() {

@@ -43,7 +43,6 @@
 
     <style>
         /* 1. UNIVERSAL NORMAL AMPERSAND ENGINE (U+0026) */
-        /* Completely forces any '&' to render upright in clean system sans, disabling cursive loops */
         @font-face {
             font-family: 'NormalAmp';
             src: local('Plus Jakarta Sans'), local('Segoe UI'), local('Arial'), local('sans-serif');
@@ -149,9 +148,10 @@
             margin-bottom: 0.4rem;
         }
 
+        /* RESTORED PURE, ICONIC SUBTITLE */
         .hero-subtitle-line {
             font-style: italic;
-            font-size: clamp(1.15rem, 2.2vw, 1.65rem);
+            font-size: clamp(1.2rem, 2.3vw, 1.7rem);
             color: #475569;
             margin-bottom: 1.4rem;
             white-space: nowrap;
@@ -350,37 +350,118 @@
         .badge-indigo { background: #eef2ff; border: 1px solid #c7d2fe; color: var(--accent-indigo); }
         .badge-slate { background: #f8fafc; border: 1px solid #e2e8f0; color: #475569; }
 
-        /* ==================== HARMONIOUS LIGHT SCHOLARLY CANVASES (NO BLACK VOIDS) ==================== */
-        .light-scholarly-canvas {
-            background: #fcfbf9;
-            border: 1.5px solid #e2dcd0;
-            border-radius: 14px;
-            padding: 2.8rem 2.0rem;
+        /* ==================== EXECUTIVE ACADEMIC SLATE & LABORATORY CONSOLES ==================== */
+        
+        /* 1. Academic Video Theater */
+        .executive-video-theater {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            border: 1.5px solid #334155;
+            border-radius: 16px;
+            padding: 3.2rem 2.0rem;
             text-align: center;
-            color: var(--slate-body);
-            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.02);
+            color: #ffffff;
+            box-shadow: 0 12px 28px rgba(15, 23, 42, 0.08);
+            position: relative;
         }
 
-        .light-blueprint-canvas {
-            background: #f0f9ff;
-            border: 1.5px solid #bae6fd;
-            border-radius: 14px;
-            padding: 2.8rem 2.0rem;
-            text-align: center;
-            color: var(--slate-body);
-            box-shadow: 0 4px 16px rgba(2, 132, 199, 0.03);
+        .theater-play-btn {
+            width: 68px;
+            height: 68px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.10);
+            backdrop-filter: blur(8px);
+            border: 2px solid rgba(255, 255, 255, 0.25);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            color: #38bdf8;
+            margin-bottom: 1.0rem;
+            box-shadow: 0 0 20px rgba(56, 189, 248, 0.25);
+            transition: all 0.3s ease;
         }
 
-        .light-crucible-canvas {
-            background: #fbfbfe;
-            border: 1.5px solid #ddd6fe;
-            border-radius: 14px;
-            padding: 2.8rem 2.0rem;
+        .executive-video-theater:hover .theater-play-btn {
+            transform: scale(1.08);
+            background: rgba(56, 189, 248, 0.20);
+            border-color: #38bdf8;
+        }
+
+        /* 2. Simulation Engine Console */
+        .executive-sim-console {
+            background: linear-gradient(135deg, #090d16 0%, #172554 100%);
+            border: 1.5px solid #1e3a8a;
+            border-radius: 16px;
+            padding: 3.0rem 2.0rem;
             text-align: center;
-            color: var(--slate-body);
-            box-shadow: 0 4px 16px rgba(99, 102, 241, 0.03);
+            color: #ffffff;
+            box-shadow: 0 12px 30px rgba(2, 132, 199, 0.07);
+        }
+
+        /* 3. The Crucible Blackboard */
+        .executive-crucible-slate {
+            background: linear-gradient(135deg, #090d16 0%, #1e1b4b 100%);
+            border: 1.5px solid #4338ca;
+            border-radius: 16px;
+            padding: 2.8rem 2.2rem;
+            text-align: center;
+            color: #ffffff;
+            box-shadow: 0 12px 28px rgba(67, 56, 202, 0.07);
             user-select: none;
             -webkit-user-select: none;
+        }
+
+        .trap-unit-badge {
+            display: inline-block;
+            background: rgba(56, 189, 248, 0.15);
+            color: #38bdf8;
+            border: 1px solid rgba(56, 189, 248, 0.3);
+            padding: 0.25rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 1.2rem;
+        }
+
+        .trap-challenge-card {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 12px;
+            padding: 2.0rem 2.2rem;
+            margin: 0 auto 2.0rem;
+            max-width: 860px;
+            min-height: 120px;
+        }
+
+        .trap-question-text {
+            font-family: 'NormalAmp', 'Playfair Display', Georgia, serif;
+            font-size: clamp(1.15rem, 1.8vw, 1.45rem);
+            color: #f8fafc;
+            line-height: 1.7;
+            margin: 0;
+            font-style: italic;
+            text-align: justify;
+            text-justify: inter-word;
+        }
+
+        .trap-question-text sub {
+            font-size: 0.72em;
+            line-height: 0;
+            position: relative;
+            vertical-align: baseline;
+            bottom: -0.3em;
+            font-style: normal;
+        }
+
+        .trap-question-text sup {
+            font-size: 0.72em;
+            line-height: 0;
+            position: relative;
+            vertical-align: baseline;
+            top: -0.45em;
+            font-style: normal;
         }
 
         /* ==================== SYLLABUS GRID ==================== */
@@ -460,60 +541,6 @@
             color: #ffffff;
             border-color: var(--navy-primary);
             box-shadow: 0 4px 12px rgba(30, 58, 138, 0.2);
-        }
-
-        .trap-unit-badge {
-            display: inline-block;
-            background: #eff6ff;
-            color: #0284c7;
-            border: 1px solid #bae6fd;
-            padding: 0.25rem 0.8rem;
-            border-radius: 20px;
-            font-size: 0.75rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-            margin-bottom: 1.2rem;
-        }
-
-        .trap-challenge-card {
-            background: #ffffff;
-            border: 1.5px solid #cbd5e1;
-            border-radius: 12px;
-            padding: 2.0rem 2.2rem;
-            margin: 0 auto 2.0rem;
-            max-width: 860px;
-            min-height: 120px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.02);
-        }
-
-        .trap-question-text {
-            font-family: 'NormalAmp', 'Playfair Display', Georgia, serif;
-            font-size: clamp(1.15rem, 1.8vw, 1.45rem);
-            color: var(--navy-dark);
-            line-height: 1.7;
-            margin: 0;
-            font-style: italic;
-            text-align: justify;
-            text-justify: inter-word;
-        }
-
-        .trap-question-text sub {
-            font-size: 0.72em;
-            line-height: 0;
-            position: relative;
-            vertical-align: baseline;
-            bottom: -0.3em;
-            font-style: normal;
-        }
-
-        .trap-question-text sup {
-            font-size: 0.72em;
-            line-height: 0;
-            position: relative;
-            vertical-align: baseline;
-            top: -0.45em;
-            font-style: normal;
         }
 
         /* ==================== CARD 1: SPRINT CARD ==================== */
@@ -680,10 +707,10 @@
             background: rgba(30, 58, 138, 0.03);
             border: 1px solid #bfdbfe;
             border-radius: 10px;
-            padding: 0.85rem 1.2rem;
-            font-size: 0.84rem;
-            color: #475569;
-            line-height: 1.5;
+            padding: 0.9rem 1.4rem;
+            font-size: 0.86rem;
+            color: #334155;
+            line-height: 1.6;
             margin-bottom: 1.8rem;
             text-align: center;
         }
@@ -771,7 +798,7 @@
             .hero-meta { text-align: center; }
             .hero-faculty-card { padding: 1.5rem 1.0rem; }
             .card-shell { padding: 1.4rem; margin-bottom: 2.5rem; scroll-margin-top: 70px; }
-            .light-crucible-canvas { padding: 1.8rem 1.2rem; }
+            .executive-crucible-slate { padding: 1.8rem 1.2rem; }
             .trap-challenge-card { padding: 1.4rem 1.2rem; }
             .trap-question-text { text-align: left; }
             .sprint-form-grid { grid-template-columns: 1fr; }
@@ -799,10 +826,11 @@
         </ul>
     </nav>
 
-    <!-- ==================== SECTION 1: HERO (EXPLICIT 1-ON-1 TUITION FOCUS) ==================== -->
+    <!-- ==================== SECTION 1: HERO ==================== -->
     <header class="hero">
         <h1 class="hero-title">Mastering Linear Algebra</h1>
-        <div class="hero-subtitle-line">Private 1-on-1 Tuition &bull; From Physical Intuition to Mathematical Rigor</div>
+        <!-- PURE ICONIC SUBTITLE RESTORED -->
+        <div class="hero-subtitle-line">From Physical Intuition to Mathematical Rigor</div>
         
         <p class="hero-desc">
             Independent, private 1-on-1 university tuition for international Undergraduate &amp; Postgraduate students of Sciences and Engineering, and Industry Professionals.
@@ -848,7 +876,7 @@
         </div>
     </header>
 
-    <!-- ==================== MODULE 1: CONCEPTUAL VIDEO ARCHIVE (LIGHT SCHOLARLY THEME) ==================== -->
+    <!-- ==================== MODULE 1: CONCEPTUAL VIDEO ARCHIVE (ACADEMIC THEATER) ==================== -->
     <section id="archive" class="card-shell theme-navy">
         <div class="card-shell-header">
             <h2 class="card-shell-title">Conceptual Video Archive</h2>
@@ -859,16 +887,18 @@
                 A continuously expanding archive of 8 to 10-minute visual concept videos by Dr. Dhabalendu Samanta—demystifying Linear Algebra through everyday physical intuition and real-world engineering phenomena across undergraduate, postgraduate, AI, and Quantum engineering curricula.
             </p>
         </div>
-        <div class="light-scholarly-canvas">
-            <div style="font-size: 2.5rem; margin-bottom: 0.5rem; color: var(--navy-primary);">▶</div>
-            <h3 style="font-size: 1.30rem; margin-bottom: 0.4rem; color: var(--navy-dark);">The Essence of Eigenvalues &amp; Eigenvectors</h3>
-            <p style="font-size: 0.92rem; color: #64748b; max-width: 520px; margin: 0 auto; line-height: 1.5;">
+        
+        <!-- HIGH-PRESTIGE ACADEMIC THEATER CANVAS -->
+        <div class="executive-video-theater">
+            <div class="theater-play-btn">▶</div>
+            <h3 style="font-size: 1.35rem; margin-bottom: 0.4rem; color: #ffffff;">The Essence of Eigenvalues &amp; Eigenvectors</h3>
+            <p style="font-size: 0.94rem; color: #cbd5e1; max-width: 540px; margin: 0 auto; line-height: 1.55;">
                 An 8 to 10-minute visual explanation of eigenvalues and rotational invariants will be released soon.
             </p>
         </div>
     </section>
 
-    <!-- ==================== MODULE 2: INTERACTIVE 3D STUDIO (LIGHT BLUEPRINT THEME) ==================== -->
+    <!-- ==================== MODULE 2: INTERACTIVE 3D STUDIO (SIMULATION TERMINAL) ==================== -->
     <section id="studio" class="card-shell theme-cyan">
         <div class="card-shell-header">
             <span class="card-top-badge badge-cyan">✦ Spatial Simulation Engine</span>
@@ -878,15 +908,16 @@
             </p>
         </div>
 
-        <div class="light-blueprint-canvas">
-            <div style="display: inline-block; background: #e0f2fe; border: 1px solid #7dd3fc; color: #0369a1; padding: 0.3rem 0.9rem; border-radius: 20px; font-size: 0.78rem; font-weight: 700; margin-bottom: 1.2rem; text-transform: uppercase; letter-spacing: 0.08em;">
+        <!-- HIGH-PERFORMANCE MATHEMATICAL SIMULATION CONSOLE -->
+        <div class="executive-sim-console">
+            <div style="display: inline-block; background: rgba(2, 132, 199, 0.25); border: 1px solid rgba(56, 189, 248, 0.40); color: #38bdf8; padding: 0.3rem 0.9rem; border-radius: 20px; font-size: 0.78rem; font-weight: 700; margin-bottom: 1.2rem; text-transform: uppercase; letter-spacing: 0.08em;">
                 ✦ Unit-I: 3D Geometric Workspace (Open Demonstration)
             </div>
-            <h3 style="font-size: 1.6rem; color: var(--navy-dark); margin-bottom: 0.6rem;">
+            <h3 style="font-size: 1.65rem; color: #ffffff; margin-bottom: 0.6rem;">
                 Unit-I: Systems of Linear Equations &amp; Intersecting Manifolds
             </h3>
-            <p style="color: #475569; max-width: 640px; margin: 0 auto 1.8rem; font-size: 0.94rem; line-height: 1.6;">
-                <span style="font-size: 0.88rem; color: #64748b; display: inline-block;">
+            <p style="color: #cbd5e1; max-width: 640px; margin: 0 auto 1.8rem; font-size: 0.95rem; line-height: 1.6;">
+                <span style="font-size: 0.88rem; color: #94a3b8; display: inline-block;">
                     (Advanced algorithmic simulations across Units II through VI are guided live during private 1-on-1 tuition sessions).
                 </span>
             </p>
@@ -898,7 +929,7 @@
                    style="padding: 0.85rem 1.8rem; font-size: 0.92rem; display: inline-block; background: #0284c7;">
                     Launch Unit-I 3D Studio Demo ↗
                 </a>
-                <a href="#cohort" class="btn-consult" style="padding: 0.85rem 1.8rem; font-size: 0.92rem; display: inline-block; background: #ffffff; color: var(--navy-primary) !important; border: 1.5px solid #0284c7;">
+                <a href="#cohort" class="btn-consult" style="padding: 0.85rem 1.8rem; font-size: 0.92rem; display: inline-block; background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.30);">
                     Enroll in 1-on-1 Tuition →
                 </a>
             </div>
@@ -972,7 +1003,7 @@
         </div>
     </section>
 
-    <!-- ==================== MODULE 3: THE CRUCIBLE (LIGHT SCHOLARLY THEME) ==================== -->
+    <!-- ==================== MODULE 3: THE CRUCIBLE (BLACKBOARD SLATE) ==================== -->
     <section id="crucible" class="card-shell theme-indigo">
         <div class="card-shell-header">
             <span class="card-top-badge badge-indigo">✦ Foundational Conceptual Challenges</span>
@@ -995,7 +1026,8 @@
             <button class="crucible-tab" onclick="switchTrap(6, this)">Unit VI: Applications &amp; SVD</button>
         </div>
 
-        <div class="light-crucible-canvas" oncontextmenu="return false;">
+        <!-- CAMBRIDGE/IIT MATHEMATICAL BLACKBOARD SLATE -->
+        <div class="executive-crucible-slate" oncontextmenu="return false;">
             <div id="trap-unit-badge" class="trap-unit-badge">Unit I • Systems of Linear Equations</div>
             
             <div class="trap-challenge-card">
@@ -1008,7 +1040,7 @@
                 <a href="#trial" class="btn-consult" style="padding: 0.85rem 1.8rem; font-size: 0.92rem; display: inline-flex; align-items: center; gap: 8px;">
                     <span>💡 Think You Have Solved It? Book a 20-Min Session to Evaluate Your Proof →</span>
                 </a>
-                <p style="font-size: 0.78rem; color: #64748b; margin-top: 1.0rem;">
+                <p style="font-size: 0.80rem; color: #94a3b8; margin-top: 1.0rem;">
                     ✦ Conceptual problems formulated by Dr. Dhabalendu Samanta. Bring your coordinate-free reasoning to a private 20-minute diagnostic session.
                 </p>
             </div>
@@ -1224,9 +1256,9 @@
             </div>
         </div>
 
-        <!-- INVOICING & PAYMENT NOTE (DIRECT WIRE / ELECTRONIC TRANSFER) -->
+        <!-- TUITION FEES & INVOICING (CLEAR INSTITUTIONAL WIRE INSTRUCTIONS) -->
         <div class="tuition-invoicing-note">
-            💳 <strong>Tuition &amp; Invoicing:</strong> Invoices are issued post-consultation upon mutual agreement of syllabus and schedule. Payments are processed securely via <strong>Direct International Bank Wire / Electronic Transfer</strong>.
+            💳 <strong>Tuition Fees &amp; Invoicing:</strong> Official invoices containing verified international bank wire details (SWIFT / BIC / Wire Transfer) are issued directly to the student or university sponsor post-consultation upon mutual agreement of syllabus and schedule. Payments are processed securely via <strong>Direct International Bank Wire / Electronic Transfer</strong>.
         </div>
 
         <!-- CARD HOLDER A: CLASSROOM DELIVERY (EXECUTIVE CYAN HARMONY) -->
@@ -1316,7 +1348,7 @@
             },
             4: {
                 b: [85,110,105,116,32,73,86,32,8226,32,73,110,110,101,114,32,80,114,111,100,117,99,116,32,83,112,97,99,101,115],
-                q: [34,65,32,115,112,97,99,101,99,114,97,102,116,32,116,114,97,118,101,108,115,32,105,110,32,111,114,98,105,116,32,119,105,116,104,32,97,32,118,101,108,111,99,105,116,121,32,118,101,99,116,111,114,32,118,60,115,117,98,62,49,60,47,115,117,98,62,44,32,97,32,115,111,108,97,114,32,112,97,110,101,108,32,101,120,116,101,110,100,105,110,103,32,97,108,111,110,103,32,116,104,101,32,100,105,114,101,99,116,105,111,110,32,118,60,115,117,98,62,50,60,47,115,117,98,62,44,32,97,110,100,32,97,110,32,111,112,116,105,99,97,108,32,115,116,97,114,45,116,114,97,99,107,101,114,32,115,101,110,115,111,114,32,112,111,105,110,116,105,110,103,32,97,108,111,110,103,32,116,104,101,32,100,105,114,101,99,116,105,111,110,32,118,60,115,117,98,62,51,60,47,115,117,98,62,44,32,119,104,101,114,101,32,123,118,60,115,117,98,62,49,60,47,115,117,98,62,44,32,118,60,115,117,98,62,50,60,47,115,117,98,62,44,32,118,60,115,117,98,62,51,60,47,115,117,98,62,125,32,105,115,32,97,32,108,105,110,101,97,114,108,121,32,105,110,100,101,112,101,110,100,101,110,116,32,115,101,116,32,111,102,32,118,101,99,116,111,114,115,32,105,110,32,8477,60,115,117,112,62,51,60,47,115,117,112,62,46,32,78,111,110,101,32,111,102,32,116,104,101,32,116,104,114,101,101,32,100,105,114,101,99,116,105,111,110,115,32,97,114,101,32,109,117,116,117,97,108,108,121,32,112,101,114,112,101,110,100,105,99,117,108,97,114,46,32,84,111,32,112,114,101,118,101,110,116,32,111,112,116,105,99,97,108,32,103,108,97,114,101,32,97,110,100,32,99,97,108,105,98,114,97,116,101,32,116,104,101,32,97,116,116,105,116,117,100,101,32,103,117,105,100,97,110,99,101,32,115,121,115,116,101,109,58,32,40,105,41,32,68,101,99,111,109,112,111,115,101,32,116,104,101,32,115,101,110,115,111,114,32,118,101,99,116,111,114,32,118,60,115,117,98,62,51,60,47,115,117,98,62,32,105,110,116,111,32,97,32,99,111,109,112,111,110,101,110,116,32,108,121,105,110,103,32,101,110,116,105,114,101,108,121,32,119,105,116,104,105,110,32,116,104,101,32,112,108,97,110,101,32,115,112,97,110,110,101,100,32,98,121,32,123,118,60,115,117,98,62,49,60,47,115,117,98,62,44,32,118,60,115,117,98,62,50,60,47,115,117,98,62,125,44,32,97,110,100,32,97,32,99,111,109,112,111,110,101,110,116,32,115,116,114,105,99,116,108,121,32,112,101,114,112,101,110,100,105,99,117,108,97,114,32,116,111,32,116,104,105,115,32,112,108,97,110,101,46,32,40,105,105,41,32,85,115,105,110,103,32,111,110,108,121,32,105,110,110,101,114,32,112,114,111,100,117,99,116,115,32,97,110,100,32,111,114,116,104,111,103,111,110,97,108,32,112,114,111,106,101,99,116,105,111,110,115,32,40,119,105,116,104,111,117,116,32,105,110,118,111,107,105,110,103,32,51,45,100,105,109,101,110,115,105,111,110,97,108,32,99,114,111,115,115,32,112,114,111,100,117,99,116,115,41,44,32,100,101,116,101,114,109,105,110,101,32,116,104,101,32,101,120,97,99,116,32,97,110,103,108,101,32,111,102,32,101,108,101,118,97,116,105,111,110,32,111,102,32,116,104,101,32,115,116,97,114,45,116,114,97,99,107,101,114,32,115,101,110,115,111,114,32,97,98,111,118,101,32,116,104,101,32,112,108,97,110,101,46,34]
+                q: [34,65,32,115,112,97,99,101,99,114,97,102,116,32,116,114,97,118,101,108,115,32,105,110,32,111,114,98,105,116,32,119,105,116,104,32,97,32,118,101,108,111,99,105,116,121,32,118,101,99,116,111,114,32,118,60,115,117,98,62,49,60,47,115,117,98,62,44,32,97,32,115,111,108,97,114,32,112,97,110,101,108,32,101,120,116,101,110,100,105,110,103,32,97,108,111,110,103,32,116,104,101,32,100,105,114,101,99,116,105,111,110,32,118,60,115,117,98,62,50,60,47,115,117,98,62,44,32,97,110,100,32,97,110,32,111,112,116,105,99,97,108,32,115,116,97,114,45,116,114,97,99,107,101,114,32,115,101,110,115,111,114,32,112,111,105,110,116,105,110,103,32,97,108,111,110,103,32,116,104,101,32,100,105,114,101,99,116,105,111,110,32,118,60,115,117,98,62,51,60,47,115,117,98,62,44,32,119,104,101,114,101,32,123,118,60,115,117,98,62,49,60,47,115,117,98,62,44,32,118,60,115,117,98,62,50,60,47,115,117,98,62,44,32,118,60,115,117,98,62,51,60,47,115,117,98,62,125,32,105,115,32,97,32,108,105,110,101,97,114,108,121,32,105,110,100,101,112,101,110,100,101,110,116,32,115,101,116,32,111,102,32,118,101,99,116,111,114,115,32,105,110,32,8477,60,115,117,112,62,51,60,47,115,117,112,62,46,32,78,111,110,101,32,111,102,32,116,104,101,32,116,104,114,101,101,32,100,105,114,101,99,116,105,111,110,115,32,97,114,101,32,109,117,116,117,97,108,108,121,32,112,101,114,112,101,110,100,105,99,117,108,97,114,46,32,84,111,32,112,114,101,118,101,110,116,32,111,112,116,105,99,97,108,32,103,108,97,114,101,32,97,110,100,32,99,97,108,105,98,114,97,116,101,32,116,104,101,32,97,116,116,105,116,117,100,101,32,103,117,105,100,97,110,99,101,32,115,121,115,116,101,109,58,32,40,105,41,32,68,101,99,111,109,112,111,115,101,32,116,104,101,32,115,101,110,115,111,114,32,118,101,99,116,111,114,32,118,60,115,117,98,62,51,60,47,115,117,98,62,32,105,110,116,111,32,97,32,99,111,109,112,111,110,101,110,116,32,108,121,105,110,103,32,101,110,116,105,114,101,108,121,32,119,105,116,104,105,110,32,116,104,101,32,112,108,97,110,101,32,115,112,97,110,110,101,100,32,98,121,32,123,118,60,115,117,98,62,49,60,47,115,117,98,62,44,32,118,60,115,117,98,62,50,60,47,115,117,98,62,44,32,118,60,115,117,98,62,51,60,47,115,117,98,62,125,32,105,115,32,97,32,108,105,110,101,97,114,108,121,32,105,110,100,101,112,101,110,100,101,110,116,32,115,101,116,32,111,102,32,118,101,99,116,111,114,115,32,105,110,32,8477,60,115,117,112,62,51,60,47,115,117,112,62,46,32,78,111,110,101,32,111,102,32,116,104,101,32,116,104,114,101,101,32,100,105,114,101,99,116,105,111,110,115,32,97,114,101,32,109,117,116,117,97,108,108,121,32,112,101,114,112,101,110,100,105,99,117,108,97,114,46,32,84,111,32,112,114,101,118,101,110,116,32,111,112,116,105,99,97,108,32,103,108,97,114,101,32,97,110,100,32,99,97,108,105,98,114,97,116,101,32,116,104,101,32,97,116,116,105,116,117,100,101,32,103,117,105,100,97,110,99,101,32,115,121,115,116,101,109,58,32,40,105,41,32,68,101,99,111,109,112,111,115,101,32,116,104,101,32,115,101,110,115,111,114,32,118,101,99,116,111,114,32,118,60,115,117,98,62,51,60,47,115,117,98,62,32,105,110,116,111,32,97,32,99,111,109,112,111,110,101,110,116,32,108,121,105,110,103,32,101,110,116,105,114,101,108,121,32,119,105,116,104,105,110,32,116,104,101,32,112,108,97,110,101,32,115,112,97,110,110,101,100,32,98,121,32,123,118,60,115,117,98,62,49,60,47,115,117,98,62,44,32,118,60,115,117,98,62,50,60,47,115,117,98,62,44,32,118,60,115,117,98,62,51,60,47,115,117,98,62,125,32,105,115,32,97,32,108,105,110,101,97,114,108,121,32,105,110,100,101,112,101,110,100,101,110,116,32,115,101,116,32,111,102,32,118,101,99,116,111,114,115,32,105,110,32,8477,60,115,117,112,62,51,60,47,115,117,112,62,46,32,78,111,110,101,32,111,102,32,116,104,101,32,116,104,114,101,101,32,100,105,114,101,99,116,105,111,110,115,32,97,114,101,32,109,117,116,117,97,108,108,121,32,112,101,114,112,101,110,100,105,99,117,108,97,114,46,32,84,111,32,112,114,101,118,101,110,116,32,111,112,116,105,99,97,108,32,103,108,97,114,101,32,97,110,100,32,99,97,108,105,98,114,97,116,101,32,116,104,101,32,97,116,116,105,116,117,100,101,32,103,117,105,100,97,110,99,101,32,115,121,115,116,101,109,58,32,40,105,41,32,68,101,99,111,109,112,111,115,101,32,116,104,101,32,115,101,110,115,111,114,32,118,101,99,116,111,114,32,118,60,115,117,98,62,51,60,47,115,117,98,62,32,105,110,116,111,32,97,32,99,111,109,112,111,110,101,110,116,32,108,121,105,110,103,32,101,110,116,105,114,101,108,121,32,119,105,116,104,105,110,32,116,104,101,32,112,108,97,110,101,32,115,112,97,110,110,101,100,32,98,121,32,123,118,60,115,117,98,62,49,60,47,115,117,98,62,44,32,118,60,115,117,98,62,50,60,47,115,117,98,62,44,32,118,60,115,117,98,62,51,60,47,115,117,98,62,125,32,105,115,32,97,32,108,105,110,101,97,114,108,121,32,105,110,100,101,112,101,110,100,101,110,116,32,115,101,116,32,111,102,32,118,101,99,116,111,114,115,32,105,110,32,8477,60,115,117,112,62,51,60,47,115,117,112,62,46,32,78,111,110,101,32,111,102,32,116,104,101,32,116,104,114,101,101,32,100,105,114,101,99,116,105,111,110,115,32,97,114,101,32,109,117,116,117,97,108,108,121,32,112,101,114,112,101,110,100,105,99,117,108,97,114,46,32,84,111,32,112,114,101,118,101,110,116,32,111,112,116,105,99,97,108,32,103,108,97,114,101,32,97,110,100,32,99,97,108,105,98,114,97,116,101,32,116,104,101,32,97,116,116,105,116,117,100,101,32,103,117,105,100,97,110,99,101,32,115,121,115,116,101,109,58,32,40,105,41,32,68,101,99,111,109,112,111,115,101,32,116,104,101,32,115,101,110,115,111,114,32,118,101,99,116,111,114,32,118,60,115,117,98,62,51,60,47,115,117,98,62,32,105,110,116,111,32,97,32,99,111,109,112,111,110,101,110,116,32,108,121,105,110,103,32,101,110,116,105,114,101,108,121,32,119,105,116,104,105,110,32,116,104,101,32,112,108,97,110,101,32,115,112,97,110,110,101,100,32,98,121,32,123,118,60,115,117,98,62,49,60,47,115,117,98,62,44,32,118,60,115,117,98,62,50,60,47,115,117,98,62,125,44,32,97,110,100,32,97,32,99,111,109,112,111,110,101,110,116,32,115,116,114,105,99,116,108,121,32,112,101,114,112,101,110,100,105,99,117,108,97,114,32,116,111,32,116,104,105,115,32,112,108,97,110,101,46,32,40,105,105,41,32,85,115,105,110,103,32,111,110,108,121,32,105,110,110,101,114,32,112,114,111,100,117,99,116,115,32,97,110,100,32,111,114,116,104,111,103,111,110,97,108,32,112,114,111,106,101,99,116,105,111,110,115,32,40,119,105,116,104,111,117,116,32,105,110,118,111,107,105,110,103,32,51,45,100,105,109,101,110,115,105,111,110,97,108,32,99,114,111,115,115,32,112,114,111,100,117,99,116,115,41,44,32,100,101,116,101,114,109,105,110,101,32,116,104,101,32,101,120,97,99,116,32,97,110,103,108,101,32,111,102,32,101,108,101,118,97,116,105,111,110,32,111,102,32,116,104,101,32,115,116,97,114,45,116,114,97,99,107,101,114,32,115,101,110,115,111,114,32,97,98,111,118,101,32,116,104,101,32,112,108,97,110,101,46,34]
             },
             5: {
                 b: [85,110,105,116,32,86,32,8226,32,69,105,103,101,110,118,97,108,117,101,115,32,38,32,69,105,103,101,110,118,101,99,116,111,114,115],
@@ -1336,7 +1368,7 @@
             document.getElementById('trap-question-text').innerHTML = _d(_qVault[unitNum].q);
         }
 
-        /* CARD 1: SPRINT INTAKE FORM TOGGLE & AJAX DISPATCH (OPTION A) */
+        /* CARD 1: SPRINT INTAKE FORM TOGGLE & AJAX DISPATCH */
         function toggleSprintForm() {
             const formBox = document.getElementById('sprintFormContainer');
             const toggleBtn = document.getElementById('sprintToggleBtn');
@@ -1367,7 +1399,6 @@
                 problem_details: document.getElementById('sp_details').value
             };
 
-            // Direct Background Dispatch to dhabalendu@gmail.com
             fetch("https://formsubmit.co/ajax/dhabalendu@gmail.com", {
                 method: "POST",
                 headers: { 

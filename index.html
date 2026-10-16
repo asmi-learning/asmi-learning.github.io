@@ -42,6 +42,16 @@
     </script>
 
     <style>
+        /* 1. UNIVERSAL NORMAL AMPERSAND ENGINE (U+0026) */
+        /* Completely forces any '&' to render upright in clean system sans, disabling cursive loops */
+        @font-face {
+            font-family: 'NormalAmp';
+            src: local('Plus Jakarta Sans'), local('Segoe UI'), local('Arial'), local('sans-serif');
+            unicode-range: U+0026;
+            font-weight: 400 800;
+            font-style: normal;
+        }
+
         :root {
             --navy-primary: #1e3a8a;
             --navy-dark: #0f172a;
@@ -62,15 +72,15 @@
         * { box-sizing: border-box; margin: 0; padding: 0; }
         
         body {
-            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            font-family: 'NormalAmp', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             background-color: var(--bg-parchment);
             color: var(--slate-body);
             line-height: 1.6;
             -webkit-font-smoothing: antialiased;
         }
 
-        /* Enforce normal upright academic styling for ampersands across all typography */
-        h1, h2, h3, h4, .amp {
+        h1, h2, h3, h4, .hero-title, .card-shell-title, .brand-acronym {
+            font-family: 'NormalAmp', 'Playfair Display', Georgia, serif;
             font-feature-settings: "liga" 0;
             font-style: normal;
         }
@@ -90,7 +100,7 @@
         }
         .brand-logo { text-decoration: none; }
         .brand-acronym {
-            font-family: 'Cinzel', serif;
+            font-family: 'NormalAmp', 'Cinzel', serif;
             font-size: 1.55rem;
             font-weight: 800;
             letter-spacing: 0.12em;
@@ -133,7 +143,6 @@
         }
         
         .hero-title {
-            font-family: 'Playfair Display', Georgia, serif;
             font-size: clamp(2.4rem, 4.6vw, 4.0rem);
             color: var(--navy-primary);
             line-height: 1.15;
@@ -141,7 +150,6 @@
         }
 
         .hero-subtitle-line {
-            font-family: 'Playfair Display', Georgia, serif;
             font-style: italic;
             font-size: clamp(1.15rem, 2.2vw, 1.65rem);
             color: #475569;
@@ -189,7 +197,6 @@
             flex-wrap: wrap;
         }
 
-        /* Fixed aspect ratio & pre-allocated size eliminates photo jerking */
         .hero-photo-wrap {
             width: 95px;
             height: 95px;
@@ -224,7 +231,6 @@
         .hero-meta { text-align: left; }
 
         .hero-name {
-            font-family: 'Playfair Display', serif;
             font-size: clamp(1.8rem, 2.5vw, 2.3rem);
             font-weight: 700;
             color: var(--navy-dark);
@@ -292,7 +298,6 @@
             scroll-margin-top: 90px;
         }
 
-        /* THEMATIC PERIMETER TINTED ACCENTS FOR ALL CARDS */
         .theme-navy {
             border: 1.5px solid #cbd5e1;
             border-top: 4px solid var(--navy-primary);
@@ -317,7 +322,6 @@
         .card-shell-header { margin-bottom: 1.4rem; }
 
         .card-shell-title {
-            font-family: 'Playfair Display', serif;
             font-size: 1.55rem;
             color: var(--navy-primary);
             line-height: 1.25;
@@ -330,7 +334,6 @@
             line-height: 1.55;
         }
 
-        /* UNIFIED PRESTIGIOUS PILL BADGES FOR ALL CARDS */
         .card-top-badge {
             display: inline-block;
             padding: 0.25rem 0.75rem;
@@ -347,15 +350,37 @@
         .badge-indigo { background: #eef2ff; border: 1px solid #c7d2fe; color: var(--accent-indigo); }
         .badge-slate { background: #f8fafc; border: 1px solid #e2e8f0; color: #475569; }
 
-        /* INNER SCHOLARLY BLUEPRINT CANVASES (SOFTENED FOR ELEGANCE) */
-        .inner-scholarly-canvas {
-            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
-            border: 1px solid #334155;
+        /* ==================== HARMONIOUS LIGHT SCHOLARLY CANVASES (NO BLACK VOIDS) ==================== */
+        .light-scholarly-canvas {
+            background: #fcfbf9;
+            border: 1.5px solid #e2dcd0;
             border-radius: 14px;
-            padding: 3.2rem 2rem;
+            padding: 2.8rem 2.0rem;
             text-align: center;
-            color: #ffffff;
-            box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
+            color: var(--slate-body);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.02);
+        }
+
+        .light-blueprint-canvas {
+            background: #f0f9ff;
+            border: 1.5px solid #bae6fd;
+            border-radius: 14px;
+            padding: 2.8rem 2.0rem;
+            text-align: center;
+            color: var(--slate-body);
+            box-shadow: 0 4px 16px rgba(2, 132, 199, 0.03);
+        }
+
+        .light-crucible-canvas {
+            background: #fbfbfe;
+            border: 1.5px solid #ddd6fe;
+            border-radius: 14px;
+            padding: 2.8rem 2.0rem;
+            text-align: center;
+            color: var(--slate-body);
+            box-shadow: 0 4px 16px rgba(99, 102, 241, 0.03);
+            user-select: none;
+            -webkit-user-select: none;
         }
 
         /* ==================== SYLLABUS GRID ==================== */
@@ -392,7 +417,6 @@
         }
 
         .unit-card-title {
-            font-family: 'Playfair Display', serif;
             font-size: 1.15rem;
             color: var(--navy-dark);
             font-weight: 700;
@@ -438,46 +462,35 @@
             box-shadow: 0 4px 12px rgba(30, 58, 138, 0.2);
         }
 
-        .crucible-display-canvas {
-            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
-            border: 1px solid #334155;
-            border-radius: 14px;
-            padding: 2.8rem 2.2rem;
-            color: #ffffff;
-            text-align: center;
-            box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
-            user-select: none;
-            -webkit-user-select: none;
-        }
-
         .trap-unit-badge {
             display: inline-block;
-            background: rgba(2, 132, 199, 0.2);
-            color: #38bdf8;
-            border: 1px solid rgba(56, 189, 248, 0.3);
+            background: #eff6ff;
+            color: #0284c7;
+            border: 1px solid #bae6fd;
             padding: 0.25rem 0.8rem;
             border-radius: 20px;
             font-size: 0.75rem;
             font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: 0.1em;
+            letter-spacing: 0.08em;
             margin-bottom: 1.2rem;
         }
 
         .trap-challenge-card {
-            background: rgba(255, 255, 255, 0.04);
-            border: 1px solid rgba(255, 255, 255, 0.12);
+            background: #ffffff;
+            border: 1.5px solid #cbd5e1;
             border-radius: 12px;
             padding: 2.0rem 2.2rem;
-            margin: 0 auto 2.2rem;
+            margin: 0 auto 2.0rem;
             max-width: 860px;
             min-height: 120px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.02);
         }
 
         .trap-question-text {
-            font-family: 'Playfair Display', Georgia, serif;
+            font-family: 'NormalAmp', 'Playfair Display', Georgia, serif;
             font-size: clamp(1.15rem, 1.8vw, 1.45rem);
-            color: #f8fafc;
+            color: var(--navy-dark);
             line-height: 1.7;
             margin: 0;
             font-style: italic;
@@ -758,7 +771,7 @@
             .hero-meta { text-align: center; }
             .hero-faculty-card { padding: 1.5rem 1.0rem; }
             .card-shell { padding: 1.4rem; margin-bottom: 2.5rem; scroll-margin-top: 70px; }
-            .crucible-display-canvas { padding: 1.8rem 1.2rem; }
+            .light-crucible-canvas { padding: 1.8rem 1.2rem; }
             .trap-challenge-card { padding: 1.4rem 1.2rem; }
             .trap-question-text { text-align: left; }
             .sprint-form-grid { grid-template-columns: 1fr; }
@@ -824,7 +837,7 @@
 
             <div class="hero-badges-row">
                 <span class="badge-pill">PhD, Math (IIT Delhi)</span>
-                <!-- Factual Career Professorship Milestone Intact -->
+                <!-- Factual Professorship Career Milestone Intact -->
                 <span class="badge-pill"><strong>16</strong> Yrs University Professor</span>
                 <span class="badge-pill">Ex-STMicroelectronics (<strong>10 Yrs</strong>)</span>
                 <span class="badge-pill"><strong>5</strong> US Patents</span>
@@ -835,28 +848,27 @@
         </div>
     </header>
 
-    <!-- ==================== MODULE 1: CONCEPTUAL VIDEO ARCHIVE ==================== -->
+    <!-- ==================== MODULE 1: CONCEPTUAL VIDEO ARCHIVE (LIGHT SCHOLARLY THEME) ==================== -->
     <section id="archive" class="card-shell theme-navy">
         <div class="card-shell-header">
-            <span class="card-top-badge badge-cyan">✦ Visual Concept Repository</span>
             <h2 class="card-shell-title">Conceptual Video Archive</h2>
-            <div style="font-family: 'Playfair Display', serif; font-size: 1.15rem; color: #475569; font-style: italic; margin-bottom: 0.5rem;">
+            <div style="font-family: 'NormalAmp', 'Playfair Display', serif; font-size: 1.15rem; color: #475569; font-style: italic; margin-bottom: 0.5rem;">
                 Repository of Multidimensional Manifestations
             </div>
             <p class="card-shell-sub">
                 A continuously expanding archive of 8 to 10-minute visual concept videos by Dr. Dhabalendu Samanta—demystifying Linear Algebra through everyday physical intuition and real-world engineering phenomena across undergraduate, postgraduate, AI, and Quantum engineering curricula.
             </p>
         </div>
-        <div class="inner-scholarly-canvas">
-            <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">▶</div>
-            <h3 style="font-size: 1.30rem; margin-bottom: 0.4rem; font-family: 'Playfair Display', serif;">The Essence of Eigenvalues &amp; Eigenvectors</h3>
-            <p style="font-size: 0.92rem; color: #94a3b8; max-width: 520px; margin: 0 auto; line-height: 1.5;">
+        <div class="light-scholarly-canvas">
+            <div style="font-size: 2.5rem; margin-bottom: 0.5rem; color: var(--navy-primary);">▶</div>
+            <h3 style="font-size: 1.30rem; margin-bottom: 0.4rem; color: var(--navy-dark);">The Essence of Eigenvalues &amp; Eigenvectors</h3>
+            <p style="font-size: 0.92rem; color: #64748b; max-width: 520px; margin: 0 auto; line-height: 1.5;">
                 An 8 to 10-minute visual explanation of eigenvalues and rotational invariants will be released soon.
             </p>
         </div>
     </section>
 
-    <!-- ==================== MODULE 2: INTERACTIVE 3D STUDIO ==================== -->
+    <!-- ==================== MODULE 2: INTERACTIVE 3D STUDIO (LIGHT BLUEPRINT THEME) ==================== -->
     <section id="studio" class="card-shell theme-cyan">
         <div class="card-shell-header">
             <span class="card-top-badge badge-cyan">✦ Spatial Simulation Engine</span>
@@ -866,15 +878,15 @@
             </p>
         </div>
 
-        <div class="inner-scholarly-canvas">
-            <div style="display: inline-block; background: rgba(2, 132, 199, 0.25); border: 1px solid rgba(56, 189, 248, 0.35); color: #38bdf8; padding: 0.3rem 0.9rem; border-radius: 20px; font-size: 0.78rem; font-weight: 700; margin-bottom: 1.2rem; text-transform: uppercase; letter-spacing: 0.08em;">
+        <div class="light-blueprint-canvas">
+            <div style="display: inline-block; background: #e0f2fe; border: 1px solid #7dd3fc; color: #0369a1; padding: 0.3rem 0.9rem; border-radius: 20px; font-size: 0.78rem; font-weight: 700; margin-bottom: 1.2rem; text-transform: uppercase; letter-spacing: 0.08em;">
                 ✦ Unit-I: 3D Geometric Workspace (Open Demonstration)
             </div>
-            <h3 style="font-family: 'Playfair Display', serif; font-size: 1.6rem; margin-bottom: 0.6rem;">
+            <h3 style="font-size: 1.6rem; color: var(--navy-dark); margin-bottom: 0.6rem;">
                 Unit-I: Systems of Linear Equations &amp; Intersecting Manifolds
             </h3>
-            <p style="color: #94a3b8; max-width: 640px; margin: 0 auto 1.8rem; font-size: 0.94rem; line-height: 1.6;">
-                <span style="font-size: 0.88rem; color: #cbd5e1; display: inline-block;">
+            <p style="color: #475569; max-width: 640px; margin: 0 auto 1.8rem; font-size: 0.94rem; line-height: 1.6;">
+                <span style="font-size: 0.88rem; color: #64748b; display: inline-block;">
                     (Advanced algorithmic simulations across Units II through VI are guided live during private 1-on-1 tuition sessions).
                 </span>
             </p>
@@ -886,7 +898,7 @@
                    style="padding: 0.85rem 1.8rem; font-size: 0.92rem; display: inline-block; background: #0284c7;">
                     Launch Unit-I 3D Studio Demo ↗
                 </a>
-                <a href="#cohort" class="btn-consult" style="padding: 0.85rem 1.8rem; font-size: 0.92rem; display: inline-block; background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.3);">
+                <a href="#cohort" class="btn-consult" style="padding: 0.85rem 1.8rem; font-size: 0.92rem; display: inline-block; background: #ffffff; color: var(--navy-primary) !important; border: 1.5px solid #0284c7;">
                     Enroll in 1-on-1 Tuition →
                 </a>
             </div>
@@ -960,7 +972,7 @@
         </div>
     </section>
 
-    <!-- ==================== MODULE 3: THE CRUCIBLE ==================== -->
+    <!-- ==================== MODULE 3: THE CRUCIBLE (LIGHT SCHOLARLY THEME) ==================== -->
     <section id="crucible" class="card-shell theme-indigo">
         <div class="card-shell-header">
             <span class="card-top-badge badge-indigo">✦ Foundational Conceptual Challenges</span>
@@ -983,7 +995,7 @@
             <button class="crucible-tab" onclick="switchTrap(6, this)">Unit VI: Applications &amp; SVD</button>
         </div>
 
-        <div class="crucible-display-canvas" oncontextmenu="return false;">
+        <div class="light-crucible-canvas" oncontextmenu="return false;">
             <div id="trap-unit-badge" class="trap-unit-badge">Unit I • Systems of Linear Equations</div>
             
             <div class="trap-challenge-card">
@@ -996,7 +1008,7 @@
                 <a href="#trial" class="btn-consult" style="padding: 0.85rem 1.8rem; font-size: 0.92rem; display: inline-flex; align-items: center; gap: 8px;">
                     <span>💡 Think You Have Solved It? Book a 20-Min Session to Evaluate Your Proof →</span>
                 </a>
-                <p style="font-size: 0.78rem; color: #94a3b8; margin-top: 1.0rem;">
+                <p style="font-size: 0.78rem; color: #64748b; margin-top: 1.0rem;">
                     ✦ Conceptual problems formulated by Dr. Dhabalendu Samanta. Bring your coordinate-free reasoning to a private 20-minute diagnostic session.
                 </p>
             </div>
@@ -1042,7 +1054,7 @@
 
         <!-- GUIDED SPRINT DISPATCH INTAKE (OPTION A: DIRECT INBOX DISPATCH) -->
         <div id="sprintFormContainer" class="sprint-form-container">
-            <h4 style="font-family: 'Playfair Display', serif; font-size: 1.15rem; color: var(--navy-dark); margin-bottom: 0.8rem;">
+            <h4 style="font-size: 1.15rem; color: var(--navy-dark); margin-bottom: 0.8rem;">
                 Dispatch Urgent Sprint Intake Form
             </h4>
             <form id="sprintDispatchForm" onsubmit="handleSprintSubmit(event)">
@@ -1136,7 +1148,7 @@
                     <div style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #64748b; margin-bottom: 0.3rem;">
                         Semester Flexible Track
                     </div>
-                    <h3 style="font-family: 'Playfair Display', serif; font-size: 1.35rem; color: var(--navy-dark); font-weight: 700; margin-bottom: 0.4rem;">
+                    <h3 style="font-size: 1.35rem; color: var(--navy-dark); font-weight: 700; margin-bottom: 0.4rem;">
                         Semester Pay-Per-Class
                     </h3>
                     <div class="pathway-rate-display">$40 <span>/ class (hour)</span></div>
@@ -1166,7 +1178,7 @@
                     <div style="font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; color: var(--navy-primary); margin-bottom: 0.3rem;">
                         Flagship Cohort Mentorship
                     </div>
-                    <h3 style="font-family: 'Playfair Display', serif; font-size: 1.35rem; color: var(--navy-dark); font-weight: 700; margin-bottom: 0.4rem;">
+                    <h3 style="font-size: 1.35rem; color: var(--navy-dark); font-weight: 700; margin-bottom: 0.4rem;">
                         Full Semester Mentorship
                     </h3>
                     
@@ -1241,7 +1253,7 @@
         <div class="direct-inquiry-card">
             <span class="card-top-badge badge-amber" style="margin-bottom: 0.5rem;">✦ Direct Faculty Advisory &amp; Dispatch</span>
             
-            <h4 style="font-family: 'Playfair Display', serif; font-size: 1.15rem; color: var(--navy-dark); margin-bottom: 0.35rem;">
+            <h4 style="font-size: 1.15rem; color: var(--navy-dark); margin-bottom: 0.35rem;">
                 Direct Faculty Advisory
             </h4>
             <p style="font-size: 0.88rem; color: #64748b; margin-bottom: 1.0rem;">
@@ -1308,7 +1320,7 @@
             },
             5: {
                 b: [85,110,105,116,32,86,32,8226,32,69,105,103,101,110,118,97,108,117,101,115,32,38,32,69,105,103,101,110,118,101,99,116,111,114,115],
-                q: [34,83,117,112,112,111,115,101,32,97,32,115,112,104,101,114,101,32,111,102,32,114,97,100,105,117,115,32,114,32,99,101,110,116,101,114,101,100,32,97,116,32,116,104,101,32,111,114,105,103,105,110,32,40,48,44,32,48,44,32,48,41,32,105,110,32,8477,60,115,117,112,62,51,60,47,115,117,112,62,32,105,115,32,100,101,102,111,114,109,101,100,32,105,110,116,111,32,97,110,32,101,108,108,105,112,115,111,105,100,32,98,121,32,99,111,109,112,114,101,115,115,105,110,103,32,105,116,32,115,121,109,109,101,116,114,105,99,97,108,108,121,32,97,108,111,110,103,32,105,116,115,32,112,111,108,97,114,32,97,120,105,115,32,40,78,111,114,116,104,45,83,111,117,116,104,32,112,111,108,101,115,41,32,116,111,32,97,32,110,101,119,32,112,111,108,97,114,32,114,97,100,105,117,115,32,99,32,40,99,32,60,32,114,41,44,32,119,105,116,104,32,97,32,114,101,115,117,108,116,105,110,103,32,117,110,105,102,111,114,109,32,101,113,117,97,116,111,114,105,97,108,32,114,97,100,105,117,115,32,97,32,40,97,32,62,32,114,41,46,32,68,101,116,101,114,109,105,110,101,32,97,108,108,32,116,104,101,32,101,105,103,101,110,118,97,108,117,101,115,44,32,116,104,101,105,114,32,97,108,103,101,98,114,97,105,99,32,97,110,100,32,103,101,111,109,101,116,114,105,99,32,109,117,108,116,105,112,108,105,99,105,116,105,101,115,44,32,97,110,100,32,116,104,101,32,99,111,114,114,101,115,112,111,110,100,105,110,103,32,101,105,103,101,110,113,112,97,99,101,115,32,111,102,32,116,104,105,115,32,100,101,102,111,114,109,97,116,105,111,110,32,112,114,111,109,101,115,115,46,34]
+                q: [34,83,117,112,112,111,115,101,32,97,32,115,112,104,101,114,101,32,111,102,32,114,97,100,105,117,115,32,114,32,99,101,110,116,101,114,101,100,32,97,116,32,116,104,101,32,111,114,105,103,105,110,32,40,48,44,32,48,44,32,48,41,32,105,110,32,8477,60,115,117,112,62,51,60,47,115,117,112,62,32,105,115,32,100,101,102,111,114,109,101,100,32,105,110,116,111,32,97,110,32,101,108,108,105,112,115,111,105,100,32,98,121,32,99,111,109,112,114,101,115,115,105,110,103,32,105,116,32,115,121,109,109,101,116,114,105,99,97,108,108,121,32,97,108,111,110,103,32,105,116,115,32,112,111,108,97,114,32,97,120,105,115,32,40,78,111,114,116,104,45,83,111,117,116,104,32,112,111,108,101,115,41,32,116,111,32,97,32,110,101,119,32,112,111,108,97,114,32,114,97,100,105,117,115,32,99,32,40,99,32,60,32,114,41,44,32,119,105,116,104,32,97,32,114,101,115,117,108,116,105,110,103,32,117,110,105,102,111,114,109,32,101,113,117,97,116,111,114,105,97,108,32,114,97,100,105,117,115,32,97,32,40,97,32,62,32,114,41,46,32,68,101,116,101,114,109,105,110,101,32,97,108,108,32,116,104,101,32,101,105,103,101,110,118,97,108,117,101,115,44,32,116,104,101,105,114,32,97,108,103,101,98,114,97,105,99,32,97,110,100,32,103,101,111,109,101,116,114,105,99,32,109,117,108,116,105,112,108,105,99,105,116,105,101,115,44,32,97,110,100,32,116,104,101,32,99,111,114,114,101,115,112,111,110,100,105,110,103,32,101,105,103,101,110,113,112,97,99,101,115,32,111,102,32,116,104,105,115,32,100,101,102,111,114,109,97,116,105,111,110,32,112,114,111,99,101,115,115,46,34]
             },
             6: {
                 b: [85,110,105,116,32,86,73,32,8226,32,65,112,112,108,105,99,97,116,105,111,110,115,32,40,83,86,68,32,38,32,68,105,109,101,110,115,105,111,110,32,82,101,100,117,99,116,105,111,110,41],

@@ -8,14 +8,13 @@
     
     <title>ASMI Learning | Private 1-on-1 Linear Algebra Tuition &amp; Research Guidance</title>
     
-    <!-- Google tag (gtag.js) - Google Analytics 4 (Private Confidential Dashboard) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <!-- Google tag (gtag.js) - Google Analytics 4 (Updated with G-6FX4NK99T3) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6FX4NK99T3"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      // Replace G-XXXXXXXXXX with your actual GA4 Measurement ID when available
-      gtag('config', 'G-XXXXXXXXXX');
+      gtag('config', 'G-6FX4NK99T3');
     </script>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -125,6 +124,7 @@
             transition: all 0.2s ease;
             text-decoration: none;
             display: inline-block;
+            cursor: pointer;
         }
         .btn-consult:hover { background: var(--navy-dark); }
 
@@ -148,7 +148,6 @@
             margin-bottom: 0.4rem;
         }
 
-        /* SUBTITLE COLOR MATCHED TO NAVY PRIMARY */
         .hero-subtitle-line {
             font-style: italic;
             font-size: clamp(1.2rem, 2.3vw, 1.7rem);
@@ -351,8 +350,6 @@
         .badge-slate { background: #f8fafc; border: 1px solid #e2e8f0; color: #475569; }
 
         /* ==================== EXECUTIVE ACADEMIC SLATE & LABORATORY CONSOLES ==================== */
-        
-        /* 1. Academic Video Theater */
         .executive-video-theater {
             background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
             border: 1.5px solid #334155;
@@ -387,7 +384,6 @@
             border-color: #38bdf8;
         }
 
-        /* 2. Simulation Engine Console */
         .executive-sim-console {
             background: linear-gradient(135deg, #090d16 0%, #172554 100%);
             border: 1.5px solid #1e3a8a;
@@ -398,7 +394,6 @@
             box-shadow: 0 12px 30px rgba(2, 132, 199, 0.07);
         }
 
-        /* 3. The Crucible Blackboard */
         .executive-crucible-slate {
             background: linear-gradient(135deg, #090d16 0%, #1e1b4b 100%);
             border: 1.5px solid #4338ca;
@@ -543,7 +538,7 @@
             box-shadow: 0 4px 12px rgba(30, 58, 138, 0.2);
         }
 
-        /* ==================== CARD 1: SPRINT CARD ==================== */
+        /* ==================== INTAKE FORMS & MICRO-COPY ==================== */
         .sprint-lines-block {
             margin: 0.9rem 0 1.2rem;
         }
@@ -586,17 +581,18 @@
             font-family: 'Plus Jakarta Sans', sans-serif;
         }
 
-        .sprint-form-container {
+        .inbuilt-form-container {
             display: none;
             background: #ffffff;
             border: 1.5px solid var(--border-color);
             border-radius: 14px;
-            padding: 1.6rem;
-            margin-top: 1.2rem;
+            padding: 1.8rem;
+            margin-top: 1.4rem;
             box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+            text-align: left;
         }
 
-        .sprint-form-grid {
+        .inbuilt-form-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
             gap: 1.0rem;
@@ -613,7 +609,7 @@
             letter-spacing: 0.04em;
         }
 
-        .form-group input, .form-group textarea {
+        .form-group input, .form-group textarea, .form-group select {
             width: 100%;
             background: #ffffff;
             border: 1.5px solid var(--border-color);
@@ -626,8 +622,21 @@
             transition: border 0.2s ease;
         }
 
-        .form-group input:focus, .form-group textarea:focus {
+        .form-group input:focus, .form-group textarea:focus, .form-group select:focus {
             border-color: var(--navy-primary);
+        }
+
+        .form-success-box {
+            display: none;
+            background: #f0fdf4;
+            border: 1.5px solid #86efac;
+            color: #14532d;
+            padding: 1.1rem 1.4rem;
+            border-radius: 10px;
+            font-size: 0.90rem;
+            font-weight: 600;
+            line-height: 1.55;
+            margin-top: 1.0rem;
         }
 
         /* ==================== CARD 3: ADMISSIONS & SEMESTER PATHWAYS ==================== */
@@ -715,7 +724,7 @@
             text-align: center;
         }
 
-        /* CARD HOLDER A: CLASSROOM DELIVERY (CYAN HARMONY) */
+        /* CLASSROOM & DIRECT ADVISORY CARDS */
         .classroom-inset-card {
             background: #ffffff;
             border: 1.5px solid #bfdbfe;
@@ -748,7 +757,6 @@
             line-height: 1.5;
         }
 
-        /* CARD HOLDER B: DIRECT ADVISORY & DISPATCH (WARM BRONZE HARMONY) */
         .direct-inquiry-card {
             background: #fffdfa;
             border: 1.5px dashed #fde68a;
@@ -760,7 +768,60 @@
             box-shadow: 0 4px 14px rgba(180, 83, 9, 0.03);
         }
 
-        /* SCHEDULER IFRAME WRAPPER */
+        /* MODAL GATE STYLING (UNIQUE STUDENT ID) */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(15, 23, 42, 0.75);
+            backdrop-filter: blur(4px);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+        }
+
+        .modal-card {
+            background: #ffffff;
+            border-radius: 16px;
+            border: 1.5px solid #cbd5e1;
+            border-top: 4px solid var(--navy-primary);
+            max-width: 520px;
+            width: 100%;
+            padding: 2.2rem 2.0rem;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+            position: relative;
+            text-align: left;
+        }
+
+        .modal-close-btn {
+            position: absolute;
+            top: 1.2rem;
+            right: 1.2rem;
+            background: transparent;
+            border: none;
+            font-size: 1.4rem;
+            cursor: pointer;
+            color: #64748b;
+        }
+
+        .modal-close-btn:hover { color: var(--navy-dark); }
+
+        .calendar-fallback-banner {
+            background: #f8fafc;
+            border: 1px solid #cbd5e1;
+            border-left: 4px solid var(--accent-cyan);
+            border-radius: 8px;
+            padding: 0.9rem 1.1rem;
+            font-size: 0.85rem;
+            color: #334155;
+            margin-bottom: 1.2rem;
+            line-height: 1.5;
+        }
+
         .scheduler-wrapper {
             background: var(--bg-parchment);
             border: 1px solid var(--border-color);
@@ -786,10 +847,16 @@
             background: rgba(255, 255, 255, 0.04);
             border: 1px solid rgba(255, 255, 255, 0.08);
             border-radius: 10px;
-            padding: 1.2rem;
-            font-size: 0.80rem;
-            line-height: 1.6;
+            padding: 1.4rem;
+            font-size: 0.82rem;
+            line-height: 1.65;
             text-align: justify;
+        }
+
+        .legal-shield h4 {
+            font-size: 0.95rem;
+            color: #f1f5f9;
+            margin-bottom: 0.5rem;
         }
 
         @media (max-width: 768px) {
@@ -801,7 +868,7 @@
             .executive-crucible-slate { padding: 1.8rem 1.2rem; }
             .trap-challenge-card { padding: 1.4rem 1.2rem; }
             .trap-question-text { text-align: left; }
-            .sprint-form-grid { grid-template-columns: 1fr; }
+            .inbuilt-form-grid { grid-template-columns: 1fr; }
         }
     </style>
 
@@ -829,7 +896,6 @@
     <!-- ==================== SECTION 1: HERO ==================== -->
     <header class="hero">
         <h1 class="hero-title">Mastering Linear Algebra</h1>
-        <!-- PURE ICONIC SUBTITLE IN EXECUTIVE NAVY -->
         <div class="hero-subtitle-line">From Physical Intuition to Mathematical Rigor</div>
         
         <p class="hero-desc">
@@ -844,7 +910,6 @@
             </div>
 
             <div class="hero-faculty-header">
-                <!-- ZERO-JERK PRE-RESERVED PHOTO WRAPPER -->
                 <div class="hero-photo-wrap">
                     <img src="Photo_DS.jpg" 
                          alt="Dr. Dhabalendu Samanta"
@@ -865,7 +930,6 @@
 
             <div class="hero-badges-row">
                 <span class="badge-pill">PhD, Math (IIT Delhi)</span>
-                <!-- Factual Professorship Career Milestone Intact -->
                 <span class="badge-pill"><strong>16</strong> Yrs University Professor</span>
                 <span class="badge-pill">Ex-STMicroelectronics (<strong>10 Yrs</strong>)</span>
                 <span class="badge-pill"><strong>5</strong> US Patents</span>
@@ -876,10 +940,10 @@
         </div>
     </header>
 
-    <!-- ==================== MODULE 1: CONCEPTUAL VIDEO ARCHIVE (ACADEMIC THEATER) ==================== -->
+    <!-- ==================== MODULE 1: CONCEPTUAL VIDEO ARCHIVE (WITH PLACEHOLDER BADGE) ==================== -->
     <section id="archive" class="card-shell theme-navy">
-        <!-- STRICTLY TWO LINES: TITLE & SUBTITLE (NO BADGE PILL) -->
         <div class="card-shell-header">
+            <span class="card-top-badge badge-cyan">✦ Conceptual Archive • Multidimensional Manifestations</span>
             <h2 class="card-shell-title">Conceptual Video Archive</h2>
             <div style="font-family: 'NormalAmp', 'Playfair Display', serif; font-size: 1.15rem; color: #475569; font-style: italic; margin-bottom: 0.5rem;">
                 Repository of Multidimensional Manifestations
@@ -889,7 +953,7 @@
             </p>
         </div>
         
-        <!-- HIGH-PRESTIGE ACADEMIC THEATER CANVAS -->
+        <!-- HIGH-PRESTIGE ACADEMIC THEATER CANVAS (PLACEHOLDER) -->
         <div class="executive-video-theater">
             <div class="theater-play-btn">▶</div>
             <h3 style="font-size: 1.35rem; margin-bottom: 0.4rem; color: #ffffff;">The Essence of Eigenvalues &amp; Eigenvectors</h3>
@@ -899,7 +963,7 @@
         </div>
     </section>
 
-    <!-- ==================== MODULE 2: INTERACTIVE 3D STUDIO (SIMULATION TERMINAL) ==================== -->
+    <!-- ==================== MODULE 2: INTERACTIVE 3D STUDIO ==================== -->
     <section id="studio" class="card-shell theme-cyan">
         <div class="card-shell-header">
             <span class="card-top-badge badge-cyan">✦ Spatial Simulation Engine</span>
@@ -909,7 +973,6 @@
             </p>
         </div>
 
-        <!-- HIGH-PERFORMANCE MATHEMATICAL SIMULATION CONSOLE -->
         <div class="executive-sim-console">
             <div style="display: inline-block; background: rgba(2, 132, 199, 0.25); border: 1px solid rgba(56, 189, 248, 0.40); color: #38bdf8; padding: 0.3rem 0.9rem; border-radius: 20px; font-size: 0.78rem; font-weight: 700; margin-bottom: 1.2rem; text-transform: uppercase; letter-spacing: 0.08em;">
                 ✦ Unit-I: 3D Geometric Workspace (Open Demonstration)
@@ -948,63 +1011,57 @@
         </div>
 
         <div class="syllabus-grid">
-            <!-- UNIT 1 -->
             <div class="syllabus-unit-card">
                 <div class="unit-num-kicker">Unit I</div>
                 <h3 class="unit-card-title">Systems of Linear Equations</h3>
                 <p class="unit-card-topics">
-                    Matrices and elementary row operations, row-reduced echelon form (RREF), rank of a matrix, solution of linear systems via Gauss elimination and LU decomposition (matrix factorization), matrix multiplication and invertible matrices.
+                    Matrices and elementary row operations, row-reduced echelon form (RREF), rank of a matrix, solution of linear systems via Gauss elimination and LU decomposition, matrix multiplication and invertible matrices.
                 </p>
             </div>
 
-            <!-- UNIT 2 -->
             <div class="syllabus-unit-card">
                 <div class="unit-num-kicker">Unit II</div>
                 <h3 class="unit-card-title">Vector Spaces &amp; Subspaces</h3>
                 <p class="unit-card-topics">
-                    Axiomatic vector spaces and properties, subspaces, linear dependence and independence, linear combinations and span, basis and dimension, sum and intersection of subspaces, direct sums, dual spaces, invariant and cyclic subspaces.
+                    Axiomatic vector spaces and properties, subspaces, linear dependence and independence, linear combinations and span, basis and dimension, sum and intersection of subspaces, direct sums, dual spaces.
                 </p>
             </div>
 
-            <!-- UNIT 3 -->
             <div class="syllabus-unit-card">
                 <div class="unit-num-kicker">Unit III</div>
                 <h3 class="unit-card-title">Linear Transformations</h3>
                 <p class="unit-card-topics">
-                    Linear maps and operational properties, range and kernel, rank and nullity of transformations, Rank-Nullity Theorem and proof consequences, matrix representations of operators, change of basis, isomorphism theorems, and change of coordinate matrices.
+                    Linear maps and operational properties, range and kernel, rank and nullity of transformations, Rank-Nullity Theorem and consequences, matrix representations, change of basis, isomorphism theorems.
                 </p>
             </div>
 
-            <!-- UNIT 4 -->
             <div class="syllabus-unit-card">
                 <div class="unit-num-kicker">Unit IV</div>
                 <h3 class="unit-card-title">Inner Product Spaces</h3>
                 <p class="unit-card-topics">
-                    Scalar inner products, orthogonality, normed linear spaces, complex inner products, orthogonal complements, subspace projections, Gram-Schmidt orthogonalization process, least squares approximation, and Bessel's inequality.
+                    Scalar inner products, orthogonality, normed linear spaces, complex inner products, orthogonal complements, subspace projections, Gram-Schmidt orthogonalization, least squares approximation.
                 </p>
             </div>
 
-            <!-- UNIT 5 -->
             <div class="syllabus-unit-card">
                 <div class="unit-num-kicker">Unit V</div>
                 <h3 class="unit-card-title">Eigenvalues &amp; Eigenvectors</h3>
                 <p class="unit-card-topics">
-                    Eigenvalues and eigenvectors of operators and matrices, eigenspaces, algebraic and geometric multiplicity, Cayley-Hamilton Theorem, similarity and diagonalization, symmetric and Hermitian matrices, orthogonal diagonalization, quadratic forms, and conic sections.
+                    Eigenvalues and eigenvectors of operators and matrices, eigenspaces, algebraic and geometric multiplicity, Cayley-Hamilton Theorem, similarity, orthogonal diagonalization, quadratic forms.
                 </p>
             </div>
 
-            <!-- UNIT 6 -->
             <div class="syllabus-unit-card">
                 <div class="unit-num-kicker">Unit VI</div>
                 <h3 class="unit-card-title">Advanced Applications &amp; SVD</h3>
                 <p class="unit-card-topics">
-                    Spectral decomposition, Singular Value Decomposition (SVD), dimensionality reduction, Principal Component Analysis (PCA), algorithmic image compression, facial recognition (eigenfaces), and solving decoupled systems of first-order linear ODEs.
+                    Spectral decomposition, Singular Value Decomposition (SVD), dimensionality reduction, Principal Component Analysis (PCA), algorithmic image compression, eigenfaces, decoupled systems of linear ODEs.
                 </p>
             </div>
         </div>
     </section>
 
-    <!-- ==================== MODULE 3: THE CRUCIBLE (BLACKBOARD SLATE) ==================== -->
+    <!-- ==================== MODULE 3: THE CRUCIBLE (WITH 4(b) IN-BUILT INTAKE FORM) ==================== -->
     <section id="crucible" class="card-shell theme-indigo">
         <div class="card-shell-header">
             <span class="card-top-badge badge-indigo">✦ Foundational Conceptual Challenges</span>
@@ -1027,7 +1084,7 @@
             <button class="crucible-tab" onclick="switchTrap(6, this)">Unit VI: Applications &amp; SVD</button>
         </div>
 
-        <!-- CAMBRIDGE/IIT MATHEMATICAL BLACKBOARD SLATE -->
+        <!-- MATHEMATICAL BLACKBOARD SLATE -->
         <div class="executive-crucible-slate" oncontextmenu="return false;">
             <div id="trap-unit-badge" class="trap-unit-badge">Unit I • Systems of Linear Equations</div>
             
@@ -1038,17 +1095,75 @@
             </div>
 
             <div>
-                <a href="#trial" class="btn-consult" style="padding: 0.85rem 1.8rem; font-size: 0.92rem; display: inline-flex; align-items: center; gap: 8px;">
-                    <span>💡 Think You Have Solved It? Book a 20-Min Session to Evaluate Your Proof →</span>
-                </a>
+                <button type="button" 
+                        class="btn-consult" 
+                        id="crucibleToggleBtn"
+                        onclick="toggleCrucibleForm()" 
+                        style="padding: 0.85rem 1.8rem; font-size: 0.92rem; border: none;">
+                    💡 Think You Have Solved It? Dispatch Proof for Review ↓
+                </button>
                 <p style="font-size: 0.80rem; color: #94a3b8; margin-top: 1.0rem;">
-                    ✦ Conceptual problems formulated by Dr. Dhabalendu Samanta. Bring your coordinate-free reasoning to a private 20-minute diagnostic session.
+                    ✦ Conceptual problems formulated by Dr. Dhabalendu Samanta. Submit your coordinate-free reasoning for private faculty review.
                 </p>
             </div>
         </div>
+
+        <!-- 4(b) IN-BUILT INTAKE FORM: CRUCIBLE PROOF EVALUATION -->
+        <div id="crucibleFormContainer" class="inbuilt-form-container">
+            <h4 style="font-size: 1.15rem; color: var(--navy-dark); margin-bottom: 0.4rem;">
+                Dispatch Proof Evaluation Request
+            </h4>
+            <p style="font-size: 0.84rem; color: #64748b; margin-bottom: 1.0rem;">
+                Submit your proof sketch or argument directly to Dr. Samanta for academic evaluation.
+            </p>
+
+            <form id="crucibleDispatchForm" onsubmit="handleCrucibleSubmit(event)">
+                <div class="inbuilt-form-grid">
+                    <div class="form-group">
+                        <label>Your Full Name *</label>
+                        <input type="text" id="cr_name" required placeholder="e.g., Eleanor Vance">
+                    </div>
+                    <div class="form-group">
+                        <label>Academic Email *</label>
+                        <input type="email" id="cr_email" required placeholder="e.g., eleanor@mit.edu">
+                    </div>
+                    <div class="form-group">
+                        <label>University &amp; Degree *</label>
+                        <input type="text" id="cr_univ" required placeholder="e.g., Cambridge / BA Math">
+                    </div>
+                    <div class="form-group">
+                        <label>Crucible Unit &amp; Problem *</label>
+                        <select id="cr_unit" required>
+                            <option value="Unit I: Systems of Linear Equations">Unit I: Systems of Linear Equations</option>
+                            <option value="Unit II: Vector Spaces & Subspaces">Unit II: Vector Spaces &amp; Subspaces</option>
+                            <option value="Unit III: Linear Transformations">Unit III: Linear Transformations</option>
+                            <option value="Unit IV: Inner Product Spaces">Unit IV: Inner Product Spaces</option>
+                            <option value="Unit V: Eigenvalues & Eigenvectors">Unit V: Eigenvalues &amp; Eigenvectors</option>
+                            <option value="Unit VI: Advanced Applications & SVD">Unit VI: Advanced Applications &amp; SVD</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group" style="margin-bottom: 1.2rem;">
+                    <label>Proof Sketch / Proposed Solution *</label>
+                    <textarea id="cr_solution" rows="4" required placeholder="Detail your coordinate-free geometric reasoning, algebraic proof sketch, or share a link to your written proof PDF/image..."></textarea>
+                </div>
+
+                <button type="submit" 
+                        id="crucibleSubmitBtn"
+                        class="btn-consult" 
+                        style="background: var(--navy-primary); border: none; padding: 0.75rem 1.6rem; font-size: 0.90rem;">
+                    Dispatch Proof for Faculty Review →
+                </button>
+
+                <div id="crucibleSuccessBox" class="form-success-box">
+                    ✦ Submission Received. Your academic request has been dispatched directly to Dr. Samanta. Expect an email reply with slot confirmation or further instructions within 12–24 hours.
+                </div>
+            </form>
+        </div>
     </section>
 
-    <!-- ==================== CARD 1 (STANDALONE): PROBLEM-SET & MIDTERM DIAGNOSTIC SPRINT ==================== -->
+    <!-- ==================== 4(a) SPRINT CARD: WITH UPDATED SUCCESS MICRO-COPY ==================== -->
     <section id="sprint" class="card-shell theme-cyan">
         <span class="card-top-badge badge-cyan">✦ Accelerated Academic Track • 48-Hour Rapid Response</span>
         
@@ -1085,13 +1200,13 @@
             </button>
         </div>
 
-        <!-- GUIDED SPRINT DISPATCH INTAKE (OPTION A: DIRECT INBOX DISPATCH) -->
-        <div id="sprintFormContainer" class="sprint-form-container">
+        <!-- GUIDED SPRINT DISPATCH INTAKE -->
+        <div id="sprintFormContainer" class="inbuilt-form-container">
             <h4 style="font-size: 1.15rem; color: var(--navy-dark); margin-bottom: 0.8rem;">
                 Dispatch Urgent Sprint Intake Form
             </h4>
             <form id="sprintDispatchForm" onsubmit="handleSprintSubmit(event)">
-                <div class="sprint-form-grid">
+                <div class="inbuilt-form-grid">
                     <div class="form-group">
                         <label>Your Full Name *</label>
                         <input type="text" id="sp_name" required placeholder="e.g., Alex Johnson">
@@ -1115,20 +1230,22 @@
                     <textarea id="sp_details" rows="3" required placeholder="Briefly describe the theorem, derivation, or problem-set topic you need resolved in this 60-min sprint..."></textarea>
                 </div>
 
-                <div style="display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;">
-                    <button type="submit" 
-                            id="sprintSubmitBtn"
-                            class="btn-consult" 
-                            style="background: var(--navy-primary); border: none; padding: 0.75rem 1.6rem; font-size: 0.90rem; cursor: pointer;">
-                        Dispatch Urgent Sprint Request →
-                    </button>
-                    <span id="sprintStatusMsg" style="font-size: 0.88rem; font-weight: 700;"></span>
+                <button type="submit" 
+                        id="sprintSubmitBtn"
+                        class="btn-consult" 
+                        style="background: var(--navy-primary); border: none; padding: 0.75rem 1.6rem; font-size: 0.90rem;">
+                    Dispatch Urgent Sprint Request →
+                </button>
+
+                <!-- MICRO-COPY CONFIRMATION SCREEN -->
+                <div id="sprintSuccessBox" class="form-success-box">
+                    ✦ Submission Received. Your academic request has been dispatched directly to Dr. Samanta. Expect an email reply with slot confirmation or further instructions within 12–24 hours.
                 </div>
             </form>
         </div>
     </section>
 
-    <!-- ==================== CARD 2 (STANDALONE): FREE TRIAL DIAGNOSTIC CONSULTATION ==================== -->
+    <!-- ==================== 4(c) INTAKE FORM: FREE 20-MIN DIAGNOSTIC CONSULTATION ==================== -->
     <section id="trial" class="card-shell theme-green">
         <span class="card-top-badge badge-green">✦ Complimentary Academic Trial • 1-on-1 Evaluation</span>
         
@@ -1137,30 +1254,74 @@
         </h2>
         
         <p class="card-shell-sub" style="margin-bottom: 1.2rem;">
-            Map your university syllabus, diagnose proof roadblocks, and evaluate mathematical invariants with Dr. Dhabalendu Samanta before enrolling in 1-on-1 tuition.
+            Map your university syllabus, diagnose proof roadblocks, and evaluate mathematical invariants with Dr. Dhabalendu Samanta before enrolling in 1-on-1 tuition. If qualified, students will be issued a verified Unique Student ID to schedule classes.
         </p>
 
-        <!-- ON-DEMAND CLICK BUTTON (CALENDAR ONLY APPEARS ON CLICK) -->
         <div style="text-align: center; margin: 1.2rem 0 0.4rem;">
             <button type="button" 
-                    id="trialCalendarToggleBtn"
+                    id="trialFormToggleBtn"
                     class="btn-consult" 
-                    onclick="toggleTrialCalendar()" 
-                    style="background: var(--accent-green); padding: 0.8rem 1.8rem; font-size: 0.92rem; border: none; cursor: pointer;">
-                Open 20-Min Calendar ↓
+                    onclick="toggleTrialForm()" 
+                    style="background: var(--accent-green); padding: 0.8rem 1.8rem; font-size: 0.92rem; border: none;">
+                Open Diagnostic Request Form ↓
             </button>
         </div>
 
-        <!-- REVEALED 20-MIN CALENDLY EMBED -->
-        <div id="trial-scheduler-frame" class="scheduler-wrapper" style="display: none; margin-top: 1.4rem;">
-            <div class="calendly-inline-widget" 
-                 data-url="https://calendly.com/dhabalendu/20min?hide_landing_page_details=1&hide_gdpr_banner=1&background_color=f7f3ea&text_color=0f172a&primary_color=1e3a8a" 
-                 style="min-width:320px;height:700px;width:100%;">
-            </div>
+        <!-- 4(c) IN-BUILT INTAKE FORM -->
+        <div id="trialFormContainer" class="inbuilt-form-container">
+            <h4 style="font-size: 1.15rem; color: var(--navy-dark); margin-bottom: 0.4rem;">
+                Dispatch Free 20-Minute Diagnostic Audit Request
+            </h4>
+            <p style="font-size: 0.84rem; color: #64748b; margin-bottom: 1.0rem;">
+                Submit your course profile. Dr. Samanta reviews every consultation request personally.
+            </p>
+
+            <form id="trialDispatchForm" onsubmit="handleTrialSubmit(event)">
+                <div class="inbuilt-form-grid">
+                    <div class="form-group">
+                        <label>Your Full Name *</label>
+                        <input type="text" id="tr_name" required placeholder="e.g., Jonathan Reed">
+                    </div>
+                    <div class="form-group">
+                        <label>Academic Email *</label>
+                        <input type="email" id="tr_email" required placeholder="e.g., jreed@columbia.edu">
+                    </div>
+                    <div class="form-group">
+                        <label>University &amp; Degree *</label>
+                        <input type="text" id="tr_univ" required placeholder="e.g., Columbia / BS Computer Science">
+                    </div>
+                    <div class="form-group">
+                        <label>Current Mathematics / Physics Course *</label>
+                        <input type="text" id="tr_course" required placeholder="e.g., MATH 2010 Advanced Linear Algebra">
+                    </div>
+                </div>
+
+                <div class="form-group" style="margin-bottom: 1.0rem;">
+                    <label>Primary Syllabus Roadblock / Goal *</label>
+                    <textarea id="tr_goal" rows="3" required placeholder="Describe your primary syllabus roadblock, upcoming exam hurdles, or proof challenges..."></textarea>
+                </div>
+
+                <div class="form-group" style="margin-bottom: 1.2rem;">
+                    <label>Any Other Specific Query (Optional)</label>
+                    <input type="text" id="tr_query" placeholder="e.g., Preferred timezones, specific theorem discussions, etc.">
+                </div>
+
+                <button type="submit" 
+                        id="trialSubmitBtn"
+                        class="btn-consult" 
+                        style="background: var(--accent-green); border: none; padding: 0.75rem 1.6rem; font-size: 0.90rem;">
+                    Request Free Diagnostic Vetting Call →
+                </button>
+
+                <!-- MICRO-COPY CONFIRMATION SCREEN -->
+                <div id="trialSuccessBox" class="form-success-box">
+                    ✦ Submission Received. Your academic request has been dispatched directly to Dr. Samanta. Expect an email reply with slot confirmation or further instructions within 12–24 hours.
+                </div>
+            </form>
         </div>
     </section>
 
-    <!-- ==================== CARD 3 (STANDALONE): WINTER 2026 COHORT ADMISSIONS & SCHEDULING ==================== -->
+    <!-- ==================== 4(d) COHORT ADMISSIONS & SCHEDULING (STUDENT ID GATE) ==================== -->
     <section id="cohort" class="card-shell theme-navy">
         
         <span class="card-top-badge badge-cyan">✦ Winter 2026 Cohort Strictly Capped at 5 Students</span>
@@ -1172,7 +1333,7 @@
             Direct, private 1-on-1 university tuition and comprehensive curriculum mastery with Dr. Dhabalendu Samanta. Choose your preferred semester tuition structure below:
         </p>
 
-        <!-- TWO SIDE-BY-SIDE SEMESTER ENROLLMENT PATHWAYS (NO PLAN A/B LABELS) -->
+        <!-- TWO PATHWAYS UNIFIED UNDER A VERIFIED STUDENT ID GATE -->
         <div class="admissions-grid">
             
             <!-- PATHWAY 1: SEMESTER PAY-PER-CLASS -->
@@ -1199,9 +1360,9 @@
 
                 <button type="button" 
                         class="btn-consult" 
-                        onclick="revealCohortCalendar('per-class')"
-                        style="background: var(--navy-primary); width: 100%; text-align: center; border: none; cursor: pointer; padding: 0.75rem 1.0rem; font-size: 0.88rem;">
-                    Schedule Class Slot ↓
+                        onclick="openStudentIdModal('Semester Pay-Per-Class')"
+                        style="background: var(--navy-primary); width: 100%; text-align: center; border: none; padding: 0.75rem 1.0rem; font-size: 0.88rem;">
+                    Schedule Class Slots using Student ID →
                 </button>
             </div>
 
@@ -1225,35 +1386,33 @@
                     <ul class="pathway-perks-list">
                         <li><span>✓</span> <strong>3 Dedicated Hours / Week</strong> reserved on Dr. Samanta's master calendar</li>
                         <li><span>✓</span> Guaranteed 35+ hours (extendable at zero added charges through finals)</li>
-                        <li><span>✓</span> Priority WhatsApp &amp; Email access for between-class proof verification and query</li>
+                        <li><span>✓</span> Priority WhatsApp &amp; Email access for between-class proof verification</li>
                         <li><span>✓</span> Complete coverage: Coursework, Midterm Sprints, and Finals Prep</li>
                     </ul>
                 </div>
 
                 <button type="button" 
                         class="btn-consult" 
-                        onclick="revealCohortCalendar('full-term')"
-                        style="background: #15803d; width: 100%; text-align: center; border: none; cursor: pointer; padding: 0.75rem 1.0rem; font-size: 0.88rem;">
-                    Lock 3 hr/wk Semester Slot ↓
+                        onclick="openStudentIdModal('Full Semester Mentorship')"
+                        style="background: #15803d; width: 100%; text-align: center; border: none; padding: 0.75rem 1.0rem; font-size: 0.88rem;">
+                    Schedule Class Slots using Student ID →
                 </button>
             </div>
 
         </div>
 
-        <!-- REVEALED COHORT CALENDLY EXPANDER -->
-        <div id="cohort-scheduler-frame" class="scheduler-wrapper" style="display: none;">
-            <div id="cohort-view-per-class">
-                <div class="calendly-inline-widget" 
-                     data-url="https://calendly.com/dhabalendu/20min?hide_landing_page_details=1&hide_gdpr_banner=1&background_color=f7f3ea&text_color=0f172a&primary_color=1e3a8a" 
-                     style="min-width:320px;height:700px;width:100%;">
-                </div>
+        <!-- CALENDAR WRAPPER (UNLOCKED UPON VERIFIED STUDENT ID) -->
+        <div id="cohort-scheduler-frame" class="scheduler-wrapper" style="display: none; padding: 1.5rem;">
+            <!-- FALLBACK & WEEKLY RELEASE VISUAL NOTICE -->
+            <div class="calendar-fallback-banner">
+                <strong>✦ Verified Active Student Calendar</strong><br>
+                All current weekly slots are booked or pending release. Dr. Samanta updates available slots every Sunday. Need an urgent exception? Email <a href="mailto:dhabalendu@gmail.com" style="color: var(--navy-primary); font-weight: 700;">dhabalendu@gmail.com</a> directly.
             </div>
 
-            <div id="cohort-view-full-term" style="display: none;">
-                <div class="calendly-inline-widget" 
-                     data-url="https://calendly.com/dhabalendu/semester-cohort?hide_landing_page_details=1&hide_gdpr_banner=1&background_color=f7f3ea&text_color=0f172a&primary_color=1e3a8a" 
-                     style="min-width:320px;height:700px;width:100%;">
-                </div>
+            <!-- FREE UNIFIED CLASS SCHEDULER WIDGET -->
+            <div class="calendly-inline-widget" 
+                 data-url="https://calendly.com/dhabalendu/20min?hide_landing_page_details=1&hide_gdpr_banner=1&background_color=f7f3ea&text_color=0f172a&primary_color=1e3a8a" 
+                 style="min-width:320px;height:700px;width:100%;">
             </div>
         </div>
 
@@ -1262,7 +1421,7 @@
             💳 <strong>Tuition Fees &amp; Invoicing:</strong> Official invoices containing verified international bank wire details (SWIFT / BIC / Wire Transfer) are issued directly to the student or university sponsor post-consultation upon mutual agreement of syllabus and schedule. Payments are processed securely via <strong>Direct International Bank Wire / Electronic Transfer</strong>.
         </div>
 
-        <!-- CARD HOLDER A: CLASSROOM DELIVERY (EXECUTIVE CYAN HARMONY) -->
+        <!-- CLASSROOM DELIVERY -->
         <div class="classroom-inset-card">
             <span class="card-top-badge badge-cyan" style="margin-bottom: 0.4rem;">✦ Classroom Delivery &amp; Instruction</span>
             
@@ -1282,7 +1441,7 @@
             </div>
         </div>
 
-        <!-- CARD HOLDER B: DIRECT ADVISORY & DISPATCH (WARM BRONZE HARMONY) -->
+        <!-- DIRECT ADVISORY -->
         <div class="direct-inquiry-card">
             <span class="card-top-badge badge-amber" style="margin-bottom: 0.5rem;">✦ Direct Faculty Advisory &amp; Dispatch</span>
             
@@ -1310,11 +1469,58 @@
         </div>
     </section>
 
-    <!-- ==================== FOOTER ==================== -->
+    <!-- ==================== STUDENT ID VERIFICATION MODAL GATE ==================== -->
+    <div id="studentIdModal" class="modal-overlay">
+        <div class="modal-card">
+            <button type="button" class="modal-close-btn" onclick="closeStudentIdModal()">&times;</button>
+            
+            <div style="font-size: 0.78rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; color: var(--navy-primary); margin-bottom: 0.4rem;">
+                ✦ Verified Cohort Access Gate
+            </div>
+            <h3 id="modalPlanTitle" style="font-size: 1.35rem; color: var(--navy-dark); margin-bottom: 0.6rem;">
+                Input Your Unique Student ID
+            </h3>
+            
+            <p style="font-size: 0.85rem; color: #64748b; margin-bottom: 1.2rem; line-height: 1.5;">
+                Class bookings require a verified Unique Student ID issued during your 20-Minute Diagnostic Consultation.
+            </p>
+
+            <form onsubmit="handleStudentIdValidation(event)">
+                <div class="form-group" style="margin-bottom: 0.8rem;">
+                    <label>Unique Student ID *</label>
+                    <input type="text" id="modal_student_id" placeholder="e.g., ASMI-2026-XXXX" required>
+                </div>
+
+                <div id="modalIdError" style="display: none; color: #dc2626; font-size: 0.82rem; font-weight: 600; margin-bottom: 0.9rem; line-height: 1.4;">
+                    Access restricted. Please complete your 20-Min Diagnostic Session to receive an ID.
+                </div>
+
+                <div style="display: flex; gap: 0.8rem; justify-content: flex-end; align-items: center; margin-top: 1.0rem;">
+                    <a href="#trial" onclick="closeStudentIdModal()" style="font-size: 0.84rem; color: var(--navy-primary); text-decoration: underline; margin-right: auto;">
+                        Need an ID? Book Diagnostic Call →
+                    </a>
+                    <button type="submit" class="btn-consult" style="padding: 0.65rem 1.4rem; font-size: 0.88rem; border: none;">
+                        Verify &amp; Unlock Slots →
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- ==================== FOOTER (WITH UPDATED SECTION 5 LIABILITY NOTICE) ==================== -->
     <footer>
         <div style="max-width: 1000px; margin: 0 auto; text-align: center;">
             <div class="legal-shield">
-                <strong>Legal &amp; Regulatory Notice:</strong> ASMI Learning is the independent academic mentorship practice of Dr. Dhabalendu Samanta, PhD (IIT Delhi), operating as an Independent Educational Consultant and Sole Proprietor. ASMI Learning provides advanced supplementary tutoring, conceptual training, and academic advisory. ASMI Learning is not an accredited university, college, or chartered institution, and does not confer formal academic degrees, diplomas, or institutional credits under the UK QAA, US Department of Education, Indian UGC, or any other national or international educational regulatory authority worldwide.
+                <h4>5. Limitation of Liability &amp; Inadvertent Inaccuracies</h4>
+                <p style="margin-bottom: 0.8rem;">
+                    While Dr. Samanta provides elite pedagogical guidance based on 16 years of academic directorship, ASMI Learning does not guarantee specific university examination grades, degree classifications, or institutional outcomes. Academic performance remains the sole responsibility of the student.
+                </p>
+                <p style="margin-bottom: 0.8rem;">
+                    All mathematical mentorship, proof analysis, problem formulations, and simulation models are developed and provided in good faith to the best of faculty knowledge. While rigorous academic standards are maintained, ASMI Learning and Dr. Dhabalendu Samanta accept no legal liability or financial responsibility for any inadvertent inaccuracies, typographical errors, unintended computational discrepancies, or omissions in problem formulations, lecture notes, advisory discussions, conceptual video archive, or 3D simulation tool.
+                </p>
+                <p style="font-size: 0.78rem; color: #cbd5e1; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 0.6rem;">
+                    <strong>Academic Practice Notice:</strong> ASMI Learning is the independent academic mentorship practice of Dr. Dhabalendu Samanta, PhD (IIT Delhi), operating as an Independent Educational Consultant and Sole Proprietor. ASMI Learning provides advanced supplementary tutoring and conceptual advisory, and does not confer formal academic degrees or credits under national or international regulatory bodies.
+                </p>
             </div>
 
             <div style="margin-bottom: 1.2rem; display: flex; justify-content: center; gap: 2.5rem; flex-wrap: wrap;">
@@ -1328,7 +1534,7 @@
         </div>
     </footer>
 
-    <!-- ROBUST MATHEMATICAL CRUCIBLE, SPRINT & SCHEDULER ENGINE -->
+    <!-- ROBUST MATHEMATICAL CRUCIBLE, INTAKE & SCHEDULER ENGINE -->
     <script>
         function _d(arr) {
             return String.fromCharCode.apply(null, arr);
@@ -1341,7 +1547,7 @@
             },
             2: {
                 b: [85,110,105,116,32,73,73,32,8226,32,86,101,99,116,111,114,32,83,112,97,99,101,115],
-                q: [34,76,101,116,32,66,32,61,32,123,118,60,115,117,98,62,49,60,47,115,117,98,62,44,32,118,60,115,117,98,62,50,60,47,115,117,98,62,44,32,118,60,115,117,98,62,51,60,47,115,117,98,62,125,32,98,101,32,97,110,32,97,114,98,105,116,114,97,114,121,32,111,114,100,101,114,101,100,32,98,97,115,105,115,32,111,102,32,8477,60,115,117,112,62,51,60,47,115,117,112,62,44,32,114,101,112,114,101,115,101,110,116,105,110,103,32,97,32,102,105,120,101,100,32,110,111,110,45,122,101,114,111,32,118,101,99,116,111,114,32,120,58,32,120,32,61,32,99,60,115,117,98,62,49,60,47,115,117,98,62,118,60,115,117,98,62,49,60,47,115,117,98,62,32,43,32,99,60,115,117,98,62,50,60,47,115,117,98,62,118,60,115,117,98,62,50,60,47,115,117,98,62,32,43,32,99,60,115,117,98,62,51,60,47,115,117,98,62,118,60,115,117,98,62,51,60,47,115,117,98,62,32,40,119,104,101,114,101,32,99,60,115,117,98,62,49,60,47,115,117,98,62,32,8800,32,48,32,97,110,100,32,99,60,115,117,98,62,50,60,47,115,117,98,62,32,8800,32,48,41,46,32,83,117,112,112,111,115,101,32,116,104,97,116,32,116,104,101,32,114,101,112,114,101,115,101,110,116,97,116,105,111,110,32,111,102,32,120,32,119,105,116,104,32,114,101,115,112,101,99,116,32,116,111,32,116,104,101,32,110,101,119,32,111,114,100,101,114,101,100,32,98,97,115,105,115,32,66,39,32,61,32,123,118,60,115,117,98,62,49,60,47,115,117,98,62,44,32,118,39,60,115,117,98,62,50,60,47,115,117,98,62,44,32,118,60,115,117,98,62,51,60,47,115,117,98,62,125,32,105,115,58,32,120,32,61,32,99,39,60,115,117,98,62,49,60,47,115,117,98,62,118,60,115,117,98,62,49,60,47,115,117,98,62,32,43,32,99,39,60,115,117,98,62,50,60,47,115,117,98,62,118,39,60,115,117,98,62,50,60,47,115,117,98,62,32,43,32,99,39,60,115,117,98,62,51,60,47,115,117,98,62,118,60,115,117,98,62,51,60,47,115,117,98,62,32,40,119,104,101,114,101,32,99,60,115,117,98,62,49,60,47,115,117,98,62,32,8800,32,48,32,97,110,100,32,99,60,115,117,98,62,50,60,47,115,117,98,62,32,8800,32,48,41,46,32,83,117,112,112,111,115,101,32,116,104,97,116,32,116,104,101,32,114,101,112,114,101,115,101,110,116,97,116,105,111,110,32,111,102,32,120,32,119,105,116,104,32,114,101,115,112,101,99,116,32,116,111,32,116,104,101,32,110,101,119,32,111,114,100,101,114,101,100,32,98,97,115,105,115,32,66,39,32,61,32,123,118,60,115,117,98,62,49,60,47,115,117,98,62,44,32,118,39,60,115,117,98,62,50,60,47,115,117,98,62,44,32,118,60,115,117,98,62,51,60,47,115,117,98,62,125,32,105,115,58,32,120,32,61,32,99,39,60,115,117,98,62,49,60,47,115,117,98,62,118,60,115,117,98,62,49,60,47,115,117,98,62,32,43,32,99,39,60,115,117,98,62,50,60,47,115,117,98,62,118,39,60,115,117,98,62,50,60,47,115,117,98,62,32,43,32,99,39,60,115,117,98,62,51,60,47,115,117,98,62,118,60,115,117,98,62,51,60,47,115,117,98,62,46,32,67,97,110,32,116,104,101,32,115,99,97,108,97,114,32,99,39,60,115,117,98,62,49,60,47,115,117,98,62,32,98,101,99,111,109,101,32,122,101,114,111,63,32,73,102,32,121,101,115,44,32,100,101,116,101,114,109,105,110,101,32,116,104,101,32,110,101,99,101,115,115,97,114,121,32,97,110,100,32,115,117,102,102,105,99,105,101,110,116,32,99,111,110,100,105,116,105,111,110,32,111,110,32,116,104,101,32,118,101,99,116,111,114,32,118,39,60,115,117,98,62,50,60,47,115,117,98,62,32,97,110,100,32,99,111,110,115,116,114,117,99,116,32,105,116,46,32,73,102,32,110,111,116,44,32,112,114,111,118,101,32,119,104,121,32,105,116,32,105,115,32,105,109,112,111,115,115,105,98,108,101,46,34]
+                q: [34,76,101,116,32,66,32,61,32,123,118,60,115,117,98,62,49,60,47,115,117,98,62,44,32,118,60,115,117,98,62,50,60,47,115,117,98,62,44,32,118,60,115,117,98,62,51,60,47,115,117,98,62,125,32,98,101,32,97,110,32,97,114,98,105,116,114,97,114,121,32,111,114,100,101,114,101,100,32,98,97,115,105,115,32,111,102,32,8477,60,115,117,112,62,51,60,47,115,117,112,62,44,32,114,101,112,114,101,115,101,110,116,105,110,103,32,97,32,102,105,120,101,100,32,110,111,110,45,122,101,114,111,32,118,101,99,116,111,114,32,120,58,32,120,32,61,32,99,60,115,117,98,62,49,60,47,115,117,98,62,118,60,115,117,98,62,49,60,47,115,117,98,62,32,43,32,99,60,115,117,98,62,50,60,47,115,117,98,62,118,60,115,117,98,62,50,60,47,115,117,98,62,32,43,32,99,60,115,117,98,62,51,60,47,115,117,98,62,118,60,115,117,98,62,51,60,47,115,117,98,62,32,40,119,104,101,114,101,32,99,60,115,117,98,62,49,60,47,115,117,98,62,32,8800,32,48,32,97,110,100,32,99,60,115,117,98,62,50,60,47,115,117,98,62,32,8800,32,48,41,46,32,83,117,112,112,111,115,101,32,116,104,97,116,32,116,104,101,32,114,101,112,114,101,115,101,110,116,97,116,105,111,110,32,111,102,32,120,32,119,105,116,104,32,114,101,115,112,101,99,116,32,116,111,32,116,104,101,32,110,101,119,32,111,114,100,101,114,101,100,32,98,97,115,105,115,32,66,39,32,61,32,123,118,60,115,117,98,62,49,60,47,115,117,98,62,44,32,118,39,60,115,117,98,62,50,60,47,115,117,98,62,44,32,118,60,115,117,98,62,51,60,47,115,117,98,62,125,32,105,115,58,32,120,32,61,32,99,39,60,115,117,98,62,49,60,47,115,117,98,62,118,60,115,117,98,62,49,60,47,115,117,98,62,32,43,32,99,39,60,115,117,98,62,50,60,47,115,117,98,62,118,39,60,115,117,98,62,50,60,47,115,117,98,62,32,43,32,99,39,60,115,117,98,62,51,60,47,115,117,98,62,118,60,115,117,98,62,51,60,47,115,117,98,62,46,32,67,97,110,32,116,104,101,32,115,99,97,108,97,114,32,99,39,60,115,117,98,62,49,60,47,115,117,98,62,32,98,101,99,111,109,101,32,122,101,114,111,63,32,73,102,32,121,101,115,44,32,100,101,116,101,114,109,105,110,101,32,116,104,101,32,110,101,99,101,115,115,97,114,121,32,97,110,100,32,115,117,102,102,105,99,105,101,110,116,32,99,111,110,100,105,116,105,111,110,32,111,110,32,116,104,101,32,118,101,99,116,111,114,32,118,39,60,115,117,98,62,50,60,47,115,117,98,62,32,97,110,100,32,99,111,110,115,116,114,117,99,116,32,105,116,46,32,73,102,32,110,111,116,44,32,112,114,111,118,101,32,119,104,121,32,105,116,32,105,115,32,105,109,112,111,115,115,105,98,108,101,46,34]
             },
             3: {
                 b: [85,110,105,116,32,73,73,73,32,8226,32,76,105,110,101,97,114,32,84,114,97,110,115,102,111,114,109,97,116,105,111,110,115],
@@ -1367,9 +1573,14 @@
 
             document.getElementById('trap-unit-badge').innerHTML = _d(_qVault[unitNum].b);
             document.getElementById('trap-question-text').innerHTML = _d(_qVault[unitNum].q);
+
+            const unitSelect = document.getElementById('cr_unit');
+            if (unitSelect) {
+                unitSelect.selectedIndex = unitNum - 1;
+            }
         }
 
-        /* CARD 1: SPRINT INTAKE FORM TOGGLE & AJAX DISPATCH */
+        /* 4(a) SPRINT FORM TOGGLE & DISPATCH */
         function toggleSprintForm() {
             const formBox = document.getElementById('sprintFormContainer');
             const toggleBtn = document.getElementById('sprintToggleBtn');
@@ -1386,13 +1597,13 @@
         function handleSprintSubmit(e) {
             e.preventDefault();
             const submitBtn = document.getElementById('sprintSubmitBtn');
-            const statusMsg = document.getElementById('sprintStatusMsg');
+            const successBox = document.getElementById('sprintSuccessBox');
             
             submitBtn.innerText = 'Dispatching Request...';
             submitBtn.disabled = true;
 
             const payload = {
-                service: "Problem-Set & Midterm Diagnostic Sprint (48-Hour Rapid Response)",
+                service: "Problem-Set & Midterm Diagnostic Sprint",
                 student_name: document.getElementById('sp_name').value,
                 student_email: document.getElementById('sp_email').value,
                 university: document.getElementById('sp_univ').value,
@@ -1410,10 +1621,8 @@
             })
             .then(response => response.json())
             .then(data => {
-                submitBtn.innerText = '✓ Urgent Request Dispatched';
-                submitBtn.style.backgroundColor = '#15803d';
-                statusMsg.style.color = '#15803d';
-                statusMsg.innerHTML = 'Dr. D. Samanta has received your sprint intake and will respond within 48 hours.';
+                submitBtn.style.display = 'none';
+                successBox.style.display = 'block';
                 document.getElementById('sprintDispatchForm').reset();
             })
             .catch(error => {
@@ -1421,42 +1630,149 @@
                 const fallbackBody = encodeURIComponent("Name: " + payload.student_name + "\nEmail: " + payload.student_email + "\nUniversity: " + payload.university + "\nDeadline: " + payload.deadline + "\n\nProblem Details:\n" + payload.problem_details);
                 window.location.href = "mailto:dhabalendu@gmail.com?subject=" + fallbackSubject + "&body=" + fallbackBody;
                 
-                submitBtn.innerText = '✓ Dispatched via Email Client';
-                submitBtn.style.backgroundColor = '#15803d';
+                submitBtn.style.display = 'none';
+                successBox.style.display = 'block';
             });
         }
 
-        /* CARD 2: ON-DEMAND FREE TRIAL CALENDLY TOGGLE */
-        function toggleTrialCalendar() {
-            const frame = document.getElementById('trial-scheduler-frame');
-            const btn = document.getElementById('trialCalendarToggleBtn');
-            if (frame.style.display === 'block') {
-                frame.style.display = 'none';
-                btn.innerText = 'Open 20-Min Calendar ↓';
+        /* 4(b) CRUCIBLE FORM TOGGLE & DISPATCH */
+        function toggleCrucibleForm() {
+            const formBox = document.getElementById('crucibleFormContainer');
+            const toggleBtn = document.getElementById('crucibleToggleBtn');
+            if (formBox.style.display === 'block') {
+                formBox.style.display = 'none';
+                toggleBtn.innerText = '💡 Think You Have Solved It? Dispatch Proof for Review ↓';
             } else {
-                frame.style.display = 'block';
-                btn.innerText = 'Close Calendar ↑';
-                frame.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                formBox.style.display = 'block';
+                toggleBtn.innerText = 'Close Proof Dispatch Form ↑';
+                formBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
             }
         }
 
-        /* CARD 3: REVEAL COHORT CALENDLY ON DEMAND */
-        function revealCohortCalendar(mode) {
-            const frameWrap = document.getElementById('cohort-scheduler-frame');
-            const viewPerClass = document.getElementById('cohort-view-per-class');
-            const viewFullTerm = document.getElementById('cohort-view-full-term');
+        function handleCrucibleSubmit(e) {
+            e.preventDefault();
+            const submitBtn = document.getElementById('crucibleSubmitBtn');
+            const successBox = document.getElementById('crucibleSuccessBox');
 
-            frameWrap.style.display = 'block';
+            submitBtn.innerText = 'Dispatching Proof...';
+            submitBtn.disabled = true;
 
-            if (mode === 'per-class') {
-                viewPerClass.style.display = 'block';
-                viewFullTerm.style.display = 'none';
+            const payload = {
+                service: "The Crucible: Professor's Traps (Proof Evaluation)",
+                student_name: document.getElementById('cr_name').value,
+                student_email: document.getElementById('cr_email').value,
+                university: document.getElementById('cr_univ').value,
+                selected_unit: document.getElementById('cr_unit').value,
+                proof_sketch: document.getElementById('cr_solution').value
+            };
+
+            fetch("https://formsubmit.co/ajax/dhabalendu@gmail.com", {
+                method: "POST",
+                headers: { 
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify(payload)
+            })
+            .then(response => response.json())
+            .then(data => {
+                submitBtn.style.display = 'none';
+                successBox.style.display = 'block';
+                document.getElementById('crucibleDispatchForm').reset();
+            })
+            .catch(error => {
+                const fallbackSubject = encodeURIComponent("[CRUCIBLE PROOF] " + payload.selected_unit + " from " + payload.student_name);
+                const fallbackBody = encodeURIComponent("Name: " + payload.student_name + "\nEmail: " + payload.student_email + "\nUniversity: " + payload.university + "\nUnit: " + payload.selected_unit + "\n\nProof Sketch:\n" + payload.proof_sketch);
+                window.location.href = "mailto:dhabalendu@gmail.com?subject=" + fallbackSubject + "&body=" + fallbackBody;
+                
+                submitBtn.style.display = 'none';
+                successBox.style.display = 'block';
+            });
+        }
+
+        /* 4(c) FREE 20-MIN DIAGNOSTIC FORM TOGGLE & DISPATCH */
+        function toggleTrialForm() {
+            const formBox = document.getElementById('trialFormContainer');
+            const toggleBtn = document.getElementById('trialFormToggleBtn');
+            if (formBox.style.display === 'block') {
+                formBox.style.display = 'none';
+                toggleBtn.innerText = 'Open Diagnostic Request Form ↓';
             } else {
-                viewPerClass.style.display = 'none';
-                viewFullTerm.style.display = 'block';
+                formBox.style.display = 'block';
+                toggleBtn.innerText = 'Close Diagnostic Request Form ↑';
+                formBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
             }
+        }
 
-            frameWrap.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        function handleTrialSubmit(e) {
+            e.preventDefault();
+            const submitBtn = document.getElementById('trialSubmitBtn');
+            const successBox = document.getElementById('trialSuccessBox');
+
+            submitBtn.innerText = 'Submitting Request...';
+            submitBtn.disabled = true;
+
+            const payload = {
+                service: "Free 20-Minute Diagnostic Consultation & Student ID Vetting",
+                student_name: document.getElementById('tr_name').value,
+                student_email: document.getElementById('tr_email').value,
+                university: document.getElementById('tr_univ').value,
+                course: document.getElementById('tr_course').value,
+                roadblock_goal: document.getElementById('tr_goal').value,
+                optional_query: document.getElementById('tr_query').value
+            };
+
+            fetch("https://formsubmit.co/ajax/dhabalendu@gmail.com", {
+                method: "POST",
+                headers: { 
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify(payload)
+            })
+            .then(response => response.json())
+            .then(data => {
+                submitBtn.style.display = 'none';
+                successBox.style.display = 'block';
+                document.getElementById('trialDispatchForm').reset();
+            })
+            .catch(error => {
+                const fallbackSubject = encodeURIComponent("[DIAGNOSTIC AUDIT] Request from " + payload.student_name);
+                const fallbackBody = encodeURIComponent("Name: " + payload.student_name + "\nEmail: " + payload.student_email + "\nUniversity: " + payload.university + "\nCourse: " + payload.course + "\nGoal: " + payload.roadblock_goal + "\nQuery: " + payload.optional_query);
+                window.location.href = "mailto:dhabalendu@gmail.com?subject=" + fallbackSubject + "&body=" + fallbackBody;
+                
+                submitBtn.style.display = 'none';
+                successBox.style.display = 'block';
+            });
+        }
+
+        /* 4(d) STUDENT ID MODAL GATE LOGIC */
+        function openStudentIdModal(planName) {
+            document.getElementById('modalPlanTitle').innerText = 'Schedule Class Slots: ' + planName;
+            document.getElementById('studentIdModal').style.display = 'flex';
+            document.getElementById('modalIdError').style.display = 'none';
+            document.getElementById('modal_student_id').value = '';
+        }
+
+        function closeStudentIdModal() {
+            document.getElementById('studentIdModal').style.display = 'none';
+        }
+
+        function handleStudentIdValidation(e) {
+            e.preventDefault();
+            const idInput = document.getElementById('modal_student_id').value.trim();
+            const errorBox = document.getElementById('modalIdError');
+
+            /* Accept any standard student ID issued during diagnostic call */
+            if (idInput.length >= 4) {
+                closeStudentIdModal();
+                const calendarBox = document.getElementById('cohort-scheduler-frame');
+                calendarBox.style.display = 'block';
+                calendarBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            } else {
+                errorBox.innerText = "Access restricted. Please complete your 20-Min Diagnostic Session to receive an ID.";
+                errorBox.style.display = 'block';
+            }
         }
 
         function copyFacultyEmail() {
